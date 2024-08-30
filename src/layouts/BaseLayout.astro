@@ -1,0 +1,32 @@
+---
+import "@/styles/sol.css"
+---
+
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name="color-scheme" content="dark light" />
+    <meta name='generator' content={Astro.generator} />
+
+    <title>Astro</title>
+  </head>
+  <body>
+    <main>
+    <slot />
+  </main>
+  </body>
+</html>
+
+<style is:global>
+  main {
+    inline-size: min(48rem, calc(100% - 2rlh * 2));
+    margin-inline: auto;
+    padding-block: 2rlh;
+  }
+
+  main > * + *:not(dialog):not([popover]) {
+    margin-block-start: var(--spacing-md);
+  }
+</style>

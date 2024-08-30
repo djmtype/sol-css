@@ -1,0 +1,72 @@
+@import "./palettes/hues.css";
+@import "./palettes/palette.gray.css";
+@import "./palettes/palette.primary.css";
+
+/* Color controls */
+:root {
+  --primary-hue: var(--hue-indigo);
+  --primary-hue-rotate-by: 0;
+  --primary-chroma: 1;
+
+  --gray-hue: var(--primary-hue);
+  --gray-hue-rotate-by: 0;
+  --gray-chroma: .1;
+}
+
+/* Logical color props */
+* {
+  --color-ink: light-dark(var(--color-gray-14), var(--color-gray-2));
+
+  --color-ink-contrast: light-dark(var(--color-gray-16), var(--color-gray-1));
+
+  --color-ink-highlight: light-dark(var(--color-gray-16), var(--color-gray-16));
+
+
+  --color-ink-muted: light-dark(var(--color-gray-10), var(--color-gray-4));
+
+  --color-ink-inverse: light-dark(var(--color-gray-2), var(--color-gray-14));
+
+  --color-ink-primary: light-dark(
+    var(--color-primary-10),
+    var(--color-primary-6)
+  );
+
+  --color-surface: light-dark(var(--color-gray-2), var(--color-gray-14));
+
+  --color-surface-bright: light-dark(var(--color-gray-1), var(--color-gray-13));
+
+  --color-surface-dim: light-dark(var(--color-gray-3), var(--color-gray-15));
+
+  --color-separator: light-dark(var(--color-gray-5), var(--color-gray-11));
+
+  --color-separator-highlight: light-dark(var(--color-gray-8), var(--color-gray-8));
+
+  --color-shadow: light-dark(var(--color-gray-4), var(--color-gray-16));
+
+  --color-surface-highlight: light-dark(var(--color-primary-3), var(--color-primary-4));
+
+  /* focus state */
+
+  --color-focus: light-dark(var(--color-primary-10), var(--color-primary-6));
+
+  /* form controls */
+
+
+  --color-accent: light-dark(var(--color-primary-10), var(--color-primary-10));
+
+  --color-checked: light-dark(var(--color-primary-2), var(--color-primary-2));
+
+  /* anchor */
+
+  --color-anchor: light-dark(var(--color-primary-10), var(--color-primary-5));
+
+  --color-anchor-hover: light-dark(
+    var(--color-primary-9),
+    var(--color-primary-4)
+  );
+
+  --color-anchor-active: light-dark(
+    var(--color-primary-11),
+    var(--color-primary-6)
+  );
+}

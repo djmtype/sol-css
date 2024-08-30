@@ -1,0 +1,13 @@
+:root {
+  --font-size: var(--font-size-value, clamp(1rem, 0.9rem + 0.3vw, 1.25rem));
+  --font-scale: var(--font-scale-value, 1.25);
+
+  --font-size-xs: calc(var(--font-size) / var(--font-scale));
+  --font-size-sm: var(--font-size);
+  --font-size-md: calc(var(--font-size-sm) * var(--font-scale));
+  --font-size-lg: calc(var(--font-size-md) * var(--font-scale));
+  --font-size-xl: calc(var(--font-size-lg) * var(--font-scale));
+  --font-size-2xl: calc(var(--font-size-xl) * var(--font-scale));
+  --font-size-3xl: calc(var(--font-size-2xl) * var(--font-scale));
+  --font-size-4xl: calc(var(--font-size-3xl) * var(--font-scale));
+}

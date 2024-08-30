@@ -1,0 +1,35 @@
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="clear"],
+input[type="button"],
+[role="button"],
+input[type="file"]::file-selector-button {
+  --_display: inline-flex;
+  --_alignment: center;
+  --_padding: var(--input-padding-size);
+  --_padding-pow: 3;
+  display: var(--_display);
+  font-family: inherit;
+  transition: all 200ms;
+  padding-block: var(--_padding);
+  padding-inline: calc(var(--_padding) * var(--_padding-pow));
+  border: var(--input-border-size) solid var(--color-primary-10);
+  background-color: var(--color-primary-10);
+  border-radius: var(--input-radius-size);
+  color: var(--color-gray-2);
+  font-weight: 600;
+text-align: var(--_alignment);
+  &:hover,
+  &:focus-visible {
+    background-color: var(--color-primary-9);
+    border-color: var(--color-primary-9);
+    /* outline-color: var(--color-primary-9); */
+  }
+
+  &:active {
+    background-color: var(--color-primary-11);
+    border-color: var(--color-primary-11);
+    /* outline-color: var(--color-primary-11); */
+  }
+}

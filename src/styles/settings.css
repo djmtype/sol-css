@@ -1,0 +1,6 @@
+:root {
+  --input-padding-size: var(--spacing-4xs);
+  --input-radius-size: .15em;
+  --input-border-size: 1px;
+ --separator-size: 1px;
+}

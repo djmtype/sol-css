@@ -1,0 +1,287 @@
+/* 
+SOL Reset
+A cross between reset and normalize, sans IE
+
+Sources: 
+SET Studio [https://piccalil.li/blog/a-more-modern-css-reset/]
+Open Props Normalize [https://github.com/argyleink/open-props/blob/main/src/extra/normalize.src.css]
+Normalize CSS [https://github.com/necolas/normalize.css/blob/master/normalize.css]
+CSS Remedy [https://github.com/jensimmons/cssremedy]
+Josh Comeau [https://www.joshwcomeau.com/css/custom-css-reset/]
+
+*/
+
+/* 
+Prevent padding and border from affecting element width. 
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 
+1. Remove odd text zoom on touch devices  
+2. Remove iOS tap color
+*/
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  /* 1 */
+  -webkit-tap-highlight-color: transparent;
+  /* 2 */
+}
+
+/* Add smooth scrolling animation */
+@media (prefers-reduced-motion: no-preference) {
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+}
+
+/* 
+1. Remove margin
+2. Set to smallest vertical height
+3. Set max width
+4. Set unified text rendering appearance
+5. Set default font family
+6. Set default line height
+7. Prevent words from overflow
+*/
+body {
+  margin: 0;
+  /* 1 */
+  min-height: 100svh;
+  /* 2 */
+  max-inline-size: 100%;
+  /* 3 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* 4 */
+  font-family: system-ui, sans-serif;
+  /* 5 */
+  line-height: 1.5;
+  /* 6 */
+  overflow-wrap: break-word;
+  /* 7 */
+}
+
+/* Remove default margin */
+figure {
+  margin-inline: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+ul,
+ol,
+hr {
+  margin-block: 0;
+}
+
+/* Better leading on large headlines */
+h1,
+h2,
+h3 {
+  line-height: calc(1em + 0.5rem);
+}
+
+/* 
+Balance headlines 
+*/
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-wrap: balance;
+}
+
+/* 
+1. Remove indentation on styled lists 
+2. Remove list type appearance for non-technical list items
+*/
+ul[role="list"],
+ol[role="list"] {
+  padding-inline: 0;
+  /* 1 */
+  list-style-type: none;
+  /* 2 */
+}
+
+/* 
+Make anchor and abbreviated elements more legible
+*/
+a:not([class]),
+u,
+ins,
+abbr {
+  text-decoration-skip-ink: auto;
+  text-underline-offset: 0.2ex;
+}
+
+/* 
+Unify text size across browsers  
+*/
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Add browser consistency for code */
+code {
+  font-family: monospace-ui, monospace;
+  font-size: 1em;
+}
+
+/* Preserve intrinsic aspect ratio. */
+img,
+svg,
+video,
+canvas {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+/* Remove awkward space */
+img,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+}
+
+/* Makes image easier to target image */
+picture {
+  display: contents;
+}
+
+source {
+  display: none;
+}
+
+/* 
+1. Remove gaps 
+2. Correct color consistency
+*/
+table {
+  border-collapse: collapse;
+  /* 1 */
+  border-color: currentcolor;
+  /* 2 */
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  line-height: inherit;
+}
+
+
+
+/* Normalize separator appearance */
+hr {
+  border-style: solid;
+  border-width: 1px 0 0;
+  color: inherit;
+  height: 0;
+}
+
+/* Provide cursor indicators for interactive elements */
+button,
+summary,
+input[type="submit"],
+input[type="reset"] {
+  cursor: pointer;
+}
+
+
+
+/* Webkit: Fix search field appearance */
+[type="search"] {
+  -webkit-appearance: textfield;
+}
+
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* Webkit: Apply default button appearance */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"],
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+}
+
+/* Webkit: Fix font size */
+::-webkit-file-upload-button {
+  font: inherit;
+}
+
+[type="number"] {
+  height: auto;
+}
+
+/*
+Add the correct vertical alignment
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/* Allow page top breathing room */
+:target {
+  scroll-margin-top: 2rlh;
+}
+
+/* Add better focus state */
+:focus-visible, [id]:target {
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: currentColor;
+  outline-offset: 2px;
+  transition: outline-offset 200ms;
+}
+
+/* Provide visual feedback for disabled elements */
+:disabled {
+  cursor: not-allowed;
+}

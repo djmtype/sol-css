@@ -1,0 +1,22 @@
+:root {
+  --spacing-size: var(
+    --spacing-size-value,
+    clamp(1rem, calc(0.9rem + 0.3vw), 1.25rem)
+  );
+  --spacing-scale: var(--spacing-scale-value, 1.25);
+
+  --spacing-4xs: calc(var(--spacing-3xs) / var(--spacing-scale));
+  --spacing-3xs: calc(var(--spacing-2xs) / var(--spacing-scale));
+  --spacing-2xs: calc(var(--spacing-xs) / var(--spacing-scale));
+  --spacing-xs: calc(var(--spacing-size) / var(--spacing-scale));
+
+  --spacing-sm: var(--spacing-size);
+  --spacing-md: calc(var(--spacing-sm) * var(--spacing-scale));
+  --spacing-lg: calc(var(--spacing-md) * var(--spacing-scale));
+  --spacing-xl: calc(var(--spacing-lg) * var(--spacing-scale));
+  --spacing-2xl: calc(var(--spacing-xl) * var(--spacing-scale));
+  --spacing-3xl: calc(var(--spacing-2xl) * var(--spacing-scale));
+  --spacing-4xl: calc(var(--spacing-3xl) * var(--spacing-scale));
+  --spacing-5xl: calc(var(--spacing-4xl) * var(--spacing-scale));
+  --spacing-6xl: calc(var(--spacing-5xl) * var(--spacing-scale));
+}

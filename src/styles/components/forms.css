@@ -1,0 +1,194 @@
+
+
+::placeholder {
+  color: var(--color-ink-muted);
+  opacity: 1;
+  font-style: italic;
+}
+
+legend {
+  padding: 0;
+}
+
+fieldset {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Text fields */
+
+input:not([type="submit"], [type="reset"], [type="file"], [type="range"]),
+textarea,
+select {
+  --_padding: var(--input-padding-size);
+  --_padding-pow: 1.5;
+  --_padding-inline: calc(var(--_padding) * var(--_padding-pow));
+  padding-block: var(--_padding);
+  padding-inline: var(--_padding-inline);
+  border-radius: var(--input-radius-size);
+  border: var(--input-border-size) solid var(--color-separator);
+  background: var(--color-surface-dim);
+
+  &:focus-visible {
+    color: var(--color-ink-contrast);
+    background: var(--color-surface-bright);
+  }
+  &:hover,
+  &:focus-visible {
+    border-color: var(--color-separator-highlight);
+  }
+}
+
+
+
+
+/* Check fields */
+
+input[type="checkbox"],
+input[type="radio"] {
+  height: 1em;
+  width: 1em;
+  aspect-ratio: 1;
+  vertical-align: middle;
+  margin-top: -0.25ex;
+  appearance: none;
+  padding: 0;
+  border: var(--input-border-size) solid var(--color-separator);
+  background-color: var(--color-surface-dim);
+ 
+}
+
+input[type="radio"] {
+  border-radius: 1e5px;
+  &:checked {
+    background-color: var(--color-checked);
+    border-color: var(--color-accent);
+    box-shadow: inset 0 0 0 0.25em var(--color-accent);
+  }
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--color-accent);
+  background-image: var(--icon-check);
+  background-size: min(1em, 100%);
+  background-repeat: no-repeat;
+  border-color: var(--color-accent);
+}
+
+/* Select */
+
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='white' opacity='.7' stroke-linecap='round' vector-effect='non-scaling-stroke' stroke-linejoin='round' stroke-width='2' d='m6 9l6 6l6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 1em;
+  background-position: calc(100% - var(--_padding-inline)) 50%;
+  padding-inline-end: calc(min(1em, 100%) + 1ch + var(--_padding-inline));
+  position: relative;
+}
+
+
+select:invalid,
+option:disabled {
+  color: var(--color-ink-muted);
+  font-style: italic;
+}
+
+/* Range */
+input[type="range"] {
+  --_track-height: 0.5rem;
+  --_thumb-size: 1.5rem;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type="range"]::-webkit-slider-runnable-track,
+input[type="range"]::-moz-range-track {
+  background: light-dark(var(--color-gray-4), var(--color-gray-13));
+  height: var(--_track-height);
+  border-radius: 1e5px;
+}
+
+input[type="range"]::-webkit-slider-thumb,
+input[type="range"]::-moz-range-thumb {
+  appearance: none;
+  height: var(--_thumb-size);
+  width: var(--_thumb-size);
+  background: var(--color-accent);
+  border: 0;
+  border-radius: 1e5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  margin-block-start: calc(
+    (var(--_track-height) / 2) - (var(--_thumb-size) / 2)
+  );
+}
+
+input[type="range"]:focus-visible {
+  outline: unset;
+}
+
+input[type="range"]:focus-visible::-webkit-slider-thumb,
+input[type="range"]:focus-visible::-moz-range-thumb {
+  border: 0;
+  --_outline-size: 2px;
+  outline-width: var(--_outline-size);
+  outline-style: solid;
+  outline-color: var(--color-focus);
+  outline-offset: var(--_outline-size);
+}
+
+input[type="range"]:focus-within,
+input[type="range"]:active {
+  &::-webkit-slider-runnable-track,
+  &::-moz-range-track {
+    transition: all 200ms linear;
+    background: light-dark(var(--color-gray-5), var(--color-gray-12));
+  }
+
+  &::-webkit-slider-thumb,
+  &::-moz-range-thumb {
+    transition: all 200ms linear;
+    background: var(--color-primary-9);
+    transform: scale(1.25);
+  }
+}
+
+
+/* 
+* Equalize heights (Safari bug) *
+*/
+
+input:is(
+    [type="date"],
+    [type="datetime-local"],
+    [type="time"],
+    [type="month"]
+  ) {
+  height: calc(
+    (var(--font-size-sm) * 1.5) + (var(--input-padding-size) * 2) +
+      (var(--input-border-size) * 2)
+  );
+}
+
+/* Match other input heights */
+
+/* button,
+input:not(
+    [type="date"],
+    [type="datetime-local"],
+    [type="time"],
+    [type="month"],
+    [type="checkbox"],
+    [type="radio"]
+  ) {
+  min-height: calc(
+    (var(--font-size-sm) * 1.5) + (var(--input-padding-size) * 2) +
+      (var(--input-border-size) * 2)
+  );
+} */

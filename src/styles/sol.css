@@ -1,0 +1,23 @@
+@layer base, settings, theme, components, layout, utilities;
+
+@import "settings.css" layer(theme);
+
+@import "base/reset.css" layer(base);
+
+@import "theme/color.css" layer(theme);
+@import "theme/typography.css" layer(theme);
+@import "theme/spacing.css" layer(theme);
+@import "theme/border.css" layer(theme);
+@import "theme/shadow.css" layer(theme);
+@import "theme/icons.css" layer(theme);
+
+@import "components/typography.css" layer(components);
+
+@import "components/button.css" layer(components);
+@import "components/details.css" layer(components);
+@import "components/dialog.css" layer(components);
+@import "components/popover.css" layer(components);
+@import "components/table.css" layer(components);
+@import "components/forms.css" layer(components);
+
+@import "layout/global.css" layer(layout);

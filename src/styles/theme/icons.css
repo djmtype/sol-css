@@ -1,0 +1,10 @@
+:root {
+
+  --icon-x: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor'  stroke-width='2' stroke-linecap='round' vector-effect='non-scaling-stroke' stroke-linejoin='round' %3E%3Cpath d='M18 6 6 18'/%3E%3Cpath d='m6 6 12 12'/%3E%3C/svg%3E");
+
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' vector-effect='non-scaling-stroke' stroke-width='2' d='M20 6L9 17l-5-5'/%3E%3C/svg%3E");
+
+
+  --icon-chevron-right: 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' vector-effect='non-scaling-stroke' stroke-width='2' d='m9 18l6-6l-6-6'/%3E%3C/svg%3E");
+}

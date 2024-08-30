@@ -1,0 +1,104 @@
+details {
+  --_padding-pow: 3;
+  --_padding-block: var(--input-padding-size);
+  --_padding-inline: calc(var(--_padding-block) * var(--_padding-pow));
+}
+
+details > summary[role="button"] {
+  --_alignment: initial;
+  --_display: list-item;
+
+}
+
+details > summary[role="button"] {
+  --_icon-rotation: rotate(0deg);
+  position: relative;
+  transition: all 200ms;
+  /* padding-block: var(--_padding-block);
+  padding-inline: var(--_padding-inline); */
+  padding-inline-end: calc(var(--_padding) + 1ch);
+  /* border: var(--input-border-size) solid var(--color-primary-10);
+  background-color: var(--color-primary-10);
+  border-radius: var(--input-radius-size);
+  color: var(--color-gray-2);
+  font-weight: 600;
+  display: list-item; */
+}
+
+/* details > summary {
+  &:hover,
+  &:focus-visible {
+    background-color: var(--color-primary-9);
+    border-color: var(--color-primary-9);
+  }
+
+  &:active {
+    background-color: var(--color-primary-9);
+    border-color: var(--color-primary-9);
+  }
+} */
+
+details > summary::after {
+  background-color: currentColor;
+  content: "";
+  transition: all 200ms;
+  mask-image: var(--icon-chevron-right);
+  mask-size: contain;
+  mask-position: 50% 50%;
+  mask-repeat: no-repeat;
+  inline-size: 1em;
+  block-size: 100%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: calc(var(--_padding) * var(--_padding-pow));
+  /* right: calc(var(--_padding) - 1em / 2); */
+  transform: var(--_icon-rotation);
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details > summary::marker {
+  content: "";
+}
+
+details[open] > summary:first-of-type {
+  background-color: var(--color-primary-9);
+  border-color: var(--color-primary-9);
+}
+
+
+
+details[open] > summary {
+  --_icon-rotation: rotate(90deg);
+}
+
+[role="group"] > details + details {
+  margin-block-start: var(--spacing-4xs);
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(calc(-1 * var(--spacing-4xs)));
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+details > div {
+  border-radius: var(--input-radius-size);
+  background: var(--color-surface-bright);
+  margin-block-start: var(--spacing-4xs);
+  padding: var(--_padding-inline);
+  border: var(--input-border-size) solid var(--color-separator);
+}
+
+details[open] > div {
+  animation-name: fadeInDown;
+  animation-duration: 400ms;
+}

@@ -1,0 +1,46 @@
+details {
+  --_padding-pow: 1.5;
+  --_padding: var(--input-padding-size);
+
+  --_padding-block: calc(var(--_padding) * var(--_padding-pow));
+  --_padding-inline: calc(var(--_padding) * var(--_padding-pow));
+  --_background: transparent;
+  --_border-color: var(--color-separator);
+  transition: background 200ms linear, border 200ms linear;
+  padding: 0;
+  border-radius: var(--input-radius-size);
+  /* overflow: clip; */
+  background: var(--_background);
+  border: var(--input-border-size) solid var(--_border-color);
+  position: relative;
+  &:hover,
+  &:focus-visible, &:focus-within {
+    --_background: var(--color-surface-bright);
+    --_border-color: var(--color-separator-highlight);
+  }
+}
+
+details[open] {
+  --_background: var(--color-surface-bright);
+  --_border-color: var(--color-separator-highlight);
+  padding-block: var(--_padding-block);
+  padding-inline: var(--_padding-inline);
+}
+
+details > summary {
+  padding-block: var(--_padding-block);
+  padding-inline: var(--_padding-inline);
+  /* border: var(--input-border-size) solid var(--color-separator); */
+
+  display: list-item;
+  border-radius: var(--input-radius-size);
+  
+}
+
+details[open] > summary {
+  margin-block-start: calc(-1 * var(--_padding-block));
+  margin-inline: calc(-1 * var(--_padding-inline));
+  padding-block: var(--_padding-block);
+  padding-inline: var(--_padding-inline);
+  
+}
