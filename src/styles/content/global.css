@@ -1,0 +1,100 @@
+:where(html) {
+  color-scheme: light dark;
+  color: var(--color-ink);
+  background: var(--color-surface);
+  accent-color: var(--color-accent);
+}
+
+:where(html[data-theme="light"]) {
+  color-scheme: light;
+}
+
+:where(html[data-theme="dark"]) {
+  color-scheme: dark;
+}
+
+:where(body) {
+  font-size: var(--font-size-sm);
+}
+
+:where(h1) {
+  font-size: var(--font-size-2xl);
+}
+
+:where(h2) {
+  font-size: var(--font-size-xl);
+}
+
+:where(h3) {
+  font-size: var(--font-size-lg);
+}
+
+:where(h4) {
+  font-size: var(--font-size-md);
+}
+
+:where(h5) {
+  font-size: var(--font-size-sm);
+}
+
+:where(mark) {
+  --primary-hue: var(--hue-yellow);
+  background: var(--color-surface-highlight);
+  padding: var(--tag-padding-size);
+}
+
+:where(strike) {
+  --primary-hue: var(--hue-red);
+  text-decoration-line: line-through;
+  text-decoration-color: var(--color-primary-8);
+}
+
+:where(ins) {
+  --primary-hue: var(--hue-green);
+
+  color: var(--color-ink-primary);
+}
+
+:where(code) {
+  background-color: var(--color-surface-dim);
+  border-radius: var(--tag-radius-size);
+}
+
+:where(pre code) {
+  background-color: unset;
+  border-radius: unset;
+}
+
+:where(code, kbd) {
+  color: var(--color-ink-contrast);
+  padding: var(--tag-padding-size);
+}
+
+:where(kbd) {
+  outline: var(--input-border-size) solid var(--color-separator);
+  outline-offset: 1px;
+}
+
+:where(hr) {
+  color: var(--color-separator);
+}
+:where(a) {
+  color: var(--color-anchor);
+  transition: all 200ms;
+  &:hover,
+  &:focus-visible {
+    color: var(--color-anchor-hover);
+    text-decoration: none;
+  }
+  &:active {
+    color: var(--color-anchor-active);
+  }
+}
+
+:focus-visible, [id]:target {
+  outline-width: var(--focus-size);
+  outline-style: solid;
+  outline-color: var(--color-accent);
+  outline-offset: var(--focus-size);
+  transition: outline-offset 200ms;
+}

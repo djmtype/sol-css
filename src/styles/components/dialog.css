@@ -1,5 +1,6 @@
 dialog {
   opacity: 0;
+  padding: 0;
   translate: 0 25vh;
   transition-duration: 400ms;
   transition-behavior: allow-discrete;
@@ -8,19 +9,16 @@ dialog {
   border-radius: var(--input-radius-size);
   box-shadow: var(--shadow-3);
   background-color: var(--color-surface-bright);
-  padding: 0;
   inline-size: min(48rem, 100% - 4rlh);
   max-block-size: calc(100% - 4rlh);
 }
 
-dialog > form {
-  /* padding: var(--spacing-md); */
+dialog > :where(form, article) {
   display: flex;
   flex-direction: column;
-  /* gap: var(--spacing-md); */
 }
 
-dialog > form > div > * + * {
+dialog > :where(form, article) > div > * + * {
   margin-block-start: 1em;
 }
 
@@ -34,24 +32,14 @@ dialog footer {
 
 dialog header {
   top: 0;
-}
-
-dialog footer {
-  bottom: 0;
-}
-
-dialog header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-block-end: var(--input-border-size) solid var(--color-separator);
 }
 
-dialog header h2 {
-  font-size: var(--font-size-lg);
-}
-
 dialog footer {
+  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,7 +47,7 @@ dialog footer {
   border-block-start: var(--input-border-size) solid var(--color-separator);
 }
 
-dialog > form > div {
+dialog > :where(form, article) > div {
   padding: var(--spacing-lg);
 }
 
@@ -82,25 +70,11 @@ dialog[open]::backdrop {
   display: none;
 }
 
-body:has(dialog) {
-  transition-property: filter;
-  transition-duration: 400ms;
-  transition-behavior: allow-discrete;
-}
 
-body:has(dialog[open]) {
-  overflow: clip;
-  overscroll-behavior: contain;
-  filter: blur(5px) grayscale(1);
-  @starting-style {
-    filter: blur(0px) grayscale(0);
-  }
-}
 
 dialog header > button[aria-label] {
-  padding: 0;
-  inline-size: 3rem;
-  block-size: 3rem;
+  padding-inline: var(--button-padding-size);
+ border-radius: var(--radius-pill);
   aspect-ratio: 1;
   min-height: unset;
   position: relative;
@@ -118,4 +92,20 @@ dialog header > button[aria-label]::after {
   mask-size: contain;
   mask-repeat: no-repeat;
   background-color: currentColor;
+}
+
+
+body:has(dialog) {
+  transition-property: filter;
+  transition-duration: 400ms;
+  transition-behavior: allow-discrete;
+}
+
+body:has(dialog[open]) {
+  overflow: clip;
+  overscroll-behavior: contain;
+  filter: blur(5px) grayscale(1);
+  @starting-style {
+    filter: blur(0px) grayscale(0);
+  }
 }

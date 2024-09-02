@@ -132,7 +132,7 @@ abbr {
 Unify text size across browsers  
 */
 small {
-  font-size: 80%;
+  font-size: 75%;
 }
 
 /*
@@ -272,14 +272,6 @@ progress {
   scroll-margin-top: 2rlh;
 }
 
-/* Add better focus state */
-:focus-visible, [id]:target {
-  outline-width: 2px;
-  outline-style: solid;
-  outline-color: currentColor;
-  outline-offset: 2px;
-  transition: outline-offset 200ms;
-}
 
 /* Provide visual feedback for disabled elements */
 :disabled {

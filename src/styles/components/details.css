@@ -1,11 +1,10 @@
 details {
-  --_padding-pow: 3;
-  --_padding-block: var(--input-padding-size);
-  --_padding-inline: calc(var(--_padding-block) * var(--_padding-pow));
+padding: 0;
+
 }
 
 details > summary[role="button"] {
-  --_alignment: initial;
+  --_text-align: initial;
   --_display: list-item;
 
 }
@@ -14,29 +13,12 @@ details > summary[role="button"] {
   --_icon-rotation: rotate(0deg);
   position: relative;
   transition: all 200ms;
-  /* padding-block: var(--_padding-block);
-  padding-inline: var(--_padding-inline); */
-  padding-inline-end: calc(var(--_padding) + 1ch);
-  /* border: var(--input-border-size) solid var(--color-primary-10);
-  background-color: var(--color-primary-10);
-  border-radius: var(--input-radius-size);
-  color: var(--color-gray-2);
-  font-weight: 600;
-  display: list-item; */
+  padding-inline-end: calc(var(--button-padding-size) * var(--button-padding-pow) + var(--icon-size) * 2);
+  
+
 }
 
-/* details > summary {
-  &:hover,
-  &:focus-visible {
-    background-color: var(--color-primary-9);
-    border-color: var(--color-primary-9);
-  }
 
-  &:active {
-    background-color: var(--color-primary-9);
-    border-color: var(--color-primary-9);
-  }
-} */
 
 details > summary::after {
   background-color: currentColor;
@@ -46,13 +28,13 @@ details > summary::after {
   mask-size: contain;
   mask-position: 50% 50%;
   mask-repeat: no-repeat;
-  inline-size: 1em;
+  block-size: var(--icon-size);
+  inline-size: var(--icon-size);
   block-size: 100%;
   display: inline-block;
   position: absolute;
   top: 0;
-  right: calc(var(--_padding) * var(--_padding-pow));
-  /* right: calc(var(--_padding) - 1em / 2); */
+  right: calc(var(--button-padding-size) * var(--button-padding-pow));
   transform: var(--_icon-rotation);
 }
 
@@ -94,7 +76,7 @@ details > div {
   border-radius: var(--input-radius-size);
   background: var(--color-surface-bright);
   margin-block-start: var(--spacing-4xs);
-  padding: var(--_padding-inline);
+  padding: calc(var(--button-padding-size) * var(--button-padding-pow));
   border: var(--input-border-size) solid var(--color-separator);
 }
 

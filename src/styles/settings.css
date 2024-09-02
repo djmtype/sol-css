@@ -1,6 +1,29 @@
 :root {
+
+
+
+  --focus-size: 2px;
+
+  --separator-size: 1px;
+
+  --icon-size: min(1em, 100%); 
+
+  --input-padding-pow: 1.5;
   --input-padding-size: var(--spacing-4xs);
-  --input-radius-size: .15em;
+
+
+  --input-radius-size: 0.15em;
   --input-border-size: 1px;
- --separator-size: 1px;
+
+  --button-padding-pow: 3;
+  --button-padding-size: var(--input-padding-size);
+  --button-radius-size: var(--input-radius-size);
+  --button-border-size: var(--input-border-size);
+
+  --tag-padding-size: 0.15ex 0.15em;
+  --tag-radius-size: 0.15em;
 }
+
+
+
+
