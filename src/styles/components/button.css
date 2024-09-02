@@ -11,13 +11,13 @@ input[type="file"]::file-selector-button {
   display: var(--_display);
   font-family: inherit;
   transition: all 200ms;
-  padding-block: var(--button-padding-size);
-  padding-inline: calc(var(--button-padding-size) * var(--button-padding-pow));
-  border-width: var(--button-border-size);
+  padding-block: var(--spacing-button-block-size);
+  padding-inline: var(--spacing-button-inline-size);
+  border-width: var(--border-button-size);
   border-style: solid;
   border-color: var(--color-primary-10);
   background-color: var(--color-primary-10);
-  border-radius: var(--button-radius-size);
+  border-radius: var(--radius-button-size);
   color: var(--color-gray-2);
   font-weight: 600;
   text-align: var(--_text-align);

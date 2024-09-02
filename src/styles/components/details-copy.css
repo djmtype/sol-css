@@ -1,6 +1,6 @@
 details {
   --_padding-pow: 1.5;
-  --_padding: var(--input-padding-size);
+  --_padding: var(--spacing-input-block-size);
 
   --_padding-block: calc(var(--_padding) * var(--_padding-pow));
   --_padding-inline: calc(var(--_padding) * var(--_padding-pow));
@@ -8,10 +8,10 @@ details {
   --_border-color: var(--color-separator);
   transition: background 200ms linear, border 200ms linear;
   padding: 0;
-  border-radius: var(--input-radius-size);
+  border-radius: var(--radius-input-size);
   /* overflow: clip; */
   background: var(--_background);
-  border: var(--input-border-size) solid var(--_border-color);
+  border: var(--border-input-size) solid var(--_border-color);
   position: relative;
   &:hover,
   &:focus-visible, &:focus-within {
@@ -30,10 +30,10 @@ details[open] {
 details > summary {
   padding-block: var(--_padding-block);
   padding-inline: var(--_padding-inline);
-  /* border: var(--input-border-size) solid var(--color-separator); */
+  /* border: var(--border-input-size) solid var(--color-separator); */
 
   display: list-item;
-  border-radius: var(--input-radius-size);
+  border-radius: var(--radius-input-size);
   
 }
 

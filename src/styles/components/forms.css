@@ -23,10 +23,10 @@ input:not([type="submit"], [type="reset"], [type="file"], [type="range"]),
 textarea,
 select {
 
-  padding-block: var(--input-padding-size);
-  padding-inline: calc(var(--input-padding-size) * var(--input-padding-pow));
-  border-radius: var(--input-radius-size);
-  border: var(--input-border-size) solid var(--color-separator);
+  padding-block: var(--spacing-input-block-size);
+  padding-inline: var(--spacing-input-inline-size);
+  border-radius: var(--radius-input-size);
+  border: var(--border-input-size) solid var(--color-separator);
   background: var(--color-surface-dim);
 
   &:focus-visible {
@@ -53,7 +53,7 @@ input[type="radio"] {
   margin-top: -0.25ex;
   appearance: none;
   padding: 0;
-  border: var(--input-border-size) solid var(--color-separator);
+  border: var(--border-input-size) solid var(--color-separator);
   background-color: var(--color-surface-dim);
  
 }
@@ -82,8 +82,8 @@ select {
   background-image: var(--icon-chevron-down);
   background-repeat: no-repeat;
   background-size: var(--icon-size);
-  background-position: calc(100% - var(--input-padding-size)) 50%;
-  padding-inline-end: calc(var(--icon-size) + var(--input-padding-size) * var(--input-padding-pow));
+  background-position: calc(100% - var(--spacing-input-block-size)) 50%;
+  padding-inline-end: calc(var(--icon-size) + var(--spacing-input-inline-size));
   position: relative;
 }
 
@@ -169,8 +169,8 @@ input:is(
     [type="month"]
   ) {
   height: calc(
-    (var(--font-size-sm) * 1.5) + (var(--input-padding-size) * 2) +
-      (var(--input-border-size) * 2)
+    (var(--font-size-sm) * 1.5) + (var(--spacing-input-block-size) * 2) +
+      (var(--border-input-size) * 2)
   );
 }
 
@@ -186,7 +186,7 @@ input:not(
     [type="radio"]
   ) {
   min-height: calc(
-    (var(--font-size-sm) * 1.5) + (var(--input-padding-size) * 2) +
-      (var(--input-border-size) * 2)
+    (var(--font-size-sm) * 1.5) + (var(--spacing-input-block-size) * 2) +
+      (var(--border-input-size) * 2)
   );
 } */

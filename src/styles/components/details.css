@@ -13,7 +13,7 @@ details > summary[role="button"] {
   --_icon-rotation: rotate(0deg);
   position: relative;
   transition: all 200ms;
-  padding-inline-end: calc(var(--button-padding-size) * var(--button-padding-pow) + var(--icon-size) * 2);
+  padding-inline-end: calc(var(--spacing-button-inline-size) + (var(--icon-size) * 2));
   
 
 }
@@ -34,7 +34,7 @@ details > summary::after {
   display: inline-block;
   position: absolute;
   top: 0;
-  right: calc(var(--button-padding-size) * var(--button-padding-pow));
+  right: var(--spacing-button-inline-size);
   transform: var(--_icon-rotation);
 }
 
@@ -61,23 +61,14 @@ details[open] > summary {
   margin-block-start: var(--spacing-4xs);
 }
 
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    transform: translateY(calc(-1 * var(--spacing-4xs)));
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+
 
 details > div {
-  border-radius: var(--input-radius-size);
+  border-radius: var(--radius-input-size);
   background: var(--color-surface-bright);
   margin-block-start: var(--spacing-4xs);
-  padding: calc(var(--button-padding-size) * var(--button-padding-pow));
-  border: var(--input-border-size) solid var(--color-separator);
+  padding: var(--spacing-md);
+  border: var(--border-input-size) solid var(--color-separator);
 }
 
 details[open] > div {

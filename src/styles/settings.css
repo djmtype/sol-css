@@ -1,29 +1,27 @@
 :root {
+  /* Global Content */
+  --border-focus-size: 2px;
 
+  --border-separator-size: 1px;
 
+  --icon-size: min(1em, 100%);
 
-  --focus-size: 2px;
+  /* Inline Text Elements */
+  --spacing-tag-block-size: 0.15ex;
+  --spacing-tag-inline-size: 0.15em;
+  --radius-tag-size: 0.15em;
 
-  --separator-size: 1px;
+  /* Inputs (Sans Buttons)  */
+  --spacing-input-block-size: var(--spacing-4xs);
+  --spacing-input-inline-size: var(--spacing-2xs);
 
-  --icon-size: min(1em, 100%); 
+  --radius-input-size: 0.15em;
+  --border-input-size: 1px;
 
-  --input-padding-pow: 1.5;
-  --input-padding-size: var(--spacing-4xs);
+  /* Buttons */
+  --spacing-button-block-size: var(--spacing-4xs);
+  --spacing-button-inline-size: var(--spacing-md);
 
-
-  --input-radius-size: 0.15em;
-  --input-border-size: 1px;
-
-  --button-padding-pow: 3;
-  --button-padding-size: var(--input-padding-size);
-  --button-radius-size: var(--input-radius-size);
-  --button-border-size: var(--input-border-size);
-
-  --tag-padding-size: 0.15ex 0.15em;
-  --tag-radius-size: 0.15em;
+  --radius-button-size: 0.15em;
+  --border-button-size: 1px;
 }
-
-
-
-

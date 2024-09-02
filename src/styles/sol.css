@@ -13,6 +13,7 @@
 @import "theme/shadow.css" layer(theme);
 @import "theme/icons.css" layer(theme);
 
+@import "content/animation.css" layer(content);
 @import "content/global.css" layer(content);
 
 @import "components/button.css" layer(components);

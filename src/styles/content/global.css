@@ -40,7 +40,8 @@
 :where(mark) {
   --primary-hue: var(--hue-yellow);
   background: var(--color-surface-highlight);
-  padding: var(--tag-padding-size);
+  padding-block: var(--spacing-tag-block-size);
+  padding-inline: var(--spacing-tag-inline-size);
 }
 
 :where(strike) {
@@ -57,7 +58,7 @@
 
 :where(code) {
   background-color: var(--color-surface-dim);
-  border-radius: var(--tag-radius-size);
+  border-radius: var(--radius-tag-size);
 }
 
 :where(pre code) {
@@ -67,12 +68,13 @@
 
 :where(code, kbd) {
   color: var(--color-ink-contrast);
-  padding: var(--tag-padding-size);
+  padding-block: var(--spacing-tag-block-size);
+  padding-inline: var(--spacing-tag-inline-size);
 }
 
 :where(kbd) {
-  outline: var(--input-border-size) solid var(--color-separator);
-  outline-offset: 1px;
+  outline: var(--border-separator-size) solid var(--color-separator);
+  outline-offset: var(--border-separator-size);
 }
 
 :where(hr) {
@@ -92,9 +94,9 @@
 }
 
 :focus-visible, [id]:target {
-  outline-width: var(--focus-size);
+  outline-width: var(--border-focus-size);
   outline-style: solid;
   outline-color: var(--color-accent);
-  outline-offset: var(--focus-size);
+  outline-offset: var(--border-focus-size);
   transition: outline-offset 200ms;
 }

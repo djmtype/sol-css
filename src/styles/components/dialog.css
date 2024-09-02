@@ -5,8 +5,8 @@ dialog {
   transition-duration: 400ms;
   transition-behavior: allow-discrete;
   overscroll-behavior: contain;
-  border: var(--input-border-size) solid var(--color-separator);
-  border-radius: var(--input-radius-size);
+  border: var(--border-input-size) solid var(--color-separator);
+  border-radius: var(--radius-input-size);
   box-shadow: var(--shadow-3);
   background-color: var(--color-surface-bright);
   inline-size: min(48rem, 100% - 4rlh);
@@ -35,7 +35,7 @@ dialog header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-block-end: var(--input-border-size) solid var(--color-separator);
+  border-block-end: var(--border-input-size) solid var(--color-separator);
 }
 
 dialog footer {
@@ -44,7 +44,7 @@ dialog footer {
   justify-content: center;
   align-items: center;
   gap: var(--spacing-4xs);
-  border-block-start: var(--input-border-size) solid var(--color-separator);
+  border-block-start: var(--border-input-size) solid var(--color-separator);
 }
 
 dialog > :where(form, article) > div {
@@ -73,7 +73,7 @@ dialog[open]::backdrop {
 
 
 dialog header > button[aria-label] {
-  padding-inline: var(--button-padding-size);
+  padding-inline: var(--spacing-button-block-size);
  border-radius: var(--radius-pill);
   aspect-ratio: 1;
   min-height: unset;

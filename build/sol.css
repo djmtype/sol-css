@@ -160,10 +160,10 @@
 
 @layer theme {
   :root {
-    --input-padding-size: var(--spacing-4xs);
-    --input-radius-size: .15em;
-    --input-border-size: 1px;
-    --separator-size: 1px;
+    --spacing-input-block-size: var(--spacing-4xs);
+    --radius-input-size: .15em;
+    --border-input-size: 1px;
+    --border-separator-size: 1px;
     --hue-red: 25;
     --hue-pink: 350;
     --hue-purple: 310;
@@ -336,13 +336,13 @@
   }
 
   button, input[type="submit"], input[type="reset"], input[type="clear"], input[type="button"], a[role="button"], input[type="file"]::file-selector-button {
-    --_padding: var(--input-padding-size);
+    --_padding: var(--spacing-input-block-size);
     --_padding-pow: 3;
     padding-block: var(--_padding);
     padding-inline: calc(var(--_padding) * var(--_padding-pow));
-    border: var(--input-border-size) solid var(--color-primary-10);
+    border: var(--border-input-size) solid var(--color-primary-10);
     background-color: var(--color-primary-10);
-    border-radius: var(--input-radius-size);
+    border-radius: var(--radius-input-size);
     color: var(--color-gray-2);
     font-family: inherit;
     font-weight: 600;
@@ -361,16 +361,16 @@
 
   details {
     --_padding-pow: 3;
-    --_padding-block: var(--input-padding-size);
+    --_padding-block: var(--spacing-input-block-size);
     --_padding-inline: calc(var(--_padding-block) * var(--_padding-pow));
   }
 
   details > summary {
     padding-block: var(--_padding-block);
     padding-inline: var(--_padding-inline);
-    border: var(--input-border-size) solid var(--color-primary-10);
+    border: var(--border-input-size) solid var(--color-primary-10);
     background-color: var(--color-primary-10);
-    border-radius: var(--input-radius-size);
+    border-radius: var(--radius-input-size);
     color: var(--color-gray-2);
     font-weight: 600;
     transition: all .2s;
@@ -391,10 +391,10 @@
   }
 
   details > div {
-    border-radius: var(--input-radius-size);
+    border-radius: var(--radius-input-size);
     background: var(--color-surface-bright);
     padding: var(--_padding-inline);
-    border: var(--input-border-size) solid var(--color-separator);
+    border: var(--border-input-size) solid var(--color-separator);
     margin-block-start: var(--spacing-4xs);
   }
 
@@ -452,8 +452,8 @@
     opacity: 0;
     transition-behavior: allow-discrete;
     overscroll-behavior: contain;
-    border: var(--input-border-size) solid var(--color-separator);
-    border-radius: var(--input-radius-size);
+    border: var(--border-input-size) solid var(--color-separator);
+    border-radius: var(--radius-input-size);
     box-shadow: var(--shadow-3);
     background-color: var(--color-surface-bright);
     max-block-size: calc(100% - 4rlh);
@@ -488,7 +488,7 @@
   }
 
   dialog header {
-    border-block-end: var(--input-border-size) solid var(--color-separator);
+    border-block-end: var(--border-input-size) solid var(--color-separator);
     justify-content: space-between;
     align-items: center;
     display: flex;
@@ -502,7 +502,7 @@
     justify-content: center;
     align-items: center;
     gap: var(--spacing-4xs);
-    border-block-start: var(--input-border-size) solid var(--color-separator);
+    border-block-start: var(--border-input-size) solid var(--color-separator);
     display: flex;
   }
 
@@ -560,8 +560,8 @@
   }
 
   [popover] {
-    border: var(--input-border-size) solid var(--color-separator);
-    border-radius: var(--input-radius-size);
+    border: var(--border-input-size) solid var(--color-separator);
+    border-radius: var(--radius-input-size);
     box-shadow: var(--shadow-3);
     background-color: var(--color-surface-bright);
     padding: 0;
@@ -593,8 +593,8 @@
   }
 
   nav[popover] li a {
-    padding-block: calc(var(--input-padding-size) / 2);
-    padding-inline: calc(var(--input-padding-size) * 3);
+    padding-block: calc(var(--spacing-input-block-size) / 2);
+    padding-inline: calc(var(--spacing-input-block-size) * 3);
   }
 
   [popover] {
@@ -689,13 +689,13 @@
   }
 
   input:not([type="submit"], [type="reset"], [type="file"], [type="range"]), textarea, select {
-    --_padding: var(--input-padding-size);
+    --_padding: var(--spacing-input-block-size);
     --_padding-pow: 1.5;
     --_padding-inline: calc(var(--_padding) * var(--_padding-pow));
     padding-block: var(--_padding);
     padding-inline: var(--_padding-inline);
-    border-radius: var(--input-radius-size);
-    border: var(--input-border-size) solid var(--color-separator);
+    border-radius: var(--radius-input-size);
+    border: var(--border-input-size) solid var(--color-separator);
     background: var(--color-surface-dim);
 
     &:focus-visible {
@@ -712,7 +712,7 @@
     aspect-ratio: 1;
     vertical-align: middle;
     appearance: none;
-    border: var(--input-border-size) solid var(--color-separator);
+    border: var(--border-input-size) solid var(--color-separator);
     background-color: var(--color-surface-dim);
     width: 1em;
     height: 1em;
@@ -807,7 +807,7 @@
   }
 
   input:is([type="date"], [type="datetime-local"], [type="time"], [type="month"]) {
-    height: calc((var(--font-size-sm) * 1.5)  + (var(--input-padding-size) * 2)  + (var(--input-border-size) * 2));
+    height: calc((var(--font-size-sm) * 1.5)  + (var(--spacing-input-block-size) * 2)  + (var(--border-input-size) * 2));
   }
 }
 
@@ -886,7 +886,7 @@
   }
 
   kbd {
-    outline: var(--input-border-size) solid var(--color-separator);
+    outline: var(--border-input-size) solid var(--color-separator);
     outline-offset: 1px;
   }
 
