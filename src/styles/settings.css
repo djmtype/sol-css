@@ -1,27 +1,39 @@
 :root {
   /* Global Content */
+
+  --radius-default: .15em;
+  --border-default: 1px;
+
   --border-focus-size: 2px;
 
-  --border-separator-size: 1px;
+  --border-separator: var(--border-default);
 
-  --icon-size: min(1em, 100%);
+  --icon-size: 1em;
+
+  
 
   /* Inline Text Elements */
-  --spacing-tag-block-size: 0.15ex;
-  --spacing-tag-inline-size: 0.15em;
-  --radius-tag-size: 0.15em;
+  --spacing-badge-block: 0.15ex;
+  --spacing-badge-inline: 0.15em;
+  --radius-badge-size: 0.15em;
 
   /* Inputs (Sans Buttons)  */
-  --spacing-input-block-size: var(--spacing-4xs);
-  --spacing-input-inline-size: var(--spacing-2xs);
+  --spacing-input-block: var(--spacing-4xs);
+  --spacing-input-inline: var(--spacing-2xs);
 
-  --radius-input-size: 0.15em;
-  --border-input-size: 1px;
+  --radius-input: var(--radius-default);
+  --border-input: var(--border-default);
 
   /* Buttons */
-  --spacing-button-block-size: var(--spacing-4xs);
-  --spacing-button-inline-size: var(--spacing-md);
+  --spacing-button-block: var(--spacing-4xs);
+  --spacing-button-inline: var(--spacing-md);
 
-  --radius-button-size: 0.15em;
-  --border-button-size: 1px;
+  --radius-button: var(--radius-default);
+  --border-button: var(--border-default);
+
+  --spacing-card: var(--spacing-sm);
+  --radius-card: var(--border-default);
+
+  --spacing-table: var(--spacing-xs);
+  
 }

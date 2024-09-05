@@ -4,7 +4,7 @@
       calc(var(--primary-hue, 250) + (0 * var(--primary-hue-rotate-by)))
   );
   --color-primary-2: oklch(
-    97% calc(0.06 * var(--primary-chroma, 1))
+    96% calc(0.06 * var(--primary-chroma, 1))
       calc(var(--primary-hue, 250) + (1 * var(--primary-hue-rotate-by)))
   );
   --color-primary-3: oklch(

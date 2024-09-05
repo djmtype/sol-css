@@ -1,0 +1,25 @@
+/* Details with Button */
+
+details > summary[role="button"] {
+  --_text-align: initial;
+  --_display: list-item;
+}
+
+details > summary[role="button"] {
+  padding-inline-end: calc(
+    var(--spacing-button-inline) + (var(--icon-size) * 2)
+  );
+}
+
+details[open] > summary[role="button"]:first-of-type {
+  background-color: var(--color-primary-9);
+  border-color: var(--color-primary-9);
+}
+
+details > summary[role="button"]::after {
+  right: var(--spacing-button-inline);
+}
+
+details:has(summary[role="button"]) > div {
+  padding: var(--spacing-md);
+}

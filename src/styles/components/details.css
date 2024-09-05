@@ -1,24 +1,42 @@
 details {
-padding: 0;
-
+  padding: 0;
 }
 
-details > summary[role="button"] {
-  --_text-align: initial;
-  --_display: list-item;
-
+details > summary::-webkit-details-marker {
+  display: none;
 }
 
-details > summary[role="button"] {
+details > summary::marker {
+  content: "";
+}
+
+details > summary {
   --_icon-rotation: rotate(0deg);
   position: relative;
   transition: all 200ms;
-  padding-inline-end: calc(var(--spacing-button-inline-size) + (var(--icon-size) * 2));
-  
-
+  display: list-item;
+  font-weight: 600;
 }
 
+details > summary:not([role="button"]) {
+  
+  &:hover, &:focus-visible {
+    background-color: var(--color-surface-bright);
+    border-color: var(--color-separator-highlight);
+  }
+}
 
+details > summary:not([role="button"]) {
+  padding-inline: var(--spacing-input-inline);
+  padding-inline-end: calc(var(--spacing-input-inline) * 2 + var(--icon-size));
+  padding-block: var(--spacing-input-block);
+  border: var(--border-input) solid var(--color-separator);
+  border-radius: var(--radius-input);
+}
+
+details[open] > summary:not([role="button"]) {
+  background: var(--color-surface-bright);
+}
 
 details > summary::after {
   background-color: currentColor;
@@ -33,43 +51,29 @@ details > summary::after {
   block-size: 100%;
   display: inline-block;
   position: absolute;
-  top: 0;
-  right: var(--spacing-button-inline-size);
   transform: var(--_icon-rotation);
+  top: 0;
 }
 
-details > summary::-webkit-details-marker {
-  display: none;
+details > summary::after {
+  right: var(--spacing-input-inline);
 }
-
-details > summary::marker {
-  content: "";
-}
-
-details[open] > summary:first-of-type {
-  background-color: var(--color-primary-9);
-  border-color: var(--color-primary-9);
-}
-
-
 
 details[open] > summary {
   --_icon-rotation: rotate(90deg);
 }
 
-[role="group"] > details + details {
-  margin-block-start: var(--spacing-4xs);
-}
-
 
 
 details > div {
-  border-radius: var(--radius-input-size);
+  border-radius: var(--radius-input);
   background: var(--color-surface-bright);
   margin-block-start: var(--spacing-4xs);
-  padding: var(--spacing-md);
-  border: var(--border-input-size) solid var(--color-separator);
+  padding: var(--spacing-input-inline);
+  border: var(--border-input) solid var(--color-separator);
 }
+
+
 
 details[open] > div {
   animation-name: fadeInDown;

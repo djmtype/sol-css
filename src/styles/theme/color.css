@@ -28,7 +28,7 @@
 
   --color-ink-primary: light-dark(
     var(--color-primary-10),
-    var(--color-primary-6)
+    var(--color-primary-5)
   );
 
   --color-surface: light-dark(var(--color-gray-2), var(--color-gray-14));

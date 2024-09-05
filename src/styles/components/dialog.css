@@ -5,8 +5,8 @@ dialog {
   transition-duration: 400ms;
   transition-behavior: allow-discrete;
   overscroll-behavior: contain;
-  border: var(--border-input-size) solid var(--color-separator);
-  border-radius: var(--radius-input-size);
+  border: var(--border-input) solid var(--color-separator);
+  border-radius: var(--radius-input);
   box-shadow: var(--shadow-3);
   background-color: var(--color-surface-bright);
   inline-size: min(48rem, 100% - 4rlh);
@@ -24,7 +24,7 @@ dialog > :where(form, article) > div > * + * {
 
 dialog header,
 dialog footer {
-  padding: var(--spacing-md);
+  padding: var(--spacing-card);
   position: sticky;
   background: var(--color-surface-bright);
   z-index: 1;
@@ -35,7 +35,7 @@ dialog header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-block-end: var(--border-input-size) solid var(--color-separator);
+  border-block-end: var(--border-input) solid var(--color-separator);
 }
 
 dialog footer {
@@ -44,11 +44,15 @@ dialog footer {
   justify-content: center;
   align-items: center;
   gap: var(--spacing-4xs);
-  border-block-start: var(--border-input-size) solid var(--color-separator);
+  border-block-start: var(--border-input) solid var(--color-separator);
 }
 
 dialog > :where(form, article) > div {
-  padding: var(--spacing-lg);
+  padding: var(--spacing-card);
+}
+
+dialog header > h2 {
+  font-size: var(--font-size-lg);
 }
 
 dialog header > button {
@@ -73,18 +77,20 @@ dialog[open]::backdrop {
 
 
 dialog header > button[aria-label] {
-  padding-inline: var(--spacing-button-block-size);
+ padding: unset;
  border-radius: var(--radius-pill);
   aspect-ratio: 1;
   min-height: unset;
   position: relative;
   display: grid;
   place-items: center;
+  block-size: 3rem;
+  inline-size: 3rem;
 }
 
 dialog header > button[aria-label]::after {
   content: "";
-  font-size: 1.5em;
+  font-size: 1.25em;
   height: 1em;
   width: 1em;
   display: inline-flex;

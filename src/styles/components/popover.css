@@ -1,10 +1,11 @@
 
 [popover] {
-  border: var(--border-input-size) solid var(--color-separator);
-  border-radius: var(--radius-input-size);
+  border: var(--border-input) solid var(--color-separator);
+  border-radius: var(--radius-input);
   box-shadow: var(--shadow-3);
   background-color: var(--color-surface-bright);
   padding: 0;
+ 
 }
 
 [popovertarget="menu"] {
@@ -37,8 +38,8 @@ nav[popover] li {
 
 nav[popover] li a {
   /* text-decoration: none; */
- padding-block: calc(var(--spacing-input-block-size) / 2);
- padding-inline: calc(var(--spacing-input-block-size) * 3);
+ padding-block: calc(var(--spacing-input-block) / 2);
+ padding-inline: calc(var(--spacing-input-block) * 3);
 
 }
 

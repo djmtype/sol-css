@@ -23,15 +23,15 @@ input:not([type="submit"], [type="reset"], [type="file"], [type="range"]),
 textarea,
 select {
 
-  padding-block: var(--spacing-input-block-size);
-  padding-inline: var(--spacing-input-inline-size);
-  border-radius: var(--radius-input-size);
-  border: var(--border-input-size) solid var(--color-separator);
-  background: var(--color-surface-dim);
+  padding-block: var(--spacing-input-block);
+  padding-inline: var(--spacing-input-inline);
+  border-radius: var(--radius-input);
+  border: var(--border-input) solid var(--color-separator);
+  background-color: var(--color-surface-dim);
 
   &:focus-visible {
     color: var(--color-ink-contrast);
-    background: var(--color-surface-bright);
+    background-color: var(--color-surface-bright);
   }
   &:hover,
   &:focus-visible {
@@ -50,10 +50,11 @@ input[type="radio"] {
   width: 1em;
   aspect-ratio: 1;
   vertical-align: middle;
-  margin-top: -0.25ex;
+  margin: -.3ex .15em 0 0;
+line-height: inherit;
   appearance: none;
   padding: 0;
-  border: var(--border-input-size) solid var(--color-separator);
+  border: var(--border-input) solid var(--color-separator);
   background-color: var(--color-surface-dim);
  
 }
@@ -82,10 +83,11 @@ select {
   background-image: var(--icon-chevron-down);
   background-repeat: no-repeat;
   background-size: var(--icon-size);
-  background-position: calc(100% - var(--spacing-input-block-size)) 50%;
-  padding-inline-end: calc(var(--icon-size) + var(--spacing-input-inline-size));
+  background-position: calc(100% - var(--spacing-input-block)) 50%;
+  padding-inline-end: calc(var(--icon-size) + var(--spacing-input-inline));
   position: relative;
 }
+
 
 
 select:invalid,
@@ -99,14 +101,14 @@ input[type="range"] {
   --_track-height: 0.5rem;
   --_thumb-size: 1.5rem;
   appearance: none;
-  background: transparent;
+  background-color: transparent;
   cursor: pointer;
   width: 100%;
 }
 
 input[type="range"]::-webkit-slider-runnable-track,
 input[type="range"]::-moz-range-track {
-  background: light-dark(var(--color-gray-4), var(--color-gray-13));
+  background-color: light-dark(var(--color-gray-4), var(--color-gray-13));
   height: var(--_track-height);
   border-radius: 1e5px;
 }
@@ -116,7 +118,7 @@ input[type="range"]::-moz-range-thumb {
   appearance: none;
   height: var(--_thumb-size);
   width: var(--_thumb-size);
-  background: var(--color-accent);
+  background-color: var(--color-accent);
   border: 0;
   border-radius: 1e5px;
 }
@@ -145,14 +147,14 @@ input[type="range"]:focus-within,
 input[type="range"]:active {
   &::-webkit-slider-runnable-track,
   &::-moz-range-track {
-    transition: all 200ms linear;
-    background: light-dark(var(--color-gray-5), var(--color-gray-12));
+    transition: all 200ms;
+    background-color: light-dark(var(--color-gray-5), var(--color-gray-12));
   }
 
   &::-webkit-slider-thumb,
   &::-moz-range-thumb {
-    transition: all 200ms linear;
-    background: var(--color-primary-9);
+    transition: all 200ms;
+    background-color: var(--color-primary-9);
     transform: scale(1.25);
   }
 }
@@ -169,8 +171,8 @@ input:is(
     [type="month"]
   ) {
   height: calc(
-    (var(--font-size-sm) * 1.5) + (var(--spacing-input-block-size) * 2) +
-      (var(--border-input-size) * 2)
+    (var(--font-size-sm) * 1.5) + (var(--spacing-input-block) * 2) +
+      (var(--border-input) * 2)
   );
 }
 
@@ -186,7 +188,7 @@ input:not(
     [type="radio"]
   ) {
   min-height: calc(
-    (var(--font-size-sm) * 1.5) + (var(--spacing-input-block-size) * 2) +
-      (var(--border-input-size) * 2)
+    (var(--font-size-sm) * 1.5) + (var(--spacing-input-block) * 2) +
+      (var(--border-input) * 2)
   );
 } */

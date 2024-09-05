@@ -14,6 +14,8 @@ figure:has(table) {
   
 }
 
+
+
 thead {
   background-color: var(--color-surface-dim);
   border-block-end: var(--border-2) solid var(--color-separator);
@@ -38,7 +40,7 @@ tbody tr {
 th, td {
 
   font-feature-settings:"tnum" 1;
-  padding: calc(var(--spacing-xs) / 2) var(--spacing-xs);
+  padding: calc(var(--spacing-table, var(--spacing-xs)) / 2) var(--spacing-table, var(--spacing-xs));
   
   
 }

@@ -224,8 +224,12 @@ hr {
 /* Provide cursor indicators for interactive elements */
 button,
 summary,
-input[type="submit"],
-input[type="reset"] {
+[type="submit"],
+[type="reset"],
+[type="button"], 
+[role="button"]
+:where(input[type="file"])::-webkit-file-upload-button,
+:where(input[type="file"])::file-selector-button {
   cursor: pointer;
 }
 
@@ -258,6 +262,8 @@ button,
 [type="number"] {
   height: auto;
 }
+
+
 
 /*
 Add the correct vertical alignment

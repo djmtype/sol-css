@@ -1,0 +1,18 @@
+* {
+    
+  --astro-code-color-background: var(--color-surface-bright);
+  --astro-code-token-string-expression: var(--color-ink-primary);
+  --astro-code-color-text: var(--color-ink);
+  --astro-code-token-comment: var(--color-ink-muted);
+}
+
+span[style*="--astro-code-token-comment"] {
+  display: block;
+  width: 100%;
+}
+
+pre {
+  padding: var(--spacing-card);
+  border-radius: var(--radius-card);
+  
+}
