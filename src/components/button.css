@@ -1,10 +1,10 @@
-button,
+:where(button,
 input[type="submit"],
 input[type="reset"],
 input[type="clear"],
 input[type="button"],
 [role="button"],
-input[type="file"]::file-selector-button {
+input[type="file"]::file-selector-button) {
   --_display: inline-flex;
   --_text-align: center;
 
@@ -26,13 +26,13 @@ input[type="file"]::file-selector-button {
 }
 
 
-button,
+:where(button,
 input[type="submit"],
 input[type="reset"],
 input[type="clear"],
 input[type="button"],
 [role="button"],
-input[type="file"]::file-selector-button {
+input[type="file"]::file-selector-button):not([disabled]) {
   &:hover,
   &:focus-visible {
     background-color: var(--color-primary-9);
@@ -43,4 +43,15 @@ input[type="file"]::file-selector-button {
     background-color: var(--color-primary-11);
     border-color: var(--color-primary-11);
   }
+}
+
+
+:where(button,
+input[type="submit"],
+input[type="reset"],
+input[type="clear"],
+input[type="button"],
+[role="button"],
+input[type="file"]::file-selector-button)[disabled] {
+  opacity: .8;
 }

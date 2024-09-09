@@ -1,15 +1,12 @@
 @layer base, settings, theme, content, components, layout, utilities;
 
-@import "tailwindcss/theme" layer(theme);
+/* @import "tailwindcss/theme" layer(theme);
 @import "theme/tailwind.config.css" layer(theme);
-@import "tailwindcss/utilities" layer(utilities);
-
+@import "tailwindcss/utilities" layer(utilities); */
 
 @import "base/reset.css" layer(base);
 
 @import "settings.css" layer(settings);
-
-
 @import "theme/color.css" layer(theme);
 @import "theme/typography.css" layer(theme);
 @import "theme/spacing.css" layer(theme);

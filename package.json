@@ -2,27 +2,15 @@
   "name": "sol-css",
   "type": "module",
   "version": "0.0.1",
-  "scripts": {
-    "build:css": "NODE_ENV=development lightningcss --bundle src/styles/sol.css -o build/sol.css",
-    "build:cssprod": "NODE_ENV=production lightningcss --minify --bundle src/styles/sol.css -o build/sol.min.css",
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/check": "^0.9.3",
-    "@tailwindcss/vite": "^4.0.0-alpha.21",
-    "astro": "^4.15.3",
-    "tailwindcss": "^4.0.0-alpha.21",
-    "typescript": "^5.5.4"
-  },
+  "source": "src/sol.css",
   "browserslist": [
     "defaults"
   ],
+"scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
   "devDependencies": {
-    "lightningcss": "^1.26.0",
-    "lightningcss-cli": "^1.26.0"
+    "parcel": "latest"
   }
 }

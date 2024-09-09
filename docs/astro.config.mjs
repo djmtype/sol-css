@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
 import { Features } from "lightningcss"
-import tailwindcss from '@tailwindcss/vite'
+// import tailwindcss from '@tailwindcss/vite'
 
 // https://astro.build/config
 export default defineConfig({
@@ -36,7 +36,7 @@ export default defineConfig({
     },
   },
   vite: {
-    plugins: [tailwindcss()],
+    // plugins: [tailwindcss()],
     css: {
       devSourcemap: true,
       transformer: "lightningcss",

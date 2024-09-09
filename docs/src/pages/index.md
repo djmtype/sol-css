@@ -3,6 +3,8 @@ title: Home
 layout: "@/layouts/BaseLayout.astro"
 ---
 
+<button disabled>Disabled Button</button>
+
 <ol>
 <li>One
  <ol>
@@ -356,7 +358,7 @@ Do cillum reprehenderit aliquip. Esse laborum non excepteur minim Lorem reprehen
 
 <form action="/action_page.php" method="get">
 <label for="search">Search:</label>
-  <input type="search" id="search" name="search"><button>Button</button><br /><br />
+  <input type="search" id="search" name="search" disabled><button>Button</button><br /><br />
   <label for="number">Number:</label>
   <input type="number" id="number" name="number"><br /><br />
 

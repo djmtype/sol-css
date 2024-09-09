@@ -25,6 +25,9 @@ select {
   border-radius: var(--radius-input);
   border: var(--border-input) solid var(--color-separator);
   background-color: var(--color-surface-dim);
+}
+
+:where(input:not([type="submit"], [type="reset"], [type="file"], [type="range"]), textarea, select):not([disabled]) {
 
   &:focus-visible {
     color: var(--color-ink-contrast);
@@ -182,6 +185,11 @@ input:is(
       (var(--border-input) * 2)
   );
 }
+
+input[disabled] {
+  opacity: .8;
+}
+
 
 /* Match other input heights */
 
