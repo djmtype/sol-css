@@ -3,6 +3,50 @@ title: Home
 layout: "@/layouts/BaseLayout.astro"
 ---
 
+<ol>
+<li>One
+ <ol>
+ <li>Point One</li>
+ <li>Point Two</li>
+ </ol>
+ <li>Two</li>
+</li>
+</ol>
+
+<ul>
+<li>One
+ <ol>
+ <li>Point One</li>
+ <li>Point Two</li>
+ </ol>
+ <li>Two</li>
+</li>
+</ul>
+
+
+<ul>
+<li>One
+ <ul>
+ <li>Point One
+ <ul><li>List item</li></ul>
+ </li>
+ <li>Point Two</li>
+ </ul>
+ <li>Two</li>
+</li>
+</ul>
+
+
+<div class="p-lg border-sm border-separator bg-surface-bright">
+<h1 class="text-ink-primary">Tailwind text</h1>
+</div>
+
+<label for="loadingundefined">Loading </label>
+<progress id="loadingundefined"></progress>
+
+<label for="loadinglabel">Progress </label>
+<progress id="loadinglabel" max="100" value="50"></progress>
+
 ```html
 <form>
   <fieldset role="group">
@@ -35,7 +79,6 @@ layout: "@/layouts/BaseLayout.astro"
 
 <figure>
 <table class="simple">
-  <caption>Average climate data for the UK, 1990–2020</caption>
   <thead>
     <tr>
       <th scope="col">Month</th>
@@ -181,6 +224,7 @@ layout: "@/layouts/BaseLayout.astro"
     <td>9.27</td>
   </tfoot>
 </table>
+  <figcaption>Average climate data for the UK, 1990–2020</figcaption>
 </figure>
 
 <button popovertarget="menu">
@@ -390,12 +434,22 @@ Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sap
 ### Syntax
 
 ```markdown
-![Alt text](./full/or/relative/path/of/image)
+![Alt text](/jeremy-bishop-0IZZ6OLXc_8-unsplash.jpg)
 ```
 
 ### Output
 
-![blog placeholder](/blog-placeholder-about.jpg)
+![blog placeholder](/jeremy-bishop-0IZZ6OLXc_8-unsplash.jpg)
+
+## Image with caption
+
+<figure>
+<img src="/jeremy-bishop-0IZZ6OLXc_8-unsplash.jpg" alt="blog placeholder" />
+<figcaption>
+Photo by <a href="https://unsplash.com/@jeremybishop?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Jeremy Bishop</a> on <a href="https://unsplash.com/photos/a-person-riding-a-bike-on-a-foggy-day-0IZZ6OLXc_8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+</figcaption>
+</figure>
+  
 
 ## Blockquotes
 
@@ -413,7 +467,14 @@ The blockquote element represents content that is quoted from another source, op
 #### Output
 
 > Tiam, ad mint andaepu dandae nostion secatur sequo quae.  
+>   
 > **Note** that you can use _Markdown syntax_ within a blockquote.
+
+1. The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a footer or cite element, and optionally with in-line changes such as annotations and abbreviations.
+2. Item two
+
+- The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a footer or cite element, and optionally with in-line changes such as annotations and abbreviations.
+- Item two
 
 ### Blockquote with attribution
 

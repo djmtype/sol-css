@@ -1,20 +1,25 @@
 @import "./palettes/hues.css";
 @import "./palettes/palette.gray.css";
 @import "./palettes/palette.primary.css";
+@import "./palettes/palette.utility.css";
 
 /* Color controls */
 :root {
   --primary-hue: var(--hue-indigo);
-  --primary-hue-rotate-by: 0;
+  --primary-hue-rotation: 0;
   --primary-chroma: 1;
 
   --gray-hue: var(--primary-hue);
-  --gray-hue-rotate-by: 0;
+  --gray-hue-rotation: 0;
   --gray-chroma: .1;
+
+  --utility-hue: 250;
+  --utility-hue-rotation: 0;
+  --utility-chroma: 1;
 }
 
 /* Logical color props */
-* {
+:root {
   --color-ink: light-dark(var(--color-gray-14), var(--color-gray-2));
 
   --color-ink-contrast: light-dark(var(--color-gray-16), var(--color-gray-1));
@@ -22,7 +27,7 @@
   --color-ink-highlight: light-dark(var(--color-gray-16), var(--color-gray-16));
 
 
-  --color-ink-muted: light-dark(var(--color-gray-10), var(--color-gray-4));
+  --color-ink-muted: light-dark(var(--color-gray-10), var(--color-gray-5));
 
   --color-ink-inverse: light-dark(var(--color-gray-2), var(--color-gray-14));
 
@@ -30,6 +35,8 @@
     var(--color-primary-10),
     var(--color-primary-5)
   );
+
+
 
   --color-surface: light-dark(var(--color-gray-2), var(--color-gray-14));
 
@@ -43,7 +50,7 @@
 
   --color-shadow: light-dark(var(--color-gray-4), var(--color-gray-16));
 
-  --color-surface-highlight: light-dark(var(--color-primary-3), var(--color-primary-4));
+  --color-surface-primary-highlight: light-dark(var(--color-primary-3), var(--color-primary-4));
 
   /* focus state */
 
@@ -69,4 +76,15 @@
     var(--color-primary-11),
     var(--color-primary-6)
   );
+}
+
+/* Utility color constants */
+
+* {
+  --color-ink-utility: light-dark(
+    var(--color-utility-10),
+    var(--color-utility-5)
+  );
+
+  --color-surface-utility-highlight: light-dark(var(--color-utility-3), var(--color-utility-4));
 }

@@ -38,22 +38,22 @@
 }
 
 :where(mark) {
-  --primary-hue: var(--hue-yellow);
-  background: var(--color-surface-highlight);
+  --utility-hue: var(--hue-yellow);
+  background: var(--color-surface-utility-highlight);
   padding-block: var(--spacing-badge-block);
   padding-inline: var(--spacing-badge-inline);
 }
 
 :where(strike) {
-  --primary-hue: var(--hue-red);
+  --utility-hue: var(--hue-red);
   text-decoration-line: line-through;
-  text-decoration-color: var(--color-primary-8);
+  text-decoration-color: var(--color-utility-8);
 }
 
 :where(ins) {
-  --primary-hue: var(--hue-green);
-
-  color: var(--color-ink-primary);
+  --utility-hue: var(--hue-green);
+  color: var(--color-ink-utility);
+  text-decoration-style: double;
 }
 
 
@@ -99,6 +99,43 @@
   }
 }
 
+:where(ol, ul):not([role="list"]) {
+  padding-inline-start: 2em;
+}
+
+
+:where(ol, ul):not([role="list"]) :where(ol, ul):not([role="list"]) {
+  padding-inline-start: 1em;
+}
+
+:where(ol):not([role="list"]) :where(ol):not([role="list"]) {
+  list-style-type: upper-alpha;
+}
+
+:where(ul):not([role="list"]) :where(ul):not([role="list"]) {
+  list-style-type: disc;
+}
+
+
+:where(ol, ul):not([role="list"]) li::marker {
+  color: var(--color-ink-primary);
+}
+
+:where(blockquote) {
+  margin-inline-start: 0;
+  padding-inline-start: 1em;
+  border-inline-start: var(--border-width-md) solid var(--color-accent);
+
+}
+
+:where(figcaption) {
+  --spacing-flow: 1em;
+  font-size: var(--font-size-xs);
+  font-style: italic;
+  margin-block-start: var(--spacing-flow);
+  text-align: center;
+  }
+
 :focus-visible, [id]:target {
   outline-width: var(--border-focus-size);
   outline-style: solid;
@@ -111,3 +148,5 @@
 
   background: color-mix(in oklch, var(--color-primary-8), transparent 70%);
 }
+
+

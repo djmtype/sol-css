@@ -24,15 +24,18 @@ import "@/styles/sol.css"
   
   main {
     container: layout / inline-size;
-    inline-size: min(92.5rem, calc(100% - var(--spacing-md) * 2));
+    inline-size: min(60rem, calc(100% - var(--spacing-md) * 2));
     margin-inline: auto;
     padding-block: 2rlh;
   }
 
   main > * + *:not(dialog):not([popover]) {
-    margin-block-start: var(--spacing-md);
+    margin-block-start: 1.5em;
   }
 
+  main :where(p, li, h2, h3, h4) {
+    max-inline-size: 72ch;
+  }
   
 </style>
 

@@ -2,6 +2,12 @@ figure:has(table) {
   width: 100%;
   max-width: 100%;
   overflow-x: auto;
+  position: relative;
+}
+
+figure:has(table) figcaption {
+position: sticky;
+left: 0;
 }
 
 :where(table) {
@@ -18,7 +24,7 @@ figure:has(table) {
 
 thead {
   background-color: var(--color-surface-dim);
-  border-block-end: var(--border-2) solid var(--color-separator);
+  border-block-end: var(--border-width-sm) solid var(--color-separator);
   font-weight: 600;
 }
 
@@ -33,7 +39,7 @@ th {
 }
 
 tbody tr {
-  border-block-start: var(--border-1) solid var(--color-separator);
+  border-block-start: var(--border-width-xs) solid var(--color-separator);
 }
 
 
@@ -41,12 +47,12 @@ th, td {
 
   font-feature-settings:"tnum" 1;
   padding: calc(var(--spacing-table, var(--spacing-xs)) / 2) var(--spacing-table, var(--spacing-xs));
-  
+
   
 }
 
 tfoot {
-  border-block-start: var(--border-2) solid var(--color-separator);
+  border-block-start: var(--border-width-sm) solid var(--color-separator);
   border-block-end: 0;
   background-color: var(--color-surface-dim);
   font-weight: 600;

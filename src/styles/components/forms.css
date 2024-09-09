@@ -1,5 +1,3 @@
-
-
 ::placeholder {
   color: var(--color-ink-muted);
   opacity: 1;
@@ -22,7 +20,6 @@ fieldset {
 input:not([type="submit"], [type="reset"], [type="file"], [type="range"]),
 textarea,
 select {
-
   padding-block: var(--spacing-input-block);
   padding-inline: var(--spacing-input-inline);
   border-radius: var(--radius-input);
@@ -39,9 +36,6 @@ select {
   }
 }
 
-
-
-
 /* Check fields */
 
 input[type="checkbox"],
@@ -50,13 +44,12 @@ input[type="radio"] {
   width: 1em;
   aspect-ratio: 1;
   vertical-align: middle;
-  margin: -.3ex .15em 0 0;
-line-height: inherit;
+  margin: -0.3ex 0.15em 0 0;
+  line-height: inherit;
   appearance: none;
   padding: 0;
   border: var(--border-input) solid var(--color-separator);
   background-color: var(--color-surface-dim);
- 
 }
 
 input[type="radio"] {
@@ -64,14 +57,14 @@ input[type="radio"] {
   &:checked {
     background-color: var(--color-checked);
     border-color: var(--color-accent);
-    box-shadow: inset 0 0 0 0.25em var(--color-accent);
+    box-shadow: inset 0 0 0 0.5ex var(--color-accent);
   }
 }
 
 input[type="checkbox"]:checked {
   background-color: var(--color-accent);
   background-image: var(--icon-check);
-  background-size: var(--icon-size);
+  background-size: contain;
   background-repeat: no-repeat;
   border-color: var(--color-accent);
 }
@@ -87,8 +80,6 @@ select {
   padding-inline-end: calc(var(--icon-size) + var(--spacing-input-inline));
   position: relative;
 }
-
-
 
 select:invalid,
 option:disabled {
@@ -159,6 +150,22 @@ input[type="range"]:active {
   }
 }
 
+
+  input:is([type="datetime-local" i], [type="date" i], [type="month" i], [type="time" i])::-webkit-calendar-picker-indicator {
+  
+  mask-size: 1em auto;
+  mask-position: 50% 50%;
+  mask-repeat: no-repeat;
+  background: currentColor;
+}
+
+input:is([type="datetime-local" i], [type="date" i], [type="month" i])::-webkit-calendar-picker-indicator {
+  mask-image: var(--icon-calendar);
+}
+
+input[type="time" i]::-webkit-calendar-picker-indicator {
+  mask-image: var(--icon-clock);
+}
 
 /* 
 * Equalize heights (Safari bug) *

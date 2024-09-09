@@ -38,8 +38,8 @@ nav[popover] li {
 
 nav[popover] li a {
   /* text-decoration: none; */
- padding-block: calc(var(--spacing-input-block) / 2);
- padding-inline: calc(var(--spacing-input-block) * 3);
+ padding-block: var(--spacing-input-block);
+ padding-inline: var(--spacing-input-inline);
 
 }
 

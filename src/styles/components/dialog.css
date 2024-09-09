@@ -25,6 +25,7 @@ dialog > :where(form, article) > div > * + * {
 dialog header,
 dialog footer {
   padding: var(--spacing-card);
+  padding-block: var(--spacing-xs);
   position: sticky;
   background: var(--color-surface-bright);
   z-index: 1;

@@ -1,66 +1,66 @@
-* {
+:root {
   --color-primary-1: oklch(
     98% calc(0.03 * var(--primary-chroma, 1))
-      calc(var(--primary-hue, 250) + (0 * var(--primary-hue-rotate-by)))
+      calc(var(--primary-hue, 250) + (0 * var(--primary-hue-rotation)))
   );
   --color-primary-2: oklch(
     96% calc(0.06 * var(--primary-chroma, 1))
-      calc(var(--primary-hue, 250) + (1 * var(--primary-hue-rotate-by)))
+      calc(var(--primary-hue, 250) + (1 * var(--primary-hue-rotation)))
   );
   --color-primary-3: oklch(
     93% calc(0.1 * var(--primary-chroma, 1))
-      calc(var(--primary-hue, 250) + (2 * var(--primary-hue-rotate-by)))
+      calc(var(--primary-hue, 250) + (2 * var(--primary-hue-rotation)))
   );
   --color-primary-4: oklch(
     84% calc(0.12 * var(--primary-chroma, 1))
-      calc(var(--primary-hue, 250) + (3 * var(--primary-hue-rotate-by)))
+      calc(var(--primary-hue, 250) + (3 * var(--primary-hue-rotation)))
   );
   --color-primary-5: oklch(
     80% calc(0.16 * var(--primary-chroma, 1))
-      calc(var(--primary-hue, 250) + (4 * var(--primary-hue-rotate-by)))
+      calc(var(--primary-hue, 250) + (4 * var(--primary-hue-rotation)))
   );
   --color-primary-6: oklch(
     71% calc(0.19 * var(--primary-chroma, 1))
-      calc(var(--primary-hue, 250) + (5 * var(--primary-hue-rotate-by)))
+      calc(var(--primary-hue, 250) + (5 * var(--primary-hue-rotation)))
   );
   --color-primary-7: oklch(
     66% calc(0.2 * var(--primary-chroma, 1))
-      calc(var(--primary-hue, 250) + (6 * var(--primary-hue-rotate-by)))
+      calc(var(--primary-hue, 250) + (6 * var(--primary-hue-rotation)))
   );
   --color-primary-8: oklch(
     58% calc(0.21 * var(--primary-chroma, 1))
-      calc(var(--primary-hue, 250) + (7 * var(--primary-hue-rotate-by)))
+      calc(var(--primary-hue, 250) + (7 * var(--primary-hue-rotation)))
   );
   --color-primary-9: oklch(
     53% calc(0.2 * var(--primary-chroma, 1))
-      calc(var(--primary-hue, 250) + (8 * var(--primary-hue-rotate-by)))
+      calc(var(--primary-hue, 250) + (8 * var(--primary-hue-rotation)))
   );
   --color-primary-10: oklch(
     49% calc(0.19 * var(--primary-chroma, 1))
-      calc(var(--primary-hue, 250) + (9 * var(--primary-hue-rotate-by)))
+      calc(var(--primary-hue, 250) + (9 * var(--primary-hue-rotation)))
   );
   --color-primary-11: oklch(
     42% calc(0.17 * var(--primary-chroma, 1))
-      calc(var(--primary-hue, 250) + (10 * var(--primary-hue-rotate-by)))
+      calc(var(--primary-hue, 250) + (10 * var(--primary-hue-rotation)))
   );
   --color-primary-12: oklch(
     35% calc(0.15 * var(--primary-chroma, 1))
-      calc(var(--primary-hue, 250) + (11 * var(--primary-hue-rotate-by)))
+      calc(var(--primary-hue, 250) + (11 * var(--primary-hue-rotation)))
   );
   --color-primary-13: oklch(
     27% calc(0.12 * var(--primary-chroma, 1))
-      calc(var(--primary-hue, 250) + (12 * var(--primary-hue-rotate-by)))
+      calc(var(--primary-hue, 250) + (12 * var(--primary-hue-rotation)))
   );
   --color-primary-14: oklch(
     20% calc(0.09 * var(--primary-chroma, 1))
-      calc(var(--primary-hue, 250) + (13 * var(--primary-hue-rotate-by)))
+      calc(var(--primary-hue, 250) + (13 * var(--primary-hue-rotation)))
   );
   --color-primary-15: oklch(
     16% calc(0.07 * var(--primary-chroma, 1))
-      calc(var(--primary-hue, 250) + (14 * var(--primary-hue-rotate-by)))
+      calc(var(--primary-hue, 250) + (14 * var(--primary-hue-rotation)))
   );
   --color-primary-16: oklch(
     10% calc(0.05 * var(--primary-chroma, 1))
-      calc(var(--primary-hue, 250) + (15 * var(--primary-hue-rotate-by)))
+      calc(var(--primary-hue, 250) + (15 * var(--primary-hue-rotation)))
   );
 }

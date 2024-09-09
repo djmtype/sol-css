@@ -1,9 +1,11 @@
 :root {
-  --border-1: 1px;
-  --border-2: 2px;
+  --border-width-xs: 1px;
+  --border-width-sm: 2px;
+  --border-width-md: 4px;
 
   --radius-square: 0;
   --radius-round: .15em;
   --radius-circle: 1e5px;
   --radius-pill: 1e5px;
+
 }
