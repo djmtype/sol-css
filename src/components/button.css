@@ -3,8 +3,8 @@ input[type="submit"],
 input[type="reset"],
 input[type="clear"],
 input[type="button"],
-[role="button"],
-input[type="file"]::file-selector-button) {
+[role="button"]), ::-webkit-file-upload-button
+ {
   --_display: inline-flex;
   --_text-align: center;
 
@@ -31,8 +31,9 @@ input[type="submit"],
 input[type="reset"],
 input[type="clear"],
 input[type="button"],
-[role="button"],
-input[type="file"]::file-selector-button):not([disabled]) {
+[role="button"]):not([disabled]),
+::-webkit-file-upload-button
+{
   &:hover,
   &:focus-visible {
     background-color: var(--color-primary-9);
@@ -52,6 +53,7 @@ input[type="reset"],
 input[type="clear"],
 input[type="button"],
 [role="button"],
-input[type="file"]::file-selector-button)[disabled] {
+::-webkit-file-upload-button, 
+::file-selector-button)[disabled] {
   opacity: .8;
 }

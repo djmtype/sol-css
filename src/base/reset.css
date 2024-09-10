@@ -211,8 +211,6 @@ select {
   line-height: inherit;
 }
 
-
-
 /* Normalize separator appearance */
 hr {
   border-style: solid;
@@ -226,20 +224,17 @@ button,
 summary,
 [type="submit"],
 [type="reset"],
-[type="button"], 
-[role="button"]
-:where(input[type="file"])::-webkit-file-upload-button,
-:where(input[type="file"])::file-selector-button {
+[type="button"],
+[role="button"],
+::-webkit-file-upload-button,
+::file-selector-button {
   cursor: pointer;
 }
-
-
 
 /* Webkit: Fix search field appearance */
 [type="search"] {
   -webkit-appearance: textfield;
 }
-
 
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -263,8 +258,6 @@ button,
   height: auto;
 }
 
-
-
 /*
 Add the correct vertical alignment
 */
@@ -277,7 +270,6 @@ progress {
 :target {
   scroll-margin-top: 2rlh;
 }
-
 
 /* Provide visual feedback for disabled elements */
 :disabled {

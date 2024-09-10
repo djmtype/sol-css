@@ -1,16 +1,19 @@
 {
   "name": "sol-css",
   "type": "module",
-  "version": "0.0.1",
-  "source": "src/sol.css",
+  "version": "0.0.2",
   "browserslist": [
     "defaults"
   ],
-"scripts": {
-    "start": "parcel",
-    "build": "parcel build"
+  "scripts": {
+    "build:dev": "lightningcss --bundle --targets 'defaults' src/sol.css -o build/sol.css",
+    "build:prod": "lightningcss --bundle --targets 'defaults' src/sol.css -o build/sol.min.css --minify", 
+    "build": "npm run build:dev && npm run build:prod"
   },
   "devDependencies": {
-    "parcel": "latest"
+    "lightningcss": "^1.26.0"
+  },
+  "dependencies": {
+    "lightningcss-cli": "^1.26.0"
   }
 }

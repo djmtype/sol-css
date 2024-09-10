@@ -3,6 +3,8 @@ title: Home
 layout: "@/layouts/BaseLayout.astro"
 ---
 
+<h1 class="bg-surface-bright">SOL THEME</h1>
+
 <button disabled>Disabled Button</button>
 
 <ol>

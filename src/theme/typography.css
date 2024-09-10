@@ -1,6 +1,6 @@
 :root {
-  --font-size: var(--font-size-value, clamp(1rem, 0.93rem + 0.35vw, 1.25rem));
-  --font-scale: var(--font-scale-value, 1.25);
+  --font-size: clamp(1rem, 0.93rem + 0.35vw, 1.25rem);
+  --font-scale: 1.25;
 
   --font-size-xs: calc(var(--font-size) / var(--font-scale));
   --font-size-sm: var(--font-size);

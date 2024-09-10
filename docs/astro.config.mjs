@@ -27,7 +27,7 @@ export default defineConfig({
   // defaultColor: false,  
 //  cssVariablePrefix: '--astro-code-',
       // https://shiki.style/languages
-      langs: ['html', 'markdown'],
+      // langs: ['html', 'markdown'],
       // Enable word wrap to prevent horizontal scrolling
       wrap: true,
       // Add custom transformers: https://shiki.style/guide/transformers
