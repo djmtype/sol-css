@@ -570,8 +570,10 @@
 @layer components {
   :where(button, input[type="submit"], input[type="reset"], input[type="clear"], input[type="button"], [role="button"]) {
     --_display: inline-flex;
+    --_justify-items: center;
     --_text-align: center;
     display: var(--_display);
+    justify-content: var(--_justify-items);
     padding-block: var(--spacing-button-block);
     padding-inline: var(--spacing-button-inline);
     border-width: var(--border-button);
@@ -588,8 +590,10 @@
 
   ::-webkit-file-upload-button {
     --_display: inline-flex;
+    --_justify-items: center;
     --_text-align: center;
     display: var(--_display);
+    justify-content: var(--_justify-items);
     padding-block: var(--spacing-button-block);
     padding-inline: var(--spacing-button-inline);
     border-width: var(--border-button);

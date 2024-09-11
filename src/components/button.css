@@ -6,9 +6,13 @@ input[type="button"],
 [role="button"]), ::-webkit-file-upload-button
  {
   --_display: inline-flex;
+  --_justify-content: center;
+  --_align-items: center;
   --_text-align: center;
 
   display: var(--_display);
+  align-items: var(--_align-items);
+  justify-content: var(--_justify-content);
   font-family: inherit;
   transition: all 200ms;
   padding-block: var(--spacing-button-block);
