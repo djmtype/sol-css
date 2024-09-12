@@ -18,7 +18,7 @@
   --spacing-5xl: calc(var(--spacing-4xl) * var(--spacing-scale));
   --spacing-6xl: calc(var(--spacing-5xl) * var(--spacing-scale));
 
-  --spacing-flow: 1.5em;
+  --spacing-flow: 1.0em;
 }
 
 

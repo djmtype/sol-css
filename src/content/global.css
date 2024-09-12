@@ -129,7 +129,6 @@
 }
 
 :where(figcaption) {
-  --spacing-flow: 1em;
   font-size: var(--font-size-xs);
   font-style: italic;
   margin-block-start: var(--spacing-flow);
