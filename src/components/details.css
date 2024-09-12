@@ -73,6 +73,10 @@ details > div {
   border: var(--border-input) solid var(--color-separator);
 }
 
+details > div > * + * {
+  margin-block-start: var(--spacing-flow, 1.0em);
+}
+
 
 
 details[open] > div {

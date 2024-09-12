@@ -83,7 +83,7 @@ blockquote,
 dl,
 ul,
 ol,
-hr {
+hr, pre {
   margin-block: 0;
 }
 
