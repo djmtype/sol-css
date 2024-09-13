@@ -56,13 +56,10 @@
   text-decoration-style: double;
 }
 
-
 :where(code) {
   background-color: var(--color-surface-dim);
   border-radius: var(--radius-badge-size);
 }
-
-
 
 :where(code, kbd) {
   color: var(--color-ink-contrast);
@@ -75,7 +72,6 @@
   border-radius: unset;
   padding-block: unset;
   padding-inline: unset;
-  
 }
 
 :where(kbd) {
@@ -103,7 +99,6 @@
   padding-inline-start: 2em;
 }
 
-
 :where(ol, ul):not([role="list"]) :where(ol, ul):not([role="list"]) {
   padding-inline-start: 1em;
 }
@@ -116,7 +111,6 @@
   list-style-type: disc;
 }
 
-
 :where(ol, ul):not([role="list"]) li::marker {
   color: var(--color-ink-primary);
 }
@@ -125,7 +119,6 @@
   margin-inline-start: 0;
   padding-inline-start: 1em;
   border-inline-start: var(--border-width-md) solid var(--color-accent);
-
 }
 
 :where(figcaption) {
@@ -133,9 +126,9 @@
   font-style: italic;
   margin-block-start: var(--spacing-flow);
   text-align: center;
-  }
+}
 
-:focus-visible, [id]:target {
+:focus-visible {
   outline-width: var(--border-focus-size);
   outline-style: solid;
   outline-color: var(--color-accent);
@@ -143,9 +136,13 @@
   transition: outline-offset 200ms;
 }
 
-::selection {
-
-  background: color-mix(in oklch, var(--color-primary-8), transparent 70%);
+@media (prefers-reduced-motion: no-preference) {
+  :target {
+    outline-width: 0;
+    animation: target 1s ease-out 2;
+  }
 }
 
-
+::selection {
+  background: color-mix(in oklch, var(--color-primary-8), transparent 70%);
+}

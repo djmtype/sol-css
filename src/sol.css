@@ -3,6 +3,7 @@
 @import "base/reset.css" layer(base);
 
 @import "settings.css" layer(settings);
+@import "theme/breakpoint.css" layer(theme);
 @import "theme/color.css" layer(theme);
 @import "theme/typography.css" layer(theme);
 @import "theme/spacing.css" layer(theme);

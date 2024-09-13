@@ -31,7 +31,7 @@
     margin-inline: 0;
   }
 
-  h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, ul, ol, hr {
+  h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, ul, ol, hr, pre {
     margin-block: 0;
   }
 
@@ -215,6 +215,16 @@
 
 @layer theme {
   :root {
+    --breakpoint-xs: 36rem;
+    --breakpoint-sm: 48rem;
+    --breakpoint-md: 64rem;
+    --breakpoint-lg: 80rem;
+    --breakpoint-xl: 92.5rem;
+    --width-xs: 24rem;
+    --width-sm: 36rem;
+    --width-md: 48rem;
+    --width-lg: 64rem;
+    --width-xl: 80rem;
     --hue-red: 25;
     --hue-pink: 350;
     --hue-purple: 310;
@@ -342,7 +352,7 @@
     --spacing-4xl: calc(var(--spacing-3xl) * var(--spacing-scale));
     --spacing-5xl: calc(var(--spacing-4xl) * var(--spacing-scale));
     --spacing-6xl: calc(var(--spacing-5xl) * var(--spacing-scale));
-    --spacing-flow: 1.5em;
+    --spacing-flow: 1em;
     --border-width-xs: 1px;
     --border-width-sm: 2px;
     --border-width-md: 4px;
@@ -391,6 +401,20 @@
     100% {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+
+  @keyframes target {
+    0% {
+      outline-offset: -.25em;
+      outline-color: var(--color-accent);
+      outline-width: .1em;
+    }
+
+    100% {
+      outline-offset: 2em;
+      outline-width: 1em;
+      outline-color: rgba(0, 0, 0, 0);
     }
   }
 
@@ -539,19 +563,10 @@
   }
 
   :where(figcaption) {
-    --spacing-flow: 1em;
     font-size: var(--font-size-xs);
     text-align: center;
     margin-block-start: var(--spacing-flow);
     font-style: italic;
-  }
-
-  [id]:target {
-    outline-width: var(--border-focus-size);
-    outline-style: solid;
-    outline-color: var(--color-accent);
-    outline-offset: var(--border-focus-size);
-    transition: outline-offset .2s;
   }
 
   :focus-visible {
@@ -562,6 +577,13 @@
     transition: outline-offset .2s;
   }
 
+  @media (prefers-reduced-motion: no-preference) {
+    :target {
+      outline-width: 0;
+      animation: 1s ease-out 2 target;
+    }
+  }
+
   ::selection {
     background: color-mix(in oklch, var(--color-primary-8), transparent 70%);
   }
@@ -570,10 +592,12 @@
 @layer components {
   :where(button, input[type="submit"], input[type="reset"], input[type="clear"], input[type="button"], [role="button"]) {
     --_display: inline-flex;
-    --_justify-items: center;
+    --_justify-content: center;
+    --_align-items: center;
     --_text-align: center;
     display: var(--_display);
-    justify-content: var(--_justify-items);
+    align-items: var(--_align-items);
+    justify-content: var(--_justify-content);
     padding-block: var(--spacing-button-block);
     padding-inline: var(--spacing-button-inline);
     border-width: var(--border-button);
@@ -590,10 +614,12 @@
 
   ::-webkit-file-upload-button {
     --_display: inline-flex;
-    --_justify-items: center;
+    --_justify-content: center;
+    --_align-items: center;
     --_text-align: center;
     display: var(--_display);
-    justify-content: var(--_justify-items);
+    align-items: var(--_align-items);
+    justify-content: var(--_justify-content);
     padding-block: var(--spacing-button-block);
     padding-inline: var(--spacing-button-inline);
     border-width: var(--border-button);
@@ -716,6 +742,10 @@
     padding: var(--spacing-input-inline);
     border: var(--border-input) solid var(--color-separator);
     margin-block-start: var(--spacing-4xs);
+  }
+
+  details > div > * + * {
+    margin-block-start: var(--spacing-flow);
   }
 
   details[open] > div {
