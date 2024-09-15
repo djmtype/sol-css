@@ -7,10 +7,10 @@
   --breakpoint-xl: 92.5rem;
 
 
-  --width-xs: 24rem;
-  --width-sm: 36rem;
-  --width-md: 48rem;
-  --width-lg: 64rem;
-  --width-xl: 80rem;
+  --width-xs: 20ch;
+  --width-sm: 30ch;
+  --width-md: 45ch;
+  --width-lg: 60ch;
+  --width-xl: 72ch;
 
 }

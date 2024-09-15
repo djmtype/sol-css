@@ -1,7 +1,8 @@
 :root {
-  --border-width-xs: 1px;
-  --border-width-sm: 2px;
-  --border-width-md: 4px;
+  --border-width-none: 0;
+  --border-width-hairline: 1px;
+  --border-width-thin: max(.125rem, 2px);
+  --border-width-thick: max(.25rem, 4px);
 
   --radius-square: 0;
   --radius-round: .15em;

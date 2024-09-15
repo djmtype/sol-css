@@ -118,7 +118,7 @@
 :where(blockquote) {
   margin-inline-start: 0;
   padding-inline-start: 1em;
-  border-inline-start: var(--border-width-md) solid var(--color-accent);
+  border-inline-start: var(--border-width-thick) solid var(--color-accent);
 }
 
 :where(figcaption) {
@@ -128,7 +128,7 @@
   text-align: center;
 }
 
-:focus-visible {
+:focus-visible, :target {
   outline-width: var(--border-focus-size);
   outline-style: solid;
   outline-color: var(--color-accent);

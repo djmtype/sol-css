@@ -220,11 +220,11 @@
     --breakpoint-md: 64rem;
     --breakpoint-lg: 80rem;
     --breakpoint-xl: 92.5rem;
-    --width-xs: 24rem;
-    --width-sm: 36rem;
-    --width-md: 48rem;
-    --width-lg: 64rem;
-    --width-xl: 80rem;
+    --width-xs: 20ch;
+    --width-sm: 30ch;
+    --width-md: 45ch;
+    --width-lg: 60ch;
+    --width-xl: 72ch;
     --hue-red: 25;
     --hue-pink: 350;
     --hue-purple: 310;
@@ -353,9 +353,10 @@
     --spacing-5xl: calc(var(--spacing-4xl) * var(--spacing-scale));
     --spacing-6xl: calc(var(--spacing-5xl) * var(--spacing-scale));
     --spacing-flow: 1em;
-    --border-width-xs: 1px;
-    --border-width-sm: 2px;
-    --border-width-md: 4px;
+    --border-width-none: 0;
+    --border-width-hairline: 1px;
+    --border-width-thin: max(.125rem, 2px);
+    --border-width-thick: max(.25rem, 4px);
     --radius-square: 0;
     --radius-round: .15em;
     --radius-circle: 100000px;
@@ -557,7 +558,7 @@
   }
 
   :where(blockquote) {
-    border-inline-start: var(--border-width-md) solid var(--color-accent);
+    border-inline-start: var(--border-width-thick) solid var(--color-accent);
     margin-inline-start: 0;
     padding-inline-start: 1em;
   }
@@ -567,6 +568,14 @@
     text-align: center;
     margin-block-start: var(--spacing-flow);
     font-style: italic;
+  }
+
+  :target {
+    outline-width: var(--border-focus-size);
+    outline-style: solid;
+    outline-color: var(--color-accent);
+    outline-offset: var(--border-focus-size);
+    transition: outline-offset .2s;
   }
 
   :focus-visible {
@@ -957,7 +966,7 @@
 
   thead {
     background-color: var(--color-surface-dim);
-    border-block-end: var(--border-width-sm) solid var(--color-separator);
+    border-block-end: var(--border-width-thin) solid var(--color-separator);
     font-weight: 600;
   }
 
@@ -970,7 +979,7 @@
   }
 
   tbody tr {
-    border-block-start: var(--border-width-xs) solid var(--color-separator);
+    border-block-start: var(--border-width-hairline) solid var(--color-separator);
   }
 
   th, td {
@@ -979,7 +988,7 @@
   }
 
   tfoot {
-    border-block-start: var(--border-width-sm) solid var(--color-separator);
+    border-block-start: var(--border-width-thin) solid var(--color-separator);
     background-color: var(--color-surface-dim);
     border-block-end: 0;
     font-weight: 600;
@@ -1238,7 +1247,7 @@
 
   progress {
     appearance: none;
-    border: var(--border-width-xs) solid var(--color-separator);
+    border: var(--border-width-hairline) solid var(--color-separator);
     width: 100%;
     border-radius: var(--radius-pill);
     background-color: var(--color-surface-bright);

@@ -4,7 +4,7 @@ progress {
   appearance: none;
   width: 100%;
 
-  border: var(--border-width-xs) solid var(--color-separator);
+  border: var(--border-width-hairline) solid var(--color-separator);
   block-size: 1rem;
   /* inline-size: min(100%, 15rem); */
   border-radius: var(--radius-pill);

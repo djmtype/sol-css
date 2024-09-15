@@ -24,7 +24,7 @@ left: 0;
 
 thead {
   background-color: var(--color-surface-dim);
-  border-block-end: var(--border-width-sm) solid var(--color-separator);
+  border-block-end: var(--border-width-thin) solid var(--color-separator);
   font-weight: 600;
 }
 
@@ -39,7 +39,7 @@ th {
 }
 
 tbody tr {
-  border-block-start: var(--border-width-xs) solid var(--color-separator);
+  border-block-start: var(--border-width-hairline) solid var(--color-separator);
 }
 
 
@@ -52,7 +52,7 @@ th, td {
 }
 
 tfoot {
-  border-block-start: var(--border-width-sm) solid var(--color-separator);
+  border-block-start: var(--border-width-thin) solid var(--color-separator);
   border-block-end: 0;
   background-color: var(--color-surface-dim);
   font-weight: 600;
