@@ -1,4 +1,4 @@
-:root {
+* {
   --color-primary-1: oklch(
     98% calc(0.03 * var(--primary-chroma, 1))
       calc(var(--primary-hue, 250) + (0 * var(--primary-hue-rotation)))

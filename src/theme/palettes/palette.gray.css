@@ -1,4 +1,4 @@
-:root {
+* {
   --color-gray-1: oklch(
     98% calc(0.03 * var(--gray-chroma, 0))
       calc(var(--gray-hue, 0) + (0 * var(--gray-hue-rotation)))
