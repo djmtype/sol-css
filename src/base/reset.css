@@ -156,7 +156,7 @@ sup {
 
 /* Add browser consistency for code */
 code {
-  font-family: monospace-ui, monospace;
+  font-family: ui-monospace, monospace;
   font-size: 1em;
 }
 

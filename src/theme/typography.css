@@ -10,4 +10,10 @@
   --font-size-2xl: calc(var(--font-size-xl) * var(--font-scale));
   --font-size-3xl: calc(var(--font-size-2xl) * var(--font-scale));
   --font-size-4xl: calc(var(--font-size-3xl) * var(--font-scale));
+
+  --font-size-smaller: 75%;
+
+  --font-family-sans: system-ui, sans-serif;
+  --font-family-mono: ui-monospace, monospace;
+  --font-family-serif: ui-serif, serif;
 }

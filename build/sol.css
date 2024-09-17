@@ -74,7 +74,7 @@
   }
 
   code {
-    font-family: monospace-ui, monospace;
+    font-family: ui-monospace, monospace;
     font-size: 1em;
   }
 
@@ -337,6 +337,10 @@
     --font-size-2xl: calc(var(--font-size-xl) * var(--font-scale));
     --font-size-3xl: calc(var(--font-size-2xl) * var(--font-scale));
     --font-size-4xl: calc(var(--font-size-3xl) * var(--font-scale));
+    --font-size-smaller: 75%;
+    --font-family-sans: system-ui, sans-serif;
+    --font-family-mono: ui-monospace, monospace;
+    --font-family-serif: ui-serif, serif;
     --spacing-size: clamp(1rem, calc(.93rem + .35vw), 1.25rem);
     --spacing-scale: 1.25;
     --spacing-4xs: calc(var(--spacing-3xs) / var(--spacing-scale));
