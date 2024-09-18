@@ -1,7 +1,7 @@
 {
   "name": "sol-css",
   "type": "module",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "browserslist": [
     "defaults"
   ],

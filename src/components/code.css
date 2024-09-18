@@ -6,10 +6,10 @@
   --astro-code-token-comment: var(--color-ink-muted);
 }
 
-span[style*="--astro-code-token-comment"] {
+/* span[style*="--astro-code-token-comment"] {
   display: block;
   width: 100%;
-}
+} */
 
 pre {
   padding: var(--spacing-card);

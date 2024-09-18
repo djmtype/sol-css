@@ -17,7 +17,7 @@ input[type="button"],
   transition: all 200ms;
   padding-block: var(--spacing-button-block);
   padding-inline: var(--spacing-button-inline);
-  border-width: var(--border-button);
+  border-width: var(--border-width-button);
   border-style: solid;
   border-color: var(--color-primary-10);
   background-color: var(--color-primary-10);

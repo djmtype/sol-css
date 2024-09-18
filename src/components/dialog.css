@@ -5,7 +5,7 @@ dialog {
   transition-duration: 400ms;
   transition-behavior: allow-discrete;
   overscroll-behavior: contain;
-  border: var(--border-input) solid var(--color-separator);
+  border: var(--border-width-input) solid var(--color-separator);
   border-radius: var(--radius-input);
   box-shadow: var(--shadow-3);
   background-color: var(--color-surface-bright);
@@ -36,7 +36,7 @@ dialog header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-block-end: var(--border-input) solid var(--color-separator);
+  border-block-end: var(--border-width-input) solid var(--color-separator);
 }
 
 dialog footer {
@@ -45,7 +45,7 @@ dialog footer {
   justify-content: center;
   align-items: center;
   gap: var(--spacing-4xs);
-  border-block-start: var(--border-input) solid var(--color-separator);
+  border-block-start: var(--border-width-input) solid var(--color-separator);
 }
 
 dialog > :where(form, article) > div {

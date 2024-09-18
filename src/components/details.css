@@ -30,7 +30,7 @@ details > summary:not([role="button"]) {
   padding-inline: var(--spacing-input-inline);
   padding-inline-end: calc(var(--spacing-input-inline) * 2 + var(--icon-size));
   padding-block: var(--spacing-input-block);
-  border: var(--border-input) solid var(--color-separator);
+  border: var(--border-width-input) solid var(--color-separator);
   border-radius: var(--radius-input);
 }
 
@@ -70,7 +70,7 @@ details > div {
   background: var(--color-surface-bright);
   margin-block-start: var(--spacing-4xs);
   padding: var(--spacing-input-inline);
-  border: var(--border-input) solid var(--color-separator);
+  border: var(--border-width-input) solid var(--color-separator);
 }
 
 details > div > * + * {

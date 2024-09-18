@@ -11,7 +11,7 @@ details {
   border-radius: var(--radius-input);
   /* overflow: clip; */
   background: var(--_background);
-  border: var(--border-input) solid var(--_border-color);
+  border: var(--border-width-input) solid var(--_border-color);
   position: relative;
   &:hover,
   &:focus-visible, &:focus-within {
@@ -30,7 +30,7 @@ details[open] {
 details > summary {
   padding-block: var(--_padding-block);
   padding-inline: var(--_padding-inline);
-  /* border: var(--border-input) solid var(--color-separator); */
+  /* border: var(--border-width-input) solid var(--color-separator); */
 
   display: list-item;
   border-radius: var(--radius-input);

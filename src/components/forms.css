@@ -23,7 +23,7 @@ select {
   padding-block: var(--spacing-input-block);
   padding-inline: var(--spacing-input-inline);
   border-radius: var(--radius-input);
-  border: var(--border-input) solid var(--color-separator);
+  border: var(--border-width-input) solid var(--color-separator);
   background-color: var(--color-surface-dim);
 }
 
@@ -51,7 +51,7 @@ input[type="radio"] {
   line-height: inherit;
   appearance: none;
   padding: 0;
-  border: var(--border-input) solid var(--color-separator);
+  border: var(--border-width-input) solid var(--color-separator);
   background-color: var(--color-surface-dim);
 }
 
@@ -182,7 +182,7 @@ input:is(
   ) {
   height: calc(
     (var(--font-size-sm) * 1.5) + (var(--spacing-input-block) * 2) +
-      (var(--border-input) * 2)
+      (var(--border-width-input) * 2)
   );
 }
 
@@ -204,6 +204,6 @@ input:not(
   ) {
   min-height: calc(
     (var(--font-size-sm) * 1.5) + (var(--spacing-input-block) * 2) +
-      (var(--border-input) * 2)
+      (var(--border-width-input) * 2)
   );
 } */

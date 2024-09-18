@@ -44,7 +44,7 @@
   padding-inline: var(--spacing-badge-inline);
 }
 
-:where(strike) {
+:where(strike, del) {
   --utility-hue: var(--hue-red);
   text-decoration-line: line-through;
   text-decoration-color: var(--color-utility-8);
@@ -58,7 +58,7 @@
 
 :where(code) {
   background-color: var(--color-surface-dim);
-  border-radius: var(--radius-badge-size);
+  border-radius: var(--radius-badge);
 }
 
 :where(code, kbd) {
@@ -75,8 +75,8 @@
 }
 
 :where(kbd) {
-  outline: var(--border-separator) solid var(--color-separator);
-  outline-offset: var(--border-separator);
+  outline: var(--border-width-separator) solid var(--color-separator);
+  outline-offset: var(--border-width-separator);
 }
 
 :where(hr) {
@@ -129,10 +129,10 @@
 }
 
 :focus-visible, :target {
-  outline-width: var(--border-focus-size);
+  outline-width: var(--border-width-focus);
   outline-style: solid;
   outline-color: var(--color-accent);
-  outline-offset: var(--border-focus-size);
+  outline-offset: var(--border-width-focus);
   transition: outline-offset 200ms;
 }
 

@@ -1,6 +1,6 @@
 
 [popover] {
-  border: var(--border-input) solid var(--color-separator);
+  border: var(--border-width-input) solid var(--color-separator);
   border-radius: var(--radius-input);
   box-shadow: var(--shadow-3);
   background-color: var(--color-surface-bright);
