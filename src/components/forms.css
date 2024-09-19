@@ -229,7 +229,7 @@ input:not(
 
 form {
   --_form-label-gap: var(--spacing-4xs);
-  --_form-flow: 1em;
+  --_form-flow: var(--spacing-flow, 1em);
 }
 form label:has(input:not([type="checkbox"], [type="radio"]), textarea, select) {
   display: flex;
@@ -271,7 +271,8 @@ form fieldset > legend + * {
   margin-block-start: var(--_form-label-gap);
 }
 
-form div:has(> label) {
+/* Form inputs within div */
+form div:has(> label + input) {
   display: flex;
   flex-direction: column;
   gap: var(--_form-label-gap);
