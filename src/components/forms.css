@@ -27,8 +27,11 @@ select {
   background-color: var(--color-surface-dim);
 }
 
-:where(input:not([type="submit"], [type="reset"], [type="file"], [type="range"]), textarea, select):not([disabled]) {
-
+:where(
+    input:not([type="submit"], [type="reset"], [type="file"], [type="range"]),
+    textarea,
+    select
+  ):not([disabled]) {
   &:focus-visible {
     color: var(--color-ink-contrast);
     background-color: var(--color-surface-bright);
@@ -130,11 +133,10 @@ input[type="range"]:focus-visible {
 input[type="range"]:focus-visible::-webkit-slider-thumb,
 input[type="range"]:focus-visible::-moz-range-thumb {
   border: 0;
-  --_outline-size: 2px;
-  outline-width: var(--_outline-size);
+  outline-width: var(--border-width-focus);
   outline-style: solid;
-  outline-color: var(--color-focus);
-  outline-offset: var(--_outline-size);
+  outline-color: var(--color-focus-outline);
+  outline-offset: var(--border-width-focus);
 }
 
 input[type="range"]:focus-within,
@@ -153,21 +155,39 @@ input[type="range"]:active {
   }
 }
 
-
-  input:is([type="datetime-local" i], [type="date" i], [type="month" i], [type="time" i])::-webkit-calendar-picker-indicator {
-  
+input:is(
+    [type="datetime-local" i],
+    [type="date" i],
+    [type="month" i],
+    [type="time" i]
+  )::-webkit-calendar-picker-indicator {
   mask-size: 1em auto;
   mask-position: 50% 50%;
   mask-repeat: no-repeat;
   background: currentColor;
 }
 
-input:is([type="datetime-local" i], [type="date" i], [type="month" i])::-webkit-calendar-picker-indicator {
+input:is(
+    [type="datetime-local" i],
+    [type="date" i],
+    [type="month" i]
+  )::-webkit-calendar-picker-indicator {
   mask-image: var(--icon-calendar);
 }
 
 input[type="time" i]::-webkit-calendar-picker-indicator {
   mask-image: var(--icon-clock);
+}
+
+[type="file"]::file-selector-button {
+  margin-inline-end: 1em;
+}
+
+input[type="color"] {
+  appearance: none;
+  height: calc(
+    1em * 1.5 + var(--spacing-input-block) * 2 + var(--border-width-input) * 2
+  );
 }
 
 /* 
@@ -187,9 +207,8 @@ input:is(
 }
 
 input[disabled] {
-  opacity: .8;
+  opacity: 0.8;
 }
-
 
 /* Match other input heights */
 
@@ -207,3 +226,53 @@ input:not(
       (var(--border-width-input) * 2)
   );
 } */
+
+form {
+  --_form-label-gap: var(--spacing-4xs);
+  --_form-flow: 1em;
+}
+form label:has(input:not([type="checkbox"], [type="radio"]), textarea, select) {
+  display: flex;
+  flex-direction: column;
+  gap: var(--_form-label-gap);
+  /* button[type="submit"],
+  input:not([type="checkbox"], [type="radio"]),
+  select,
+  textarea {
+    inline-size: 100%;
+  } */
+}
+
+form {
+  input:not(
+      [type="checkbox"],
+      [type="radio"],
+      [type="button"],
+      [type="submit"],
+      [type="reset"],
+      [type="file"]
+    ),
+  textarea,
+  select {
+    inline-size: 100%;
+  }
+}
+
+form label:has(input:is([type="checkbox"], [type="radio"])) {
+  display: block;
+}
+
+form > * + *,
+form > fieldset:not(:has(legend)) > * + * {
+  margin-block-start: var(--_form-flow);
+}
+
+form fieldset > legend + * {
+  margin-block-start: var(--_form-label-gap);
+}
+
+form div:has(> label) {
+  display: flex;
+  flex-direction: column;
+  gap: var(--_form-label-gap);
+}

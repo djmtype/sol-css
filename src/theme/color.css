@@ -5,7 +5,7 @@
 
 /* Color controls */
 :root {
-  --primary-hue: var(--hue-blue);
+  --primary-hue: var(--hue-indigo);
   --primary-hue-rotation: 0;
   --primary-chroma: 1;
 
@@ -24,12 +24,12 @@
 
   --color-ink-contrast: light-dark(var(--color-gray-16), var(--color-gray-1));
 
-  --color-ink-highlight: light-dark(var(--color-gray-16), var(--color-gray-16));
+  /* --color-ink-highlight: light-dark(var(--color-gray-16), var(--color-gray-16)); */
 
 
   --color-ink-muted: light-dark(var(--color-gray-10), var(--color-gray-5));
 
-  --color-ink-inverse: light-dark(var(--color-gray-2), var(--color-gray-14));
+  /* --color-ink-inverse: light-dark(var(--color-gray-2), var(--color-gray-14)); */
 
   --color-ink-primary: light-dark(
     var(--color-primary-10),
@@ -54,7 +54,7 @@
 
   /* focus state */
 
-  --color-focus: light-dark(var(--color-primary-10), var(--color-primary-6));
+  --color-focus-outline: light-dark(var(--color-primary-10), var(--color-primary-6));
 
   /* form controls */
 
@@ -68,13 +68,13 @@
   --color-anchor: light-dark(var(--color-primary-10), var(--color-primary-5));
 
   --color-anchor-hover: light-dark(
-    var(--color-primary-9),
-    var(--color-primary-4)
+    var(--color-primary-8),
+    var(--color-primary-3)
   );
 
   --color-anchor-active: light-dark(
-    var(--color-primary-11),
-    var(--color-primary-6)
+    var(--color-primary-12),
+    var(--color-primary-7)
   );
 }
 
@@ -85,6 +85,7 @@
     var(--color-utility-10),
     var(--color-utility-5)
   );
+
 
   --color-surface-utility-highlight: light-dark(var(--color-utility-3), var(--color-utility-4));
 }
