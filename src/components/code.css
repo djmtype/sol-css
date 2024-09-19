@@ -12,7 +12,7 @@
 } */
 
 pre {
-  padding: var(--spacing-card);
-  border-radius: var(--radius-card);
+  padding: var(--spacing-panel);
+  border-radius: var(--radius-panel);
   
 }

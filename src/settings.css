@@ -7,6 +7,8 @@
   --font-scale: 1.25;
   --spacing-scale: 1.2;
 
+  --spacing-flow: 1em;
+
   --border-width-focus: min(calc(var(--border-width-default) * 2), 6px);
 
   --border-width-separator: var(--border-width-default);
@@ -33,8 +35,8 @@
   --border-width-button: var(--border-width-default);
 
   /* Basic Card */
-  --spacing-card: var(--spacing-md);
-  --radius-card: var(--radius-default);
+  --spacing-panel: var(--spacing-md);
+  --radius-panel: var(--radius-default);
 
   /* Table */
   --spacing-table: var(--spacing-sm);

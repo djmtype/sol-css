@@ -31,8 +31,8 @@
   --radius-button: var(--radius-default);
   --border-width-button: var(--border-default);
 
-  --spacing-card: var(--spacing-sm);
-  --radius-card: var(--border-default);
+  --spacing-panel: var(--spacing-sm);
+  --radius-panel: var(--border-default);
 
   --spacing-table: var(--spacing-xs);
   

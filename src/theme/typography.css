@@ -2,14 +2,14 @@
   --font-size: clamp(1rem, 0.93rem + 0.35vw, 1.25rem);
   --font-scale: 1.25;
 
-  --font-size-xs: calc(var(--font-size) / var(--font-scale));
-  --font-size-sm: var(--font-size);
-  --font-size-md: calc(var(--font-size-sm) * var(--font-scale));
-  --font-size-lg: calc(var(--font-size-md) * var(--font-scale));
-  --font-size-xl: calc(var(--font-size-lg) * var(--font-scale));
-  --font-size-2xl: calc(var(--font-size-xl) * var(--font-scale));
-  --font-size-3xl: calc(var(--font-size-2xl) * var(--font-scale));
-  --font-size-4xl: calc(var(--font-size-3xl) * var(--font-scale));
+  --font-size-00: calc(var(--font-size) / var(--font-scale));
+  --font-size-0: var(--font-size);
+  --font-size-1: calc(var(--font-size-0) * var(--font-scale));
+  --font-size-2: calc(var(--font-size-1) * var(--font-scale));
+  --font-size-3: calc(var(--font-size-2) * var(--font-scale));
+  --font-size-4: calc(var(--font-size-3) * var(--font-scale));
+  --font-size-5: calc(var(--font-size-4) * var(--font-scale));
+  --font-size-6: calc(var(--font-size-5) * var(--font-scale));
 
   --font-size-smaller: 75%;
 

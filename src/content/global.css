@@ -14,27 +14,27 @@
 }
 
 :where(body) {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-0);
 }
 
 :where(h1) {
-  font-size: var(--font-size-2xl);
+  font-size: var(--font-size-4);
 }
 
 :where(h2) {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-3);
 }
 
 :where(h3) {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-2);
 }
 
 :where(h4) {
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-1);
 }
 
 :where(h5) {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-0);
 }
 
 :where(mark) {
@@ -122,7 +122,7 @@
 }
 
 :where(figcaption) {
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-00);
   font-style: italic;
   margin-block-start: var(--spacing-flow);
   text-align: center;

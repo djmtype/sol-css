@@ -181,7 +181,7 @@ input:is(
     [type="month"]
   ) {
   height: calc(
-    (var(--font-size-sm) * 1.5) + (var(--spacing-input-block) * 2) +
+    (var(--font-size-0) * 1.5) + (var(--spacing-input-block) * 2) +
       (var(--border-width-input) * 2)
   );
 }
@@ -203,7 +203,7 @@ input:not(
     [type="radio"]
   ) {
   min-height: calc(
-    (var(--font-size-sm) * 1.5) + (var(--spacing-input-block) * 2) +
+    (var(--font-size-0) * 1.5) + (var(--spacing-input-block) * 2) +
       (var(--border-width-input) * 2)
   );
 } */

@@ -24,7 +24,7 @@ dialog > :where(form, article) > div > * + * {
 
 dialog header,
 dialog footer {
-  padding: var(--spacing-card);
+  padding: var(--spacing-panel);
   padding-block: var(--spacing-xs);
   position: sticky;
   background: var(--color-surface-bright);
@@ -49,11 +49,11 @@ dialog footer {
 }
 
 dialog > :where(form, article) > div {
-  padding: var(--spacing-card);
+  padding: var(--spacing-panel);
 }
 
 dialog header > h2 {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-2);
 }
 
 dialog header > button {
