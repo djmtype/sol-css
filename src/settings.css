@@ -1,12 +1,14 @@
 :root {
+
   /* General Typography */
 
-  --font-family-default: var(--font-family-sans);
   /* --font-scale-default: 1.25; */
   --font-size-default: clamp(1rem, 0.93rem + 0.35vw, 1.25rem);
+  --font-family-default: var(--font-family-sans);
   --font-size-code: .9em;
 
   /* General Spacing */
+
   /* --spacing-scale-default: 1.25; */
   --spacing-size-default: clamp(1rem, 0.93rem + 0.35vw, 1.25rem);
   --spacing-gutter: var(--spacing-lg);
@@ -14,37 +16,42 @@
   --spacing-sibling: var(--spacing-4xs);
 
   /* General Border */
+
   --border-width-default: var(--border-width-hairline);
   --border-width-focus: min(calc(var(--border-width-default) * 2), 6px);
   --border-width-separator: var(--border-width-default);
   --radius-default: var(--radius-round);
 
   /* Inline Text Elements */
+
   --spacing-badge-block: 0.15ex;
   --spacing-badge-inline: 0.15em;
   --radius-badge: 0.15em;
 
   /* Inputs (Sans Buttons)  */
+
   --spacing-input-block: var(--spacing-3xs);
   --spacing-input-inline: var(--spacing-xs);
-
   --radius-input: var(--radius-default);
   --border-width-input: var(--border-width-default);
 
   /* Buttons */
+
   --spacing-button-block: var(--spacing-3xs);
   --spacing-button-inline: var(--spacing-lg);
-
   --radius-button: var(--radius-default);
   --border-width-button: var(--border-width-default);
 
   /* Basic Card */
+
   --spacing-panel: var(--spacing-md);
   --radius-panel: var(--radius-default);
 
   /* Table */
+
   --spacing-table: var(--spacing-sm);
 
   /* Misc */
+
   --icon-size: 1em;
 }
