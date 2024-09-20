@@ -8,6 +8,7 @@
   --spacing-scale: 1.2;
 
   --spacing-flow: 1em;
+  --spacing-sibling: var(--spacing-4xs);
 
   --border-width-focus: min(calc(var(--border-width-default) * 2), 6px);
 

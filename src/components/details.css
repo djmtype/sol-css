@@ -68,7 +68,7 @@ details[open] > summary {
 details > div {
   border-radius: var(--radius-input);
   background: var(--color-surface-bright);
-  margin-block-start: var(--spacing-4xs);
+  margin-block-start: var(--spacing-sibling);
   padding: var(--spacing-input-inline);
   border: var(--border-width-input) solid var(--color-separator);
 }

@@ -15,7 +15,7 @@
 nav[popover] {
   position: absolute;
   margin: 0;
-  margin-block-start: var(--spacing-4xs);
+  margin-block-start: var(--spacing-sibling);
   position-anchor: --menu;
   left: anchor(--menu left);
   top: anchor(--menu bottom);
@@ -49,7 +49,7 @@ nav[popover] li a {
 [popover] {
   /* display: none; */
   opacity: 0;
-  transform: translateY(calc(-1 * var(--spacing-4xs)));
+  transform: translateY(calc(-1 * var(--spacing-sibling)));
   transform-origin: center top;
   transition-duration: 400ms;
   transition-behavior: allow-discrete;
@@ -65,7 +65,7 @@ nav[popover] li a {
   transform: translateY(0);
   @starting-style {
     opacity: 0;
-    transform: translateY(calc(-1 * var(--spacing-4xs)));
+    transform: translateY(calc(-1 * var(--spacing-sibling)));
   }
 }
 

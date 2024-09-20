@@ -223,19 +223,12 @@ input:not(
 } */
 
 form {
-  --_form-label-gap: var(--spacing-4xs);
   --_form-flow: var(--spacing-flow, 1em);
 }
 form label:has(input:not([type="checkbox"], [type="radio"]), textarea, select) {
   display: flex;
   flex-direction: column;
-  gap: var(--_form-label-gap);
-  /* button[type="submit"],
-  input:not([type="checkbox"], [type="radio"]),
-  select,
-  textarea {
-    inline-size: 100%;
-  } */
+  gap: var(--spacing-sibling);
 }
 
 form {
@@ -245,14 +238,15 @@ form {
       [type="button"],
       [type="submit"],
       [type="reset"],
-      [type="file"],
-      [type="color"]
+      [type="file"]
     ),
   textarea,
   select {
     inline-size: 100%;
   }
 }
+
+
 
 form label:has(input:is([type="checkbox"], [type="radio"])) {
   display: block;
@@ -264,12 +258,12 @@ form > fieldset:not(:has(legend)) > * + * {
 }
 
 form fieldset > legend + * {
-  margin-block-start: var(--_form-label-gap);
+  margin-block-start: var(--spacing-sibling);
 }
 
 /* Form inputs within div */
 form div:has(> label + input) {
   display: flex;
   flex-direction: column;
-  gap: var(--_form-label-gap);
+  gap: var(--spacing-sibling);
 }
