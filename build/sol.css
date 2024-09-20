@@ -189,27 +189,29 @@
 
 @layer settings {
   :root {
-    --font-scale-value: 1.25;
-    --spacing-scale-value: 1.2;
-    --radius-default: .2em;
-    --border-default: 1.5px;
-    --border-focus-size: 2px;
-    --border-separator: var(--border-default);
-    --icon-size: 1em;
+    --font-family-default: var(--font-family-sans);
+    --spacing-gutter: var(--spacing-lg);
+    --spacing-flow: 1em;
+    --spacing-sibling: var(--spacing-4xs);
+    --border-width-default: var(--border-width-hairline);
+    --border-width-focus: min(calc(var(--border-width-default) * 2), 6px);
+    --border-width-separator: var(--border-width-default);
+    --radius-default: var(--radius-round);
     --spacing-badge-block: .15ex;
     --spacing-badge-inline: .15em;
-    --radius-badge-size: .15em;
+    --radius-badge: .15em;
     --spacing-input-block: var(--spacing-3xs);
     --spacing-input-inline: var(--spacing-xs);
     --radius-input: var(--radius-default);
-    --border-input: var(--border-default);
+    --border-width-input: var(--border-width-default);
     --spacing-button-block: var(--spacing-3xs);
     --spacing-button-inline: var(--spacing-lg);
     --radius-button: var(--radius-default);
-    --border-button: var(--border-default);
-    --spacing-card: var(--spacing-md);
-    --radius-card: var(--radius-default);
+    --border-width-button: var(--border-width-default);
+    --spacing-panel: var(--spacing-md);
+    --radius-panel: var(--radius-default);
     --spacing-table: var(--spacing-sm);
+    --icon-size: 1em;
   }
 }
 
@@ -291,34 +293,32 @@
   }
 
   :root {
-    --primary-hue: var(--hue-blue);
+    --primary-hue: var(--hue-indigo);
     --primary-hue-rotation: 0;
     --primary-chroma: 1;
     --gray-hue: var(--primary-hue);
     --gray-hue-rotation: 0;
     --gray-chroma: .1;
-    --utility-hue: 250;
+    --utility-hue: var(--primary-hue);
     --utility-hue-rotation: 0;
     --utility-chroma: 1;
     --color-ink: var(--lightningcss-light, var(--color-gray-14)) var(--lightningcss-dark, var(--color-gray-2));
     --color-ink-contrast: var(--lightningcss-light, var(--color-gray-16)) var(--lightningcss-dark, var(--color-gray-1));
-    --color-ink-highlight: var(--lightningcss-light, var(--color-gray-16)) var(--lightningcss-dark, var(--color-gray-16));
     --color-ink-muted: var(--lightningcss-light, var(--color-gray-10)) var(--lightningcss-dark, var(--color-gray-5));
-    --color-ink-inverse: var(--lightningcss-light, var(--color-gray-2)) var(--lightningcss-dark, var(--color-gray-14));
     --color-ink-primary: var(--lightningcss-light, var(--color-primary-10)) var(--lightningcss-dark, var(--color-primary-5));
     --color-surface: var(--lightningcss-light, var(--color-gray-2)) var(--lightningcss-dark, var(--color-gray-14));
     --color-surface-bright: var(--lightningcss-light, var(--color-gray-1)) var(--lightningcss-dark, var(--color-gray-13));
     --color-surface-dim: var(--lightningcss-light, var(--color-gray-3)) var(--lightningcss-dark, var(--color-gray-15));
+    --color-surface-primary-highlight: var(--lightningcss-light, var(--color-primary-3)) var(--lightningcss-dark, var(--color-primary-4));
     --color-separator: var(--lightningcss-light, var(--color-gray-5)) var(--lightningcss-dark, var(--color-gray-11));
     --color-separator-highlight: var(--lightningcss-light, var(--color-gray-8)) var(--lightningcss-dark, var(--color-gray-8));
     --color-shadow: var(--lightningcss-light, var(--color-gray-4)) var(--lightningcss-dark, var(--color-gray-16));
-    --color-surface-primary-highlight: var(--lightningcss-light, var(--color-primary-3)) var(--lightningcss-dark, var(--color-primary-4));
-    --color-focus: var(--lightningcss-light, var(--color-primary-10)) var(--lightningcss-dark, var(--color-primary-6));
+    --color-focus-outline: var(--lightningcss-light, var(--color-primary-10)) var(--lightningcss-dark, var(--color-primary-6));
     --color-accent: var(--lightningcss-light, var(--color-primary-10)) var(--lightningcss-dark, var(--color-primary-10));
     --color-checked: var(--lightningcss-light, var(--color-primary-2)) var(--lightningcss-dark, var(--color-primary-2));
     --color-anchor: var(--lightningcss-light, var(--color-primary-10)) var(--lightningcss-dark, var(--color-primary-5));
-    --color-anchor-hover: var(--lightningcss-light, var(--color-primary-9)) var(--lightningcss-dark, var(--color-primary-4));
-    --color-anchor-active: var(--lightningcss-light, var(--color-primary-11)) var(--lightningcss-dark, var(--color-primary-6));
+    --color-anchor-hover: var(--lightningcss-light, var(--color-primary-8)) var(--lightningcss-dark, var(--color-primary-3));
+    --color-anchor-active: var(--lightningcss-light, var(--color-primary-12)) var(--lightningcss-dark, var(--color-primary-7));
   }
 
   * {
@@ -327,22 +327,22 @@
   }
 
   :root {
-    --font-size: clamp(1rem, .93rem + .35vw, 1.25rem);
-    --font-scale: 1.25;
-    --font-size-xs: calc(var(--font-size) / var(--font-scale));
-    --font-size-sm: var(--font-size);
-    --font-size-md: calc(var(--font-size-sm) * var(--font-scale));
-    --font-size-lg: calc(var(--font-size-md) * var(--font-scale));
-    --font-size-xl: calc(var(--font-size-lg) * var(--font-scale));
-    --font-size-2xl: calc(var(--font-size-xl) * var(--font-scale));
-    --font-size-3xl: calc(var(--font-size-2xl) * var(--font-scale));
-    --font-size-4xl: calc(var(--font-size-3xl) * var(--font-scale));
-    --font-size-smaller: 75%;
     --font-family-sans: system-ui, sans-serif;
     --font-family-mono: ui-monospace, monospace;
     --font-family-serif: ui-serif, serif;
-    --spacing-size: clamp(1rem, calc(.93rem + .35vw), 1.25rem);
-    --spacing-scale: 1.25;
+    --font-size: var(--font-size-default, 1rem);
+    --font-scale: var(--font-scale-default, 1.25);
+    --font-size-00: calc(var(--font-size) / var(--font-scale));
+    --font-size-0: var(--font-size);
+    --font-size-1: calc(var(--font-size-0) * var(--font-scale));
+    --font-size-2: calc(var(--font-size-1) * var(--font-scale));
+    --font-size-3: calc(var(--font-size-2) * var(--font-scale));
+    --font-size-4: calc(var(--font-size-3) * var(--font-scale));
+    --font-size-5: calc(var(--font-size-4) * var(--font-scale));
+    --font-size-6: calc(var(--font-size-5) * var(--font-scale));
+    --font-size-smaller: 75%;
+    --spacing-size: var(--spacing-size-default, 1rem);
+    --spacing-scale: var(--spacing-scale-default, 1.25);
     --spacing-4xs: calc(var(--spacing-3xs) / var(--spacing-scale));
     --spacing-3xs: calc(var(--spacing-2xs) / var(--spacing-scale));
     --spacing-2xs: calc(var(--spacing-xs) / var(--spacing-scale));
@@ -356,7 +356,6 @@
     --spacing-4xl: calc(var(--spacing-3xl) * var(--spacing-scale));
     --spacing-5xl: calc(var(--spacing-4xl) * var(--spacing-scale));
     --spacing-6xl: calc(var(--spacing-5xl) * var(--spacing-scale));
-    --spacing-flow: 1em;
     --border-width-none: 0;
     --border-width-hairline: 1px;
     --border-width-thin: max(.125rem, 2px);
@@ -400,7 +399,7 @@
   @keyframes fadeInDown {
     0% {
       opacity: 0;
-      transform: translateY(calc(-1 * var(--spacing-4xs)));
+      transform: translateY(calc(-1 * var(--spacing-sibling)));
     }
 
     100% {
@@ -452,27 +451,28 @@
   }
 
   :where(body) {
-    font-size: var(--font-size-sm);
+    font-family: var(--font-family-default);
+    font-size: var(--font-size-0);
   }
 
   :where(h1) {
-    font-size: var(--font-size-2xl);
+    font-size: var(--font-size-4);
   }
 
   :where(h2) {
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-3);
   }
 
   :where(h3) {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-2);
   }
 
   :where(h4) {
-    font-size: var(--font-size-md);
+    font-size: var(--font-size-1);
   }
 
   :where(h5) {
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-0);
   }
 
   :where(mark) {
@@ -482,7 +482,7 @@
     padding-inline: var(--spacing-badge-inline);
   }
 
-  :where(strike) {
+  :where(strike, del) {
     --utility-hue: var(--hue-red);
     text-decoration-line: line-through;
     -webkit-text-decoration-color: var(--color-utility-8);
@@ -497,7 +497,7 @@
 
   :where(code) {
     background-color: var(--color-surface-dim);
-    border-radius: var(--radius-badge-size);
+    border-radius: var(--radius-badge);
   }
 
   :where(code, kbd) {
@@ -514,8 +514,8 @@
   }
 
   :where(kbd) {
-    outline: var(--border-separator) solid var(--color-separator);
-    outline-offset: var(--border-separator);
+    outline: var(--border-width-separator) solid var(--color-separator);
+    outline-offset: var(--border-width-separator);
   }
 
   :where(hr) {
@@ -568,25 +568,25 @@
   }
 
   :where(figcaption) {
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-00);
     text-align: center;
     margin-block-start: var(--spacing-flow);
     font-style: italic;
   }
 
   :target {
-    outline-width: var(--border-focus-size);
+    outline-width: var(--border-width-focus);
     outline-style: solid;
     outline-color: var(--color-accent);
-    outline-offset: var(--border-focus-size);
+    outline-offset: var(--border-width-focus);
     transition: outline-offset .2s;
   }
 
   :focus-visible {
-    outline-width: var(--border-focus-size);
+    outline-width: var(--border-width-focus);
     outline-style: solid;
     outline-color: var(--color-accent);
-    outline-offset: var(--border-focus-size);
+    outline-offset: var(--border-width-focus);
     transition: outline-offset .2s;
   }
 
@@ -613,7 +613,7 @@
     justify-content: var(--_justify-content);
     padding-block: var(--spacing-button-block);
     padding-inline: var(--spacing-button-inline);
-    border-width: var(--border-button);
+    border-width: var(--border-width-button);
     border-style: solid;
     border-color: var(--color-primary-10);
     background-color: var(--color-primary-10);
@@ -635,7 +635,7 @@
     justify-content: var(--_justify-content);
     padding-block: var(--spacing-button-block);
     padding-inline: var(--spacing-button-inline);
-    border-width: var(--border-button);
+    border-width: var(--border-width-button);
     border-style: solid;
     border-color: var(--color-primary-10);
     background-color: var(--color-primary-10);
@@ -715,7 +715,7 @@
     padding-inline: var(--spacing-input-inline);
     padding-inline-end: calc(var(--spacing-input-inline) * 2 + var(--icon-size));
     padding-block: var(--spacing-input-block);
-    border: var(--border-input) solid var(--color-separator);
+    border: var(--border-width-input) solid var(--color-separator);
     border-radius: var(--radius-input);
   }
 
@@ -753,8 +753,8 @@
     border-radius: var(--radius-input);
     background: var(--color-surface-bright);
     padding: var(--spacing-input-inline);
-    border: var(--border-input) solid var(--color-separator);
-    margin-block-start: var(--spacing-4xs);
+    border: var(--border-width-input) solid var(--color-separator);
+    margin-block-start: var(--spacing-sibling);
   }
 
   details > div > * + * {
@@ -770,7 +770,7 @@
     opacity: 0;
     transition-behavior: allow-discrete;
     overscroll-behavior: contain;
-    border: var(--border-input) solid var(--color-separator);
+    border: var(--border-width-input) solid var(--color-separator);
     border-radius: var(--radius-input);
     box-shadow: var(--shadow-3);
     background-color: var(--color-surface-bright);
@@ -791,7 +791,7 @@
   }
 
   dialog header, dialog footer {
-    padding: var(--spacing-card);
+    padding: var(--spacing-panel);
     padding-block: var(--spacing-xs);
     background: var(--color-surface-bright);
     z-index: 1;
@@ -799,7 +799,7 @@
   }
 
   dialog header {
-    border-block-end: var(--border-input) solid var(--color-separator);
+    border-block-end: var(--border-width-input) solid var(--color-separator);
     justify-content: space-between;
     align-items: center;
     display: flex;
@@ -809,18 +809,18 @@
   dialog footer {
     justify-content: center;
     align-items: center;
-    gap: var(--spacing-4xs);
-    border-block-start: var(--border-input) solid var(--color-separator);
+    gap: var(--spacing-sibling);
+    border-block-start: var(--border-width-input) solid var(--color-separator);
     display: flex;
     bottom: 0;
   }
 
   dialog > :where(form, article) > div {
-    padding: var(--spacing-card);
+    padding: var(--spacing-panel);
   }
 
   dialog header > h2 {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-2);
   }
 
   dialog header > button {
@@ -890,7 +890,7 @@
   }
 
   [popover] {
-    border: var(--border-input) solid var(--color-separator);
+    border: var(--border-width-input) solid var(--color-separator);
     border-radius: var(--radius-input);
     box-shadow: var(--shadow-3);
     background-color: var(--color-surface-bright);
@@ -906,7 +906,7 @@
     left: anchor(--menu left);
     top: anchor(--menu bottom);
     margin: 0;
-    margin-block-start: var(--spacing-4xs);
+    margin-block-start: var(--spacing-sibling);
     position: absolute;
   }
 
@@ -929,7 +929,7 @@
 
   [popover] {
     opacity: 0;
-    transform: translateY(calc(-1 * var(--spacing-4xs)));
+    transform: translateY(calc(-1 * var(--spacing-sibling)));
     transform-origin: top;
     transition-behavior: allow-discrete;
     transition-duration: .4s;
@@ -944,7 +944,7 @@
   @starting-style {
     [popover]:popover-open {
       opacity: 0;
-      transform: translateY(calc(-1 * var(--spacing-4xs)));
+      transform: translateY(calc(-1 * var(--spacing-sibling)));
     }
   }
 
@@ -1028,7 +1028,7 @@
     padding-block: var(--spacing-input-block);
     padding-inline: var(--spacing-input-inline);
     border-radius: var(--radius-input);
-    border: var(--border-input) solid var(--color-separator);
+    border: var(--border-width-input) solid var(--color-separator);
     background-color: var(--color-surface-dim);
   }
 
@@ -1036,7 +1036,7 @@
     padding-block: var(--spacing-input-block);
     padding-inline: var(--spacing-input-inline);
     border-radius: var(--radius-input);
-    border: var(--border-input) solid var(--color-separator);
+    border: var(--border-width-input) solid var(--color-separator);
     background-color: var(--color-surface-dim);
   }
 
@@ -1058,7 +1058,7 @@
     vertical-align: middle;
     line-height: inherit;
     appearance: none;
-    border: var(--border-input) solid var(--color-separator);
+    border: var(--border-width-input) solid var(--color-separator);
     background-color: var(--color-surface-dim);
     width: 1em;
     height: 1em;
@@ -1071,7 +1071,7 @@
     vertical-align: middle;
     line-height: inherit;
     appearance: none;
-    border: var(--border-input) solid var(--color-separator);
+    border: var(--border-width-input) solid var(--color-separator);
     background-color: var(--color-surface-dim);
     width: 1em;
     height: 1em;
@@ -1160,20 +1160,18 @@
   }
 
   input[type="range"]:focus-visible::-webkit-slider-thumb {
-    --_outline-size: 2px;
-    outline-width: var(--_outline-size);
+    outline-width: var(--border-width-focus);
     outline-style: solid;
-    outline-color: var(--color-focus);
-    outline-offset: var(--_outline-size);
+    outline-color: var(--color-focus-outline);
+    outline-offset: var(--border-width-focus);
     border: 0;
   }
 
   input[type="range"]:focus-visible::-moz-range-thumb {
-    --_outline-size: 2px;
-    outline-width: var(--_outline-size);
+    outline-width: var(--border-width-focus);
     outline-style: solid;
-    outline-color: var(--color-focus);
-    outline-offset: var(--_outline-size);
+    outline-color: var(--color-focus-outline);
+    outline-offset: var(--border-width-focus);
     border: 0;
   }
 
@@ -1241,12 +1239,60 @@
     mask-image: var(--icon-clock);
   }
 
-  input:is([type="date"], [type="datetime-local"], [type="time"], [type="month"]) {
-    height: calc((var(--font-size-sm) * 1.5)  + (var(--spacing-input-block) * 2)  + (var(--border-input) * 2));
+  [type="file"]::file-selector-button {
+    margin-inline-end: 1em;
+  }
+
+  input:is([type="date"], [type="datetime-local"], [type="time"], [type="month"], [type="color"]) {
+    height: calc((var(--font-size-0) * 1.5)  + (var(--spacing-input-block) * 2)  + (var(--border-width-input) * 2));
   }
 
   input[disabled] {
     opacity: .8;
+  }
+
+  form {
+    --_form-flow: var(--spacing-flow, 1em);
+  }
+
+  form label:has(input:not(:is([type="checkbox"], [type="radio"])), textarea, select) {
+    gap: var(--spacing-sibling);
+    flex-direction: column;
+    display: flex;
+  }
+
+  form input:not(:is([type="checkbox"], [type="radio"], [type="button"], [type="submit"], [type="reset"], [type="file"])) {
+    inline-size: 100%;
+  }
+
+  form textarea {
+    inline-size: 100%;
+  }
+
+  form select {
+    inline-size: 100%;
+  }
+
+  form label:has(input:is([type="checkbox"], [type="radio"])) {
+    display: block;
+  }
+
+  form > * + * {
+    margin-block-start: var(--_form-flow);
+  }
+
+  form > fieldset:not(:has(legend)) > * + * {
+    margin-block-start: var(--_form-flow);
+  }
+
+  form fieldset > legend + * {
+    margin-block-start: var(--spacing-sibling);
+  }
+
+  form div:has( > label + input) {
+    gap: var(--spacing-sibling);
+    flex-direction: column;
+    display: flex;
   }
 
   progress {
@@ -1310,13 +1356,8 @@
     --astro-code-token-comment: var(--color-ink-muted);
   }
 
-  span[style*="--astro-code-token-comment"] {
-    width: 100%;
-    display: block;
-  }
-
   pre {
-    padding: var(--spacing-card);
-    border-radius: var(--radius-card);
+    padding: var(--spacing-panel);
+    border-radius: var(--radius-panel);
   }
 }
