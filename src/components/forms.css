@@ -183,12 +183,6 @@ input[type="time" i]::-webkit-calendar-picker-indicator {
   margin-inline-end: 1em;
 }
 
-input[type="color"] {
-  appearance: none;
-  height: calc(
-    1em * 1.5 + var(--spacing-input-block) * 2 + var(--border-width-input) * 2
-  );
-}
 
 /* 
 * Equalize heights (Safari bug) *
@@ -198,9 +192,17 @@ input:is(
     [type="date"],
     [type="datetime-local"],
     [type="time"],
-    [type="month"]
+    [type="month"],
+    [type="color"]
   ) {
   height: calc(
+    (var(--font-size-0) * 1.5) + (var(--spacing-input-block) * 2) +
+      (var(--border-width-input) * 2)
+  );
+}
+
+input[type="color"] {
+  inline-size: calc(
     (var(--font-size-0) * 1.5) + (var(--spacing-input-block) * 2) +
       (var(--border-width-input) * 2)
   );
@@ -250,7 +252,8 @@ form {
       [type="button"],
       [type="submit"],
       [type="reset"],
-      [type="file"]
+      [type="file"],
+      [type="color"],
     ),
   textarea,
   select {
