@@ -1,10 +1,12 @@
-:where(button,
-input[type="submit"],
-input[type="reset"],
-input[type="clear"],
-input[type="button"],
-[role="button"]), ::-webkit-file-upload-button
- {
+:where(
+    button,
+    input[type="submit"],
+    input[type="reset"],
+    input[type="clear"],
+    input[type="button"],
+    [role="button"]
+  ),
+::-webkit-file-upload-button {
   --_display: inline-flex;
   --_justify-content: center;
   --_align-items: center;
@@ -25,19 +27,21 @@ input[type="button"],
   color: var(--color-gray-2);
   font-weight: 600;
   text-align: var(--_text-align);
-
- 
 }
 
+:where(a[role="button"]) {
+  text-decoration: none;
+}
 
-:where(button,
-input[type="submit"],
-input[type="reset"],
-input[type="clear"],
-input[type="button"],
-[role="button"]):not([disabled]),
-::-webkit-file-upload-button
-{
+:where(
+    button,
+    input[type="submit"],
+    input[type="reset"],
+    input[type="clear"],
+    input[type="button"],
+    [role="button"]
+  ):not([disabled]),
+::-webkit-file-upload-button {
   &:hover,
   &:focus-visible {
     background-color: var(--color-primary-9);
@@ -50,14 +54,15 @@ input[type="button"],
   }
 }
 
-
-:where(button,
-input[type="submit"],
-input[type="reset"],
-input[type="clear"],
-input[type="button"],
-[role="button"],
-::-webkit-file-upload-button, 
-::file-selector-button)[disabled] {
-  opacity: .8;
+:where(
+    button,
+    input[type="submit"],
+    input[type="reset"],
+    input[type="clear"],
+    input[type="button"],
+    [role="button"],
+    ::-webkit-file-upload-button,
+    ::file-selector-button
+  )[disabled] {
+  opacity: 0.8;
 }
