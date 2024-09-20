@@ -3,11 +3,12 @@
 
   --font-family-default: var(--font-family-sans);
   /* --font-scale-default: 1.25; */
-  /* --font-size-default: clamp(1rem, 0.93rem + 0.35vw, 1.25rem); */
+  --font-size-default: clamp(1rem, 0.93rem + 0.35vw, 1.25rem);
+  --font-size-code: .9em;
 
   /* General Spacing */
   /* --spacing-scale-default: 1.25; */
-  /* --spacing-size-default: clamp(1rem, 0.93rem + 0.35vw, 1.25rem); */
+  --spacing-size-default: clamp(1rem, 0.93rem + 0.35vw, 1.25rem);
   --spacing-gutter: var(--spacing-lg);
   --spacing-flow: 1em;
   --spacing-sibling: var(--spacing-4xs);

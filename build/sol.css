@@ -190,6 +190,9 @@
 @layer settings {
   :root {
     --font-family-default: var(--font-family-sans);
+    --font-size-default: clamp(1rem, .93rem + .35vw, 1.25rem);
+    --font-size-code: .9em;
+    --spacing-size-default: clamp(1rem, .93rem + .35vw, 1.25rem);
     --spacing-gutter: var(--spacing-lg);
     --spacing-flow: 1em;
     --spacing-sibling: var(--spacing-4xs);
@@ -501,6 +504,7 @@
   }
 
   :where(code, kbd) {
+    font-size: var(--font-size-code, 1em);
     color: var(--color-ink-contrast);
     padding-block: var(--spacing-badge-block);
     padding-inline: var(--spacing-badge-inline);

@@ -63,6 +63,7 @@
 }
 
 :where(code, kbd) {
+  font-size: var(--font-size-code, 1em);
   color: var(--color-ink-contrast);
   padding-block: var(--spacing-badge-block);
   padding-inline: var(--spacing-badge-inline);
