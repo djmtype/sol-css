@@ -189,8 +189,8 @@
 
 @layer settings {
   :root {
-    --font-family-default: var(--font-family-sans);
     --font-size-default: clamp(1rem, .93rem + .35vw, 1.25rem);
+    --font-family-default: var(--font-family-sans);
     --font-size-code: .9em;
     --spacing-size-default: clamp(1rem, .93rem + .35vw, 1.25rem);
     --spacing-gutter: var(--spacing-lg);
@@ -1358,17 +1358,5 @@
     100% {
       background-position: -200% 0;
     }
-  }
-
-  * {
-    --astro-code-color-background: var(--color-surface-bright);
-    --astro-code-token-string-expression: var(--color-ink-primary);
-    --astro-code-color-text: var(--color-ink);
-    --astro-code-token-comment: var(--color-ink-muted);
-  }
-
-  pre {
-    padding: var(--spacing-panel);
-    border-radius: var(--radius-panel);
   }
 }
