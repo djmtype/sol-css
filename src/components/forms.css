@@ -201,13 +201,6 @@ input:is(
   );
 }
 
-input[type="color"] {
-  inline-size: calc(
-    (var(--font-size-0) * 1.5) + (var(--spacing-input-block) * 2) +
-      (var(--border-width-input) * 2)
-  );
-}
-
 input[disabled] {
   opacity: 0.8;
 }
@@ -253,7 +246,7 @@ form {
       [type="submit"],
       [type="reset"],
       [type="file"],
-      [type="color"],
+      [type="color"]
     ),
   textarea,
   select {
