@@ -1,7 +1,7 @@
 :root {
 
-  --spacing-size: clamp(1rem, calc(0.93rem + 0.35vw), 1.25rem);
-  --spacing-scale: 1.25;
+  --spacing-size: var(--spacing-size-default, 1rem);
+  --spacing-scale: var(--spacing-scale-default, 1.25);
 
   --spacing-4xs: calc(var(--spacing-3xs) / var(--spacing-scale));
   --spacing-3xs: calc(var(--spacing-2xs) / var(--spacing-scale));

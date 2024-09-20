@@ -1,19 +1,25 @@
 :root {
-  /* Global Content */
-  --radius-default: var(--radius-round, 0.15em);
-  --font-family-default: var(--font-family-sans, sans-serif);
-  --border-width-default: var(--border-width-hairline, 1px);
+  /* General Typography */
 
-  --font-scale: 1.25;
-  --spacing-scale: 1.2;
+  --font-family-default: var(--font-family-sans);
+  /* --font-scale-default: 1.25; */
+  --font-size-default: clamp(1rem, 0.93rem + 0.35vw, 1.25rem);
 
+  /* General Spacing */
+  /* --spacing-scale-default: 1.25; */
+  --spacing-size-default: clamp(1rem, 0.93rem + 0.35vw, 1.25rem);
+  --spacing-gutter: var(--spacing-lg);
   --spacing-flow: 1em;
   --spacing-sibling: var(--spacing-4xs);
 
+
+  /* General Border */
+  --border-width-default: var(--border-width-hairline);
   --border-width-focus: min(calc(var(--border-width-default) * 2), 6px);
-
   --border-width-separator: var(--border-width-default);
-
+  --radius-default: var(--radius-round);
+ 
+  /* Misc */
   --icon-size: 1em;
 
   /* Inline Text Elements */

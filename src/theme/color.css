@@ -11,67 +11,66 @@
 
   --gray-hue: var(--primary-hue);
   --gray-hue-rotation: 0;
-  --gray-chroma: .1;
+  --gray-chroma: 0.1;
 
-  --utility-hue: 250;
+  --utility-hue: var(--primary-hue);
   --utility-hue-rotation: 0;
   --utility-chroma: 1;
 }
 
 /* Logical color props */
 :root {
+  /* Foreground */
   --color-ink: light-dark(var(--color-gray-14), var(--color-gray-2));
 
   --color-ink-contrast: light-dark(var(--color-gray-16), var(--color-gray-1));
 
-  /* --color-ink-highlight: light-dark(var(--color-gray-16), var(--color-gray-16)); */
-
-
   --color-ink-muted: light-dark(var(--color-gray-10), var(--color-gray-5));
-
-  /* --color-ink-inverse: light-dark(var(--color-gray-2), var(--color-gray-14)); */
 
   --color-ink-primary: light-dark(
     var(--color-primary-10),
     var(--color-primary-5)
   );
 
-
-
+  /* Background */
   --color-surface: light-dark(var(--color-gray-2), var(--color-gray-14));
 
   --color-surface-bright: light-dark(var(--color-gray-1), var(--color-gray-13));
 
   --color-surface-dim: light-dark(var(--color-gray-3), var(--color-gray-15));
 
+  --color-surface-primary-highlight: light-dark(
+    var(--color-primary-3),
+    var(--color-primary-4)
+  );
+
+  /* Border */
   --color-separator: light-dark(var(--color-gray-5), var(--color-gray-11));
 
-  --color-separator-highlight: light-dark(var(--color-gray-8), var(--color-gray-8));
+  --color-separator-highlight: light-dark(
+    var(--color-gray-8),
+    var(--color-gray-8)
+  );
 
+  /* Shadow */
   --color-shadow: light-dark(var(--color-gray-4), var(--color-gray-16));
 
-  --color-surface-primary-highlight: light-dark(var(--color-primary-3), var(--color-primary-4));
+  /* Focus state */
+  --color-focus-outline: light-dark(
+    var(--color-primary-10),
+    var(--color-primary-6)
+  );
 
-  /* focus state */
-
-  --color-focus-outline: light-dark(var(--color-primary-10), var(--color-primary-6));
-
-  /* form controls */
-
-
+  /* Form controls */
   --color-accent: light-dark(var(--color-primary-10), var(--color-primary-10));
-
   --color-checked: light-dark(var(--color-primary-2), var(--color-primary-2));
 
   /* anchor */
-
   --color-anchor: light-dark(var(--color-primary-10), var(--color-primary-5));
-
   --color-anchor-hover: light-dark(
     var(--color-primary-8),
     var(--color-primary-3)
   );
-
   --color-anchor-active: light-dark(
     var(--color-primary-12),
     var(--color-primary-7)
@@ -86,6 +85,8 @@
     var(--color-utility-5)
   );
 
-
-  --color-surface-utility-highlight: light-dark(var(--color-utility-3), var(--color-utility-4));
+  --color-surface-utility-highlight: light-dark(
+    var(--color-utility-3),
+    var(--color-utility-4)
+  );
 }

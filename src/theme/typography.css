@@ -1,6 +1,13 @@
 :root {
-  --font-size: clamp(1rem, 0.93rem + 0.35vw, 1.25rem);
-  --font-scale: 1.25;
+  /* Font Family */
+  --font-family-sans: system-ui, sans-serif;
+  --font-family-mono: ui-monospace, monospace;
+  --font-family-serif: ui-serif, serif;
+
+  /* Type Scale */
+
+  --font-size: var(--font-size-default, 1rem);
+  --font-scale: var(--font-scale-default, 1.25);
 
   --font-size-00: calc(var(--font-size) / var(--font-scale));
   --font-size-0: var(--font-size);
@@ -12,8 +19,4 @@
   --font-size-6: calc(var(--font-size-5) * var(--font-scale));
 
   --font-size-smaller: 75%;
-
-  --font-family-sans: system-ui, sans-serif;
-  --font-family-mono: ui-monospace, monospace;
-  --font-family-serif: ui-serif, serif;
 }
