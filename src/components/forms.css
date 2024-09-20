@@ -180,7 +180,7 @@ input[type="time" i]::-webkit-calendar-picker-indicator {
 }
 
 [type="file"]::file-selector-button {
-  margin-inline-end: 1em;
+  margin-inline-end: var(--spacing-sibling);
 }
 
 
@@ -262,7 +262,7 @@ form fieldset > legend + * {
 }
 
 /* Form inputs within div */
-form div:has(> label + input) {
+form div:has(> label + :is(input, textarea, select)) {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-sibling);

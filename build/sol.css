@@ -305,6 +305,9 @@
     --utility-hue: var(--primary-hue);
     --utility-hue-rotation: 0;
     --utility-chroma: 1;
+  }
+
+  :root {
     --color-ink: var(--lightningcss-light, var(--color-gray-14)) var(--lightningcss-dark, var(--color-gray-2));
     --color-ink-contrast: var(--lightningcss-light, var(--color-gray-16)) var(--lightningcss-dark, var(--color-gray-1));
     --color-ink-muted: var(--lightningcss-light, var(--color-gray-10)) var(--lightningcss-dark, var(--color-gray-5));
@@ -392,7 +395,7 @@
     --icon-x: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor'  stroke-width='2' stroke-linecap='round' vector-effect='non-scaling-stroke' stroke-linejoin='round' %3E%3Cpath d='M18 6 6 18'/%3E%3Cpath d='m6 6 12 12'/%3E%3C/svg%3E");
     --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none'  stroke='white' stroke-linecap='round' stroke-linejoin='round' vector-effect='non-scaling-stroke' stroke-width='2' d='M20 6L9 17l-5-5'/%3E%3C/svg%3E");
     --icon-chevron-right: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' vector-effect='non-scaling-stroke' stroke-width='2' d='m9 18l6-6l-6-6'/%3E%3C/svg%3E");
-    --icon-chevron-down: var(--lightningcss-light, url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='currentColor' opacity='.8' stroke-linecap='round' vector-effect='non-scaling-stroke' stroke-linejoin='round' stroke-width='2' d='m6 9l6 6l6-6'/%3E%3C/svg%3E")) var(--lightningcss-dark, url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='white' opacity='.8' stroke-linecap='round' vector-effect='non-scaling-stroke' stroke-linejoin='round' stroke-width='2' d='m6 9l6 6l6-6'/%3E%3C/svg%3E"));
+    --icon-chevron-down: var(--lightningcss-light, url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='currentColor' opacity='.8' stroke-linecap='round' vector-effect='non-scaling-stroke' stroke-linejoin='round' stroke-width='1' d='m6 9l6 6l6-6'/%3E%3C/svg%3E")) var(--lightningcss-dark, url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='white' opacity='.8' stroke-linecap='round' vector-effect='non-scaling-stroke' stroke-linejoin='round' stroke-width='1' d='m6 9l6 6l6-6'/%3E%3C/svg%3E"));
     --icon-calendar: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' vector-effect='non-scaling-stroke' stroke-width='2' stroke-linecap='round'  stroke-linejoin='round'%3E%3Cpath d='M8 2v4'/%3E%3Cpath d='M16 2v4'/%3E%3Crect width='18' height='18' x='3' y='4' rx='2'/%3E%3Cpath d='M3 10h18'/%3E%3C/svg%3E");
     --icon-clock: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' vector-effect='non-scaling-stroke' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpolyline points='12 6 12 12 16 14'/%3E%3C/svg%3E");
   }
@@ -1248,7 +1251,7 @@
   }
 
   [type="file"]::file-selector-button {
-    margin-inline-end: 1em;
+    margin-inline-end: var(--spacing-sibling);
   }
 
   input:is([type="date"], [type="datetime-local"], [type="time"], [type="month"], [type="color"]) {
@@ -1297,7 +1300,7 @@
     margin-block-start: var(--spacing-sibling);
   }
 
-  form div:has( > label + input) {
+  form div:has( > label + :is(input, textarea, select)) {
     gap: var(--spacing-sibling);
     flex-direction: column;
     display: flex;

@@ -1,0 +1,13 @@
+:root {
+  --primary-hue: var(--hue-indigo);
+  --primary-hue-rotation: 0;
+  --primary-chroma: 1;
+
+  --gray-hue: var(--primary-hue);
+  --gray-hue-rotation: 0;
+  --gray-chroma: 0.1;
+
+  --utility-hue: var(--primary-hue);
+  --utility-hue-rotation: 0;
+  --utility-chroma: 1;
+}
