@@ -1,6 +1,7 @@
 @import "./palettes/hues.css";
 @import "./palettes/palette.gray.css";
 @import "./palettes/palette.primary.css";
+@import "./palettes/palette.secondary.css";
 @import "./palettes/palette.utility.css";
 @import "./palettes/controls.css";
 
@@ -17,6 +18,10 @@
     var(--color-primary-10),
     var(--color-primary-5)
   );
+  --color-ink-secondary: light-dark(
+    var(--color-secondary-10),
+    var(--color-secondary-5)
+  );
 
   /* Background */
 
@@ -26,6 +31,10 @@
   --color-surface-primary-highlight: light-dark(
     var(--color-primary-3),
     var(--color-primary-4)
+  );
+  --color-surface-secondary-highlight: light-dark(
+    var(--color-secondary-3),
+    var(--color-secondary-4)
   );
 
   /* Border */

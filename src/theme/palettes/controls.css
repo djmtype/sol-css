@@ -3,6 +3,10 @@
   --primary-hue-rotation: 0;
   --primary-chroma: 1;
 
+  --secondary-hue: var(--hue-pink);
+  --secondary-hue-rotation: 0;
+  --secondary-chroma: 1;
+
   --gray-hue: var(--primary-hue);
   --gray-hue-rotation: 0;
   --gray-chroma: 0.1;
