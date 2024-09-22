@@ -1,0 +1,28 @@
+@import "base/reset.css";
+
+
+:where(ol, ul):not([role="list"]) {
+  padding-inline-start: 2em;
+}
+
+:where(ol, ul):not([role="list"]) :where(ol, ul):not([role="list"]) {
+  padding-inline-start: 1em;
+}
+
+:where(ol):not([role="list"]) :where(ol):not([role="list"]) {
+  list-style-type: upper-alpha;
+}
+
+:where(ul):not([role="list"]) :where(ul):not([role="list"]) {
+  list-style-type: disc;
+}
+
+:where(blockquote) {
+  margin-inline-start: 0;
+  padding-inline-start: 1em;
+}
+
+:where(figcaption) {
+  font-style: italic;
+  text-align: center;
+}

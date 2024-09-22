@@ -1,9 +1,9 @@
 progress {
   appearance: none;
+  /* vertical-align: baseline; */
   display: inline-block;
   appearance: none;
   width: 100%;
-
   border: var(--border-width-hairline) solid var(--color-separator);
   block-size: 1rem;
   /* inline-size: min(100%, 15rem); */

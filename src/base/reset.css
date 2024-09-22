@@ -263,7 +263,7 @@ Add the correct vertical alignment
 */
 
 progress {
-  vertical-align: baseline;
+  vertical-align: middle;
 }
 
 /* Allow page top breathing room */
