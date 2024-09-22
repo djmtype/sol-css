@@ -1132,19 +1132,13 @@
     width: 100%;
   }
 
-  input[type="range"]::-webkit-slider-runnable-track {
+  input[type="range"]::range-track {
     background-color: var(--lightningcss-light, var(--color-gray-4)) var(--lightningcss-dark, var(--color-gray-13));
     height: var(--_track-height);
     border-radius: 100000px;
   }
 
-  input[type="range"]::-moz-range-track {
-    background-color: var(--lightningcss-light, var(--color-gray-4)) var(--lightningcss-dark, var(--color-gray-13));
-    height: var(--_track-height);
-    border-radius: 100000px;
-  }
-
-  input[type="range"]::-webkit-slider-thumb {
+  input[type="range"]::range-thumb {
     appearance: none;
     height: var(--_thumb-size);
     width: var(--_thumb-size);
@@ -1153,7 +1147,7 @@
     border-radius: 100000px;
   }
 
-  input[type="range"]::-moz-range-thumb {
+  ::-moz-range-thumb {
     appearance: none;
     height: var(--_thumb-size);
     width: var(--_thumb-size);
@@ -1162,7 +1156,7 @@
     border-radius: 100000px;
   }
 
-  input[type="range"]::-webkit-slider-thumb {
+  ::-webkit-slider-thumb {
     margin-block-start: calc((var(--_track-height) / 2)  - (var(--_thumb-size) / 2));
   }
 
@@ -1170,7 +1164,7 @@
     outline: unset;
   }
 
-  input[type="range"]:focus-visible::-webkit-slider-thumb {
+  input[type="range"]:focus-visible::range-thumb {
     outline-width: var(--border-width-focus);
     outline-style: solid;
     outline-color: var(--color-focus-outline);
@@ -1178,53 +1172,23 @@
     border: 0;
   }
 
-  input[type="range"]:focus-visible::-moz-range-thumb {
-    outline-width: var(--border-width-focus);
-    outline-style: solid;
-    outline-color: var(--color-focus-outline);
-    outline-offset: var(--border-width-focus);
-    border: 0;
-  }
-
-  input[type="range"]:focus-within::-webkit-slider-runnable-track {
+  input[type="range"]:focus-within::range-track {
     background-color: var(--lightningcss-light, var(--color-gray-5)) var(--lightningcss-dark, var(--color-gray-12));
     transition: all .2s;
   }
 
-  input[type="range"]:focus-within::-moz-range-track {
+  input[type="range"]:active::range-track {
     background-color: var(--lightningcss-light, var(--color-gray-5)) var(--lightningcss-dark, var(--color-gray-12));
     transition: all .2s;
   }
 
-  input[type="range"]:focus-within::-webkit-slider-thumb {
+  input[type="range"]:focus-within::range-thumb {
     background-color: var(--color-primary-9);
     transition: all .2s;
     transform: scale(1.25);
   }
 
-  input[type="range"]:focus-within::-moz-range-thumb {
-    background-color: var(--color-primary-9);
-    transition: all .2s;
-    transform: scale(1.25);
-  }
-
-  input[type="range"]:active::-webkit-slider-runnable-track {
-    background-color: var(--lightningcss-light, var(--color-gray-5)) var(--lightningcss-dark, var(--color-gray-12));
-    transition: all .2s;
-  }
-
-  input[type="range"]:active::-moz-range-track {
-    background-color: var(--lightningcss-light, var(--color-gray-5)) var(--lightningcss-dark, var(--color-gray-12));
-    transition: all .2s;
-  }
-
-  input[type="range"]:active::-webkit-slider-thumb {
-    background-color: var(--color-primary-9);
-    transition: all .2s;
-    transform: scale(1.25);
-  }
-
-  input[type="range"]:active::-moz-range-thumb {
+  input[type="range"]:active::range-thumb {
     background-color: var(--color-primary-9);
     transition: all .2s;
     transform: scale(1.25);
