@@ -207,6 +207,5 @@ progress {
 }
 
 :where(figcaption) {
-  text-align: center;
   font-style: italic;
 }
