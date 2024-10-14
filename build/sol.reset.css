@@ -1,188 +1,160 @@
-*, :before, :after {
+:where(*) {
   box-sizing: border-box;
 }
 
-html {
+:where(html) {
   -webkit-text-size-adjust: none;
   -moz-text-size-adjust: none;
   text-size-adjust: none;
   -webkit-tap-highlight-color: transparent;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  html:focus-within {
-    scroll-behavior: smooth;
-  }
-}
-
-body {
-  min-height: 100svh;
+:where(body) {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-wrap: break-word;
+  min-block-size: 100%;
   max-inline-size: 100%;
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
   line-height: 1.5;
 }
 
-figure {
+:where(figure) {
   margin-inline: 0;
 }
 
-h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, ul, ol, hr, pre {
+:where(h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, ul, ol, hr, pre) {
   margin-block: 0;
 }
 
-h1, h2, h3 {
+:where(h1, h2, h3) {
   line-height: calc(1em + .5rem);
 }
 
-h1, h2, h3, h4, h5 {
+:where(h1, h2, h3, h4, h5) {
   text-wrap: balance;
 }
 
-ul[role="list"], ol[role="list"] {
+:where(ul[role="list"], ol[role="list"]) {
   padding-inline: 0;
   list-style-type: none;
 }
 
-a:not([class]), u, ins, abbr {
+:where(a:not([class]), u, ins, abbr) {
   -webkit-text-decoration-skip-ink: auto;
   text-decoration-skip-ink: auto;
   text-underline-offset: .2ex;
 }
 
-small {
+:where(small) {
   font-size: 75%;
 }
 
-sub, sup {
+:where(sub, sup) {
   vertical-align: baseline;
   font-size: 75%;
   line-height: 0;
   position: relative;
 }
 
-sub {
+:where(sub) {
   bottom: -.25em;
 }
 
-sup {
+:where(sup) {
   top: -.5em;
 }
 
-code {
+:where(code) {
   font-family: ui-monospace, monospace;
   font-size: 1em;
 }
 
-img, svg, video, canvas {
+:where(img, svg, video, canvas) {
   block-size: auto;
   max-inline-size: 100%;
 }
 
-img, video, canvas, audio, iframe, embed, object {
+:where(img, video, canvas, audio, iframe, embed, object) {
   display: block;
 }
 
-picture {
+:where(picture) {
   display: contents;
 }
 
-source {
+:where(source) {
   display: none;
 }
 
-table {
+:where(table) {
   border-collapse: collapse;
   border-color: currentColor;
 }
 
-input, button, textarea, select {
+:where(input, button, textarea, select) {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
   line-height: inherit;
 }
 
-hr {
+:where(hr) {
   color: inherit;
   border-style: solid;
   border-width: 1px 0 0;
   height: 0;
 }
 
-button, summary, [role="button"] {
+:where(button, summary, [type="submit"], [type="reset"], [type="button"], [role="button"]) {
   cursor: pointer;
 }
 
-[type="submit"] {
-  cursor: pointer;
+:where(button, [type="button"], [type="reset"], [type="submit"]) {
+  -webkit-appearance: button;
 }
 
-[type="reset"] {
-  cursor: pointer;
-}
-
-[type="button"] {
-  cursor: pointer;
-}
-
-::-webkit-file-upload-button {
-  cursor: pointer;
-}
-
-::file-selector-button {
-  cursor: pointer;
-}
-
-[type="search"] {
+:where([type="search"]) {
   -webkit-appearance: textfield;
 }
 
-[type="search"]::-webkit-search-decoration {
+:where() {
   -webkit-appearance: none;
 }
 
-button {
-  -webkit-appearance: button;
-}
-
-[type="button"] {
-  -webkit-appearance: button;
-}
-
-[type="reset"] {
-  -webkit-appearance: button;
-}
-
-[type="submit"] {
-  -webkit-appearance: button;
-}
-
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-}
-
-::-webkit-file-upload-button {
+:where() {
   font: inherit;
 }
 
-[type="number"] {
+:where([type="number"]) {
   height: auto;
 }
 
-progress {
+:where(progress) {
   vertical-align: middle;
 }
 
-:target {
+:where(:target) {
   scroll-margin-top: 2rlh;
 }
 
-:disabled {
+:where(:disabled) {
   cursor: not-allowed;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :where(html:focus-within) {
+    scroll-behavior: smooth;
+  }
+}
+
+:where(dialog) {
+  margin: auto;
+}
+
+:where(figcaption) {
+  font-style: italic;
 }
 
 :where(ol, ul):not([role="list"]) {
@@ -204,8 +176,4 @@ progress {
 :where(blockquote) {
   margin-inline-start: 0;
   padding-inline-start: 1em;
-}
-
-:where(figcaption) {
-  font-style: italic;
 }

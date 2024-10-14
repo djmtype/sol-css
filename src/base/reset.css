@@ -14,9 +14,7 @@ Josh Comeau [https://www.joshwcomeau.com/css/custom-css-reset/]
 /* 
 Prevent padding and border from affecting element width. 
 */
-*,
-*::before,
-*::after {
+:where(*, *::before, *::after) {
   box-sizing: border-box;
 }
 
@@ -24,20 +22,13 @@ Prevent padding and border from affecting element width.
 1. Remove odd text zoom on touch devices  
 2. Remove iOS tap color
 */
-html {
+:where(html) {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
   /* 1 */
   -webkit-tap-highlight-color: transparent;
   /* 2 */
-}
-
-/* Add smooth scrolling animation */
-@media (prefers-reduced-motion: no-preference) {
-  html:focus-within {
-    scroll-behavior: smooth;
-  }
 }
 
 /* 
@@ -49,10 +40,10 @@ html {
 6. Set default line height
 7. Prevent words from overflow
 */
-body {
+:where(body) {
   margin: 0;
   /* 1 */
-  min-height: 100svh;
+  min-block-size: 100%;
   /* 2 */
   max-inline-size: 100%;
   /* 3 */
@@ -68,10 +59,11 @@ body {
 }
 
 /* Remove default margin */
-figure {
+:where(figure) {
   margin-inline: 0;
 }
-h1,
+
+:where(h1,
 h2,
 h3,
 h4,
@@ -83,25 +75,25 @@ blockquote,
 dl,
 ul,
 ol,
-hr, pre {
+hr, pre) {
   margin-block: 0;
 }
 
 /* Better leading on large headlines */
-h1,
+:where(h1,
 h2,
-h3 {
+h3) {
   line-height: calc(1em + 0.5rem);
 }
 
 /* 
 Balance headlines 
 */
-h1,
+:where(h1,
 h2,
 h3,
 h4,
-h5 {
+h5) {
   text-wrap: balance;
 }
 
@@ -109,8 +101,8 @@ h5 {
 1. Remove indentation on styled lists 
 2. Remove list type appearance for non-technical list items
 */
-ul[role="list"],
-ol[role="list"] {
+:where(ul[role="list"],
+ol[role="list"]) {
   padding-inline: 0;
   /* 1 */
   list-style-type: none;
@@ -120,10 +112,10 @@ ol[role="list"] {
 /* 
 Make anchor and abbreviated elements more legible
 */
-a:not([class]),
+:where(a:not([class]),
 u,
 ins,
-abbr {
+abbr) {
   text-decoration-skip-ink: auto;
   text-underline-offset: 0.2ex;
 }
@@ -131,61 +123,61 @@ abbr {
 /* 
 Unify text size across browsers  
 */
-small {
+:where(small) {
   font-size: 75%;
 }
 
 /*
 Prevent `sub` and `sup` elements from affecting the line height in all browsers.
 */
-sub,
-sup {
+:where(sub,
+sup) {
   font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
 }
 
-sub {
+:where(sub) {
   bottom: -0.25em;
 }
 
-sup {
+:where(sup) {
   top: -0.5em;
 }
 
 /* Add browser consistency for code */
-code {
+:where(code) {
   font-family: ui-monospace, monospace;
   font-size: 1em;
 }
 
 /* Preserve intrinsic aspect ratio. */
-img,
+:where(img,
 svg,
 video,
-canvas {
+canvas) {
   max-inline-size: 100%;
   block-size: auto;
 }
 
 /* Remove awkward space */
-img,
+:where(img,
 video,
 canvas,
 audio,
 iframe,
 embed,
-object {
+object) {
   display: block;
 }
 
 /* Makes image easier to target image */
-picture {
+:where(picture) {
   display: contents;
 }
 
-source {
+:where(source) {
   display: none;
 }
 
@@ -193,7 +185,7 @@ source {
 1. Remove gaps 
 2. Correct color consistency
 */
-table {
+:where(table) {
   border-collapse: collapse;
   /* 1 */
   border-color: currentcolor;
@@ -201,10 +193,10 @@ table {
 }
 
 /* Inherit fonts for inputs and buttons */
-input,
+:where(input,
 button,
 textarea,
-select {
+select) {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
@@ -212,7 +204,7 @@ select {
 }
 
 /* Normalize separator appearance */
-hr {
+:where(hr) {
   border-style: solid;
   border-width: 1px 0 0;
   color: inherit;
@@ -220,41 +212,41 @@ hr {
 }
 
 /* Provide cursor indicators for interactive elements */
-button,
+:where(button,
 summary,
 [type="submit"],
 [type="reset"],
 [type="button"],
 [role="button"],
 ::-webkit-file-upload-button,
-::file-selector-button {
+::file-selector-button) {
   cursor: pointer;
 }
 
-/* Webkit: Fix search field appearance */
-[type="search"] {
-  -webkit-appearance: textfield;
-}
-
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
 /* Webkit: Apply default button appearance */
-button,
+:where(button,
 [type="button"],
 [type="reset"],
 [type="submit"],
-::-webkit-file-upload-button {
+::-webkit-file-upload-button) {
   -webkit-appearance: button;
 }
 
+/* Webkit: Fix search field appearance */
+:where([type="search"]) {
+  -webkit-appearance: textfield;
+}
+
+:where([type="search"]::-webkit-search-decoration) {
+  -webkit-appearance: none;
+}
+
 /* Webkit: Fix font size */
-::-webkit-file-upload-button {
+:where(::-webkit-file-upload-button) {
   font: inherit;
 }
 
-[type="number"] {
+:where([type="number"]) {
   height: auto;
 }
 
@@ -262,16 +254,57 @@ button,
 Add the correct vertical alignment
 */
 
-progress {
+:where(progress) {
   vertical-align: middle;
 }
 
 /* Allow page top breathing room */
-:target {
+:where(:target) {
   scroll-margin-top: 2rlh;
 }
 
 /* Provide visual feedback for disabled elements */
-:disabled {
+:where(:disabled) {
   cursor: not-allowed;
+}
+
+/* Adds smooth scrolling */
+@media (prefers-reduced-motion: no-preference) {
+  :where(html:focus-within) {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Removes default margin and centers the element */
+:where(dialog) {
+  margin: auto;
+}
+
+/* Distinguish captions from other text */
+:where(figcaption) {
+  font-style: italic;
+}
+
+/* Add consistent, intrinsic alignment */
+:where(ol, ul):not([role="list"]) {
+  padding-inline-start: 2em;
+}
+
+:where(ol, ul):not([role="list"]) :where(ol, ul):not([role="list"]) {
+  padding-inline-start: 1em;
+}
+
+/* Better indicators for nested list items */
+:where(ol):not([role="list"]) :where(ol):not([role="list"]) {
+  list-style-type: upper-alpha;
+}
+
+:where(ul):not([role="list"]) :where(ul):not([role="list"]) {
+  list-style-type: disc;
+}
+
+/* Reset and provide intrinsic alignment */
+:where(blockquote) {
+  margin-inline-start: 0;
+  padding-inline-start: 1em;
 }

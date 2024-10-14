@@ -1,12 +1,14 @@
-@import "base/reset.css";
-@import "settings.css";
+@layer base, settings, theme, content;
+
+@import "base/reset.css" layer(base);
+@import "settings.css" layer(settings);
 /* @import "theme/breakpoint.css"; */
-@import "theme/color.css";
-@import "theme/typography.css";
-@import "theme/spacing.css";
-@import "theme/border.css";
+@import "theme/color.css" layer(theme);
+@import "theme/typography.css" layer(theme);
+@import "theme/spacing.css" layer(theme);
+@import "theme/border.css" layer(theme);
 /* @import "theme/shadow.css";
 @import "theme/icons.css"; */
 
-@import "content/animation.css";
-@import "content/global.css";
+@import "content/animation.css" layer(content);
+@import "content/global.css" layer(content);
