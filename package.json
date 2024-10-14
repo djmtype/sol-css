@@ -1,16 +1,18 @@
 {
   "name": "sol-css",
   "type": "module",
-  "version": "0.0.31",
+  "version": "0.0.32",
   "browserslist": [
     "defaults"
   ],
   "scripts": {
     "build:reset": "lightningcss --bundle --targets 'defaults' src/base/reset.css -o build/sol.reset.css",
-    "build:base": "lightningcss --bundle --targets 'defaults' src/base.css -o build/sol.base.css",
+    "build:core": "lightningcss --bundle --targets 'defaults' src/core.css -o build/sol.core.css",
+    "build:complete": "lightningcss --bundle --targets 'defaults' src/sol.css -o build/sol.css",
     "build:dev": "lightningcss --bundle --targets 'defaults' src/sol.css -o build/sol.css",
-    "build:prod": "lightningcss --bundle --targets 'defaults' src/sol.css -o build/sol.min.css --minify", 
-    "build": "npm run build:dev && npm run build:prod && npm run build:base && npm run build:reset"
+    "build:prod": "npm run build:complete && npm run build:core && npm run build:reset", 
+    "build:min": "lightningcss --bundle --targets 'defaults' build/*.css --output-dir build/minified --minify",
+    "build": "npm run build:prod && npm run build:min"
   },
   "devDependencies": {
     "lightningcss": "^1.26.0"
