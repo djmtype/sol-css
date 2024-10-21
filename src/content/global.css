@@ -123,12 +123,11 @@
   border-inline-start: var(--border-width-thick) solid var(--color-accent);
 }
 
-:where(figcaption) {
+:where(figure:has(img) figcaption) {
   font-size: var(--font-size-00);
-  font-style: italic;
   margin-block-start: var(--spacing-flow);
-  text-align: center;
 }
+
 
 :focus-visible, :target {
   outline-width: var(--border-width-focus);

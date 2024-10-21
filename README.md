@@ -12,7 +12,7 @@ A compilation of primitive styles from other resets like Andy Bell and Open Prop
 
 2. **A solid base**  
 Builds upon the reset, plus includes a theme layer for colors, typography, spacing, and light/dark schemes all defined by custom properties.  
-[Use the base](https://github.com/djmtype/sol-css/blob/main/build/sol.base.css)
+[Use the core](https://github.com/djmtype/sol-css/blob/main/build/sol.base.css)
 
 3. **The complete package**    
 Includes the base foundation and styles for most browser-shipped HTML elements like forms, dialog, details/summary, progress, and table.  
