@@ -307,4 +307,5 @@ Add the correct vertical alignment
 :where(blockquote) {
   margin-inline-start: 0;
   padding-inline-start: 1em;
+  border-inline-start: 2px solid currentColor;
 }

@@ -175,6 +175,7 @@
   }
 
   :where(blockquote) {
+    border-inline-start: 2px solid;
     margin-inline-start: 0;
     padding-inline-start: 1em;
   }
@@ -194,7 +195,7 @@
     --border-width-separator: var(--border-width-default);
     --radius-default: var(--radius-round);
     --spacing-badge-block: .15ex;
-    --spacing-badge-inline: .15em;
+    --spacing-badge-inline: .3em;
     --radius-badge: .15em;
     --spacing-input-block: var(--spacing-3xs);
     --spacing-input-inline: var(--spacing-xs);
@@ -317,9 +318,6 @@
     --utility-hue: var(--primary-hue);
     --utility-hue-rotation: 0;
     --utility-chroma: 1;
-  }
-
-  :root {
     --color-ink: var(--lightningcss-light, var(--color-gray-14)) var(--lightningcss-dark, var(--color-gray-2));
     --color-ink-contrast: var(--lightningcss-light, var(--color-gray-16)) var(--lightningcss-dark, var(--color-gray-1));
     --color-ink-muted: var(--lightningcss-light, var(--color-gray-10)) var(--lightningcss-dark, var(--color-gray-5));
@@ -584,14 +582,6 @@
 
   :where(blockquote) {
     border-inline-start: var(--border-width-thick) solid var(--color-accent);
-    margin-inline-start: 0;
-    padding-inline-start: 1em;
-  }
-
-  :where(figure:has(blockquote)) {
-    border-inline-start: var(--border-width-thick) solid var(--color-accent);
-    margin-inline-start: 0;
-    padding-inline-start: 1em;
   }
 
   :where(figure:has(blockquote) blockquote) {
@@ -600,11 +590,13 @@
     padding-inline-start: unset;
   }
 
-  :where(figure:has(blockquote) figcaption) {
-    font-size: var(--font-size-00);
+  :where(figure:has(blockquote)) {
+    border-inline-start: var(--border-width-thick) solid var(--color-accent);
+    margin-inline-start: 0;
+    padding-inline-start: 1em;
   }
 
-  :where(figure:has(img) figcaption) {
+  :where(figure:has(img, blockquote) figcaption) {
     font-size: var(--font-size-00);
     margin-block-start: var(--spacing-flow);
   }
