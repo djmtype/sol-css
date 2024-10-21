@@ -630,7 +630,103 @@
 }
 
 @layer components {
-  :where(button, input[type="submit"], input[type="reset"], input[type="clear"], input[type="button"], [role="button"]) {
+  button, [role="button"] {
+    --_display: inline-flex;
+    --_justify-content: center;
+    --_align-items: center;
+    --_text-align: center;
+    --_background-color: var(--color-primary-10);
+    --_border-color: var(--color-primary-10);
+    display: var(--_display);
+    align-items: var(--_align-items);
+    justify-content: var(--_justify-content);
+    padding-block: var(--spacing-button-block);
+    padding-inline: var(--spacing-button-inline);
+    border-width: var(--border-width-button);
+    border-style: solid;
+    border-color: var(--_border-color);
+    background-color: var(--_background-color);
+    border-radius: var(--radius-button);
+    color: var(--color-gray-2);
+    text-align: var(--_text-align);
+    font-family: inherit;
+    font-weight: 600;
+    transition: all .2s;
+  }
+
+  input[type="submit"] {
+    --_display: inline-flex;
+    --_justify-content: center;
+    --_align-items: center;
+    --_text-align: center;
+    --_background-color: var(--color-primary-10);
+    --_border-color: var(--color-primary-10);
+    display: var(--_display);
+    align-items: var(--_align-items);
+    justify-content: var(--_justify-content);
+    padding-block: var(--spacing-button-block);
+    padding-inline: var(--spacing-button-inline);
+    border-width: var(--border-width-button);
+    border-style: solid;
+    border-color: var(--_border-color);
+    background-color: var(--_background-color);
+    border-radius: var(--radius-button);
+    color: var(--color-gray-2);
+    text-align: var(--_text-align);
+    font-family: inherit;
+    font-weight: 600;
+    transition: all .2s;
+  }
+
+  input[type="reset"] {
+    --_display: inline-flex;
+    --_justify-content: center;
+    --_align-items: center;
+    --_text-align: center;
+    --_background-color: var(--color-primary-10);
+    --_border-color: var(--color-primary-10);
+    display: var(--_display);
+    align-items: var(--_align-items);
+    justify-content: var(--_justify-content);
+    padding-block: var(--spacing-button-block);
+    padding-inline: var(--spacing-button-inline);
+    border-width: var(--border-width-button);
+    border-style: solid;
+    border-color: var(--_border-color);
+    background-color: var(--_background-color);
+    border-radius: var(--radius-button);
+    color: var(--color-gray-2);
+    text-align: var(--_text-align);
+    font-family: inherit;
+    font-weight: 600;
+    transition: all .2s;
+  }
+
+  input[type="clear"] {
+    --_display: inline-flex;
+    --_justify-content: center;
+    --_align-items: center;
+    --_text-align: center;
+    --_background-color: var(--color-primary-10);
+    --_border-color: var(--color-primary-10);
+    display: var(--_display);
+    align-items: var(--_align-items);
+    justify-content: var(--_justify-content);
+    padding-block: var(--spacing-button-block);
+    padding-inline: var(--spacing-button-inline);
+    border-width: var(--border-width-button);
+    border-style: solid;
+    border-color: var(--_border-color);
+    background-color: var(--_background-color);
+    border-radius: var(--radius-button);
+    color: var(--color-gray-2);
+    text-align: var(--_text-align);
+    font-family: inherit;
+    font-weight: 600;
+    transition: all .2s;
+  }
+
+  input[type="button"] {
     --_display: inline-flex;
     --_justify-content: center;
     --_align-items: center;
@@ -678,21 +774,66 @@
     transition: all .2s;
   }
 
-  :where(a[role="button"]) {
+  a[role="button"] {
     text-decoration: none;
   }
 
-  :where(button, input[type="submit"], input[type="reset"], input[type="clear"], input[type="button"], [role="button"]):not([disabled]):hover {
+  input[type="submit"]:not([disabled]):hover {
     --_background-color: var(--color-primary-9);
     --_border-color: var(--color-primary-9);
   }
 
-  :where(button, input[type="submit"], input[type="reset"], input[type="clear"], input[type="button"], [role="button"]):not([disabled]):focus-visible {
+  input[type="submit"]:not([disabled]):focus-visible {
     --_background-color: var(--color-primary-9);
     --_border-color: var(--color-primary-9);
   }
 
-  :where(button, input[type="submit"], input[type="reset"], input[type="clear"], input[type="button"], [role="button"]):not([disabled]):active {
+  input[type="submit"]:not([disabled]):active {
+    --_background-color: var(--color-primary-11);
+    --_border-color: var(--color-primary-11);
+  }
+
+  input[type="reset"]:not([disabled]):hover {
+    --_background-color: var(--color-primary-9);
+    --_border-color: var(--color-primary-9);
+  }
+
+  input[type="reset"]:not([disabled]):focus-visible {
+    --_background-color: var(--color-primary-9);
+    --_border-color: var(--color-primary-9);
+  }
+
+  input[type="reset"]:not([disabled]):active {
+    --_background-color: var(--color-primary-11);
+    --_border-color: var(--color-primary-11);
+  }
+
+  input[type="clear"]:not([disabled]):hover {
+    --_background-color: var(--color-primary-9);
+    --_border-color: var(--color-primary-9);
+  }
+
+  input[type="clear"]:not([disabled]):focus-visible {
+    --_background-color: var(--color-primary-9);
+    --_border-color: var(--color-primary-9);
+  }
+
+  input[type="clear"]:not([disabled]):active {
+    --_background-color: var(--color-primary-11);
+    --_border-color: var(--color-primary-11);
+  }
+
+  input[type="button"]:not([disabled]):hover {
+    --_background-color: var(--color-primary-9);
+    --_border-color: var(--color-primary-9);
+  }
+
+  input[type="button"]:not([disabled]):focus-visible {
+    --_background-color: var(--color-primary-9);
+    --_border-color: var(--color-primary-9);
+  }
+
+  input[type="button"]:not([disabled]):active {
     --_background-color: var(--color-primary-11);
     --_border-color: var(--color-primary-11);
   }
@@ -712,7 +853,38 @@
     --_border-color: var(--color-primary-11);
   }
 
-  :where(button, input[type="submit"], input[type="reset"], input[type="clear"], input[type="button"], [role="button"])[disabled] {
+  :is(button:not([disabled]), [role="button"]:not([disabled])):hover {
+    --_background-color: var(--color-primary-9);
+    --_border-color: var(--color-primary-9);
+  }
+
+  :is(button:not([disabled]), [role="button"]:not([disabled])):focus-visible {
+    --_background-color: var(--color-primary-9);
+    --_border-color: var(--color-primary-9);
+  }
+
+  :is(button:not([disabled]), [role="button"]:not([disabled])):active {
+    --_background-color: var(--color-primary-11);
+    --_border-color: var(--color-primary-11);
+  }
+
+  button[disabled], [role="button"][disabled] {
+    opacity: .8;
+  }
+
+  input[type="submit"][disabled] {
+    opacity: .8;
+  }
+
+  input[type="reset"][disabled] {
+    opacity: .8;
+  }
+
+  input[type="clear"][disabled] {
+    opacity: .8;
+  }
+
+  input[type="button"][disabled] input[type="file"][disabled] {
     opacity: .8;
   }
 
