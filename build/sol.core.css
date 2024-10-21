@@ -550,11 +550,9 @@
     padding-inline-start: 1em;
   }
 
-  :where(figcaption) {
+  :where(figure:has(img) figcaption) {
     font-size: var(--font-size-00);
-    text-align: center;
     margin-block-start: var(--spacing-flow);
-    font-style: italic;
   }
 
   :target {
