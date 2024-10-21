@@ -58,7 +58,7 @@
 }
 
 :where(code) {
-  background-color: var(--color-surface-dim);
+  background-color: var(--color-surface-bright);
   border-radius: var(--radius-badge);
 }
 
