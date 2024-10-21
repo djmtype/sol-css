@@ -123,6 +123,24 @@
   border-inline-start: var(--border-width-thick) solid var(--color-accent);
 }
 
+:where(figure:has(blockquote)) {
+  margin-inline-start: 0;
+  padding-inline-start: 1em;
+  border-inline-start: var(--border-width-thick) solid var(--color-accent);
+}
+
+:where(figure:has(blockquote) blockquote) {
+  margin-inline-start: unset;
+  padding-inline-start: unset;
+  border-inline-start: unset;
+}
+
+:where(figure:has(blockquote) figcaption) {
+  font-size: var(--font-size-00);
+}
+
+
+
 :where(figure:has(img) figcaption) {
   font-size: var(--font-size-00);
   margin-block-start: var(--spacing-flow);

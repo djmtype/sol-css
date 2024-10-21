@@ -478,7 +478,7 @@
   }
 
   :where(code) {
-    background-color: var(--color-surface-dim);
+    background-color: var(--color-surface-bright);
     border-radius: var(--radius-badge);
   }
 
@@ -548,6 +548,22 @@
     border-inline-start: var(--border-width-thick) solid var(--color-accent);
     margin-inline-start: 0;
     padding-inline-start: 1em;
+  }
+
+  :where(figure:has(blockquote)) {
+    border-inline-start: var(--border-width-thick) solid var(--color-accent);
+    margin-inline-start: 0;
+    padding-inline-start: 1em;
+  }
+
+  :where(figure:has(blockquote) blockquote) {
+    border-inline-start: unset;
+    margin-inline-start: unset;
+    padding-inline-start: unset;
+  }
+
+  :where(figure:has(blockquote) figcaption) {
+    font-size: var(--font-size-00);
   }
 
   :where(figure:has(img) figcaption) {
