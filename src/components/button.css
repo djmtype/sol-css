@@ -11,6 +11,8 @@
   --_justify-content: center;
   --_align-items: center;
   --_text-align: center;
+  --_background-color: var(--color-primary-10);
+  --_border-color: var(--color-primary-10);
 
   display: var(--_display);
   align-items: var(--_align-items);
@@ -21,8 +23,8 @@
   padding-inline: var(--spacing-button-inline);
   border-width: var(--border-width-button);
   border-style: solid;
-  border-color: var(--color-primary-10);
-  background-color: var(--color-primary-10);
+  border-color: var(--_border-color);
+  background-color: var(--_background-color);
   border-radius: var(--radius-button);
   color: var(--color-gray-2);
   font-weight: 600;
@@ -44,13 +46,13 @@
 ::-webkit-file-upload-button {
   &:hover,
   &:focus-visible {
-    background-color: var(--color-primary-9);
-    border-color: var(--color-primary-9);
+    --_background-color: var(--color-primary-9);
+    --_border-color: var(--color-primary-9);
   }
 
   &:active {
-    background-color: var(--color-primary-11);
-    border-color: var(--color-primary-11);
+    --_background-color: var(--color-primary-11);
+    --_border-color: var(--color-primary-11);
   }
 }
 
