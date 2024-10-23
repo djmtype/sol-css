@@ -153,10 +153,6 @@
   margin: auto;
 }
 
-:where(figcaption) {
-  font-style: italic;
-}
-
 :where(ol, ul):not([role="list"]) {
   padding-inline-start: 2em;
 }

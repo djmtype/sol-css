@@ -1,5 +1,5 @@
 :where(html) {
-  color-scheme: light dark;
+  color-scheme: var(--color-scheme);
   color: var(--color-ink);
   background: var(--color-surface);
   accent-color: var(--color-accent);

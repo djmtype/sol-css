@@ -280,10 +280,6 @@ Add the correct vertical alignment
   margin: auto;
 }
 
-/* Distinguish captions from other text */
-:where(figcaption) {
-  font-style: italic;
-}
 
 /* Add consistent, intrinsic alignment */
 :where(ol, ul):not([role="list"]) {

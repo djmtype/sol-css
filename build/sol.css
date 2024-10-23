@@ -154,10 +154,6 @@
     margin: auto;
   }
 
-  :where(figcaption) {
-    font-style: italic;
-  }
-
   :where(ol, ul):not([role="list"]) {
     padding-inline-start: 2em;
   }
@@ -306,6 +302,7 @@
   }
 
   :root {
+    --color-scheme: light dark;
     --primary-hue: var(--hue-indigo);
     --primary-hue-rotation: 0;
     --primary-chroma: 1;
@@ -441,19 +438,10 @@
   }
 
   :where(html) {
-    --lightningcss-light: initial;
-    --lightningcss-dark: ;
-    color-scheme: light dark;
+    color-scheme: var(--color-scheme);
     color: var(--color-ink);
     background: var(--color-surface);
     accent-color: var(--color-accent);
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :where(html) {
-      --lightningcss-light: ;
-      --lightningcss-dark: initial;
-    }
   }
 
   :where(html[data-theme="light"]) {
