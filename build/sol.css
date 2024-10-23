@@ -315,6 +315,9 @@
     --utility-hue: var(--primary-hue);
     --utility-hue-rotation: 0;
     --utility-chroma: 1;
+  }
+
+  * {
     --color-ink: var(--lightningcss-light, var(--color-gray-14)) var(--lightningcss-dark, var(--color-gray-2));
     --color-ink-contrast: var(--lightningcss-light, var(--color-gray-16)) var(--lightningcss-dark, var(--color-gray-1));
     --color-ink-muted: var(--lightningcss-light, var(--color-gray-10)) var(--lightningcss-dark, var(--color-gray-5));
@@ -334,9 +337,6 @@
     --color-anchor: var(--lightningcss-light, var(--color-primary-10)) var(--lightningcss-dark, var(--color-primary-5));
     --color-anchor-hover: var(--lightningcss-light, var(--color-primary-8)) var(--lightningcss-dark, var(--color-primary-3));
     --color-anchor-active: var(--lightningcss-light, var(--color-primary-12)) var(--lightningcss-dark, var(--color-primary-7));
-  }
-
-  * {
     --color-ink-utility: var(--lightningcss-light, var(--color-utility-10)) var(--lightningcss-dark, var(--color-utility-5));
     --color-surface-utility-highlight: var(--lightningcss-light, var(--color-utility-3)) var(--lightningcss-dark, var(--color-utility-4));
   }
