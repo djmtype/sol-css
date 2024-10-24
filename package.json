@@ -2,22 +2,13 @@
   "name": "sol-css",
   "type": "module",
   "version": "0.0.38",
-  "browserslist": [
-    "supports prefers-color-scheme, > .5%"
-  ],
   "scripts": {
-    "build:reset": "lightningcss --bundle --targets 'supports prefers-color-scheme, > .5%' src/base/reset.css -o build/sol.reset.css",
-    "build:core": "lightningcss --bundle --targets 'supports prefers-color-scheme, > .5%' src/core.css -o build/sol.core.css",
-    "build:complete": "lightningcss --bundle --targets 'supports prefers-color-scheme, > .5%' src/sol.css -o build/sol.css",
-    "build:dev": "lightningcss --bundle --targets 'supports prefers-color-scheme, > .5%' src/sol.css -o build/sol.css",
-    "build:prod": "npm run build:complete && npm run build:core && npm run build:reset", 
-    "build:min": "lightningcss --bundle --targets 'supports prefers-color-scheme, > .5%' build/*.css --output-dir build/minified --minify",
-    "build": "npm run build:prod && npm run build:min"
+    "build": "node build.js all"
   },
   "devDependencies": {
-    "lightningcss": "^1.26.0"
+    "lightningcss": "^1.27.0"
   },
   "dependencies": {
-    "lightningcss-cli": "^1.26.0"
+    "lightningcss-cli": "^1.27.0"
   }
 }

@@ -6,7 +6,6 @@
   :where(html) {
     -webkit-text-size-adjust: none;
     -moz-text-size-adjust: none;
-    -ms-text-size-adjust: none;
     text-size-adjust: none;
     -webkit-tap-highlight-color: transparent;
     interpolate-size: allow-keywords;
@@ -17,21 +16,19 @@
     -moz-osx-font-smoothing: grayscale;
     overflow-wrap: break-word;
     scrollbar-gutter: stable;
-    min-height: 100%;
-    max-width: 100%;
+    min-block-size: 100%;
+    max-inline-size: 100%;
     margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+    font-family: system-ui, sans-serif;
     line-height: 1.5;
   }
 
   :where(figure) {
-    margin-left: 0;
-    margin-right: 0;
+    margin-inline: 0;
   }
 
   :where(h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, ul, ol, hr, pre) {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-block: 0;
   }
 
   :where(h1, h2, h3) {
@@ -43,8 +40,7 @@
   }
 
   :where(ul[role="list"], ol[role="list"]) {
-    padding-left: 0;
-    padding-right: 0;
+    padding-inline: 0;
     list-style-type: none;
   }
 
@@ -79,8 +75,8 @@
   }
 
   :where(img, svg, video, canvas) {
-    height: auto;
-    max-width: 100%;
+    block-size: auto;
+    max-inline-size: 100%;
   }
 
   :where(img, video, canvas, audio, iframe, embed, object) {
@@ -128,9 +124,6 @@
 
   :where() {
     -webkit-appearance: none;
-  }
-
-  :where() {
     font: inherit;
   }
 
@@ -160,52 +153,12 @@
     margin: auto;
   }
 
-  :where(ol, ul):not([role="list"]):not(:-webkit-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
-    padding-left: 2em;
+  :where(ol, ul):not([role="list"]) {
+    padding-inline-start: 2em;
   }
 
-  :where(ol, ul):not([role="list"]):not(:-moz-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
-    padding-left: 2em;
-  }
-
-  :where(ol, ul):not([role="list"]):not(:is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
-    padding-left: 2em;
-  }
-
-  :where(ol, ul):not([role="list"]):-webkit-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
-    padding-right: 2em;
-  }
-
-  :where(ol, ul):not([role="list"]):-moz-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
-    padding-right: 2em;
-  }
-
-  :where(ol, ul):not([role="list"]):is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
-    padding-right: 2em;
-  }
-
-  :where(ol, ul):not([role="list"]) :where(ol, ul):not([role="list"]):not(:-webkit-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
-    padding-left: 1em;
-  }
-
-  :where(ol, ul):not([role="list"]) :where(ol, ul):not([role="list"]):not(:-moz-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
-    padding-left: 1em;
-  }
-
-  :where(ol, ul):not([role="list"]) :where(ol, ul):not([role="list"]):not(:is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
-    padding-left: 1em;
-  }
-
-  :where(ol, ul):not([role="list"]) :where(ol, ul):not([role="list"]):-webkit-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
-    padding-right: 1em;
-  }
-
-  :where(ol, ul):not([role="list"]) :where(ol, ul):not([role="list"]):-moz-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
-    padding-right: 1em;
-  }
-
-  :where(ol, ul):not([role="list"]) :where(ol, ul):not([role="list"]):is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
-    padding-right: 1em;
+  :where(ol, ul):not([role="list"]) :where(ol, ul):not([role="list"]) {
+    padding-inline-start: 1em;
   }
 
   :where(ol):not([role="list"]) :where(ol):not([role="list"]) {
@@ -216,40 +169,10 @@
     list-style-type: disc;
   }
 
-  :where(blockquote):not(:-webkit-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
-    border-left: 2px solid;
-    margin-left: 0;
-    padding-left: 1em;
-  }
-
-  :where(blockquote):not(:-moz-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
-    border-left: 2px solid;
-    margin-left: 0;
-    padding-left: 1em;
-  }
-
-  :where(blockquote):not(:is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
-    border-left: 2px solid;
-    margin-left: 0;
-    padding-left: 1em;
-  }
-
-  :where(blockquote):-webkit-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
-    border-right: 2px solid;
-    margin-right: 0;
-    padding-right: 1em;
-  }
-
-  :where(blockquote):-moz-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
-    border-right: 2px solid;
-    margin-right: 0;
-    padding-right: 1em;
-  }
-
-  :where(blockquote):is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
-    border-right: 2px solid;
-    margin-right: 0;
-    padding-right: 1em;
+  :where(blockquote) {
+    border-inline-start: 2px solid;
+    margin-inline-start: 0;
+    padding-inline-start: 1em;
   }
 }
 
@@ -489,7 +412,7 @@
     --shadow-chroma: var(--lightningcss-light, 3%) var(--lightningcss-dark, 10%);
     --shadow-hue: var(--shadow-tint, var(--primary-hue));
     --shadow-color: 15% var(--shadow-chroma) var(--shadow-hue);
-    --inner-shadow-highlight: var(--lightningcss-light, inset 0 -.5px 0 0 #fff) var(--lightningcss-dark, inset 0 .5px 0 0 rgba(0, 0, 0, .067), inset 0 -.5px 0 0 rgba(255, 255, 255, .067), inset 0 .5px 0 0 rgba(0, 0, 0, .467));
+    --inner-shadow-highlight: var(--lightningcss-light, inset 0 -.5px 0 0 #fff) var(--lightningcss-dark, inset 0 .5px 0 0 #0001, inset 0 -.5px 0 0 #fff1, inset 0 .5px 0 0 #0007);
     --shadow-1: 0 1px 2px -1px oklch(var(--shadow-color) / calc(var(--shadow-strength)  + 9%));
     --shadow-2: 0 3px 5px -2px oklch(var(--shadow-color) / calc(var(--shadow-strength)  + 3%)), 0 7px 14px -5px oklch(var(--shadow-color) / calc(var(--shadow-strength)  + 5%));
     --shadow-3: 0 -1px 3px 0 oklch(var(--shadow-color) / calc(var(--shadow-strength)  + 2%)), 0 1px 2px -5px oklch(var(--shadow-color) / calc(var(--shadow-strength)  + 2%)), 0 2px 5px -5px oklch(var(--shadow-color) / calc(var(--shadow-strength)  + 4%)), 0 4px 12px -5px oklch(var(--shadow-color) / calc(var(--shadow-strength)  + 5%)), 0 12px 15px -5px oklch(var(--shadow-color) / calc(var(--shadow-strength)  + 7%));
@@ -536,7 +459,7 @@
     100% {
       outline-offset: 2em;
       outline-width: 1em;
-      outline-color: rgba(0, 0, 0, 0);
+      outline-color: #0000;
     }
   }
 
@@ -624,12 +547,7 @@
     transition: all .2s;
   }
 
-  :where(a):hover {
-    color: var(--color-anchor-hover);
-    text-decoration: none;
-  }
-
-  :where(a):focus-visible {
+  :where(a):hover, :where(a):focus-visible {
     color: var(--color-anchor-hover);
     text-decoration: none;
   }
@@ -638,52 +556,12 @@
     color: var(--color-anchor-active);
   }
 
-  :where(ol, ul):not([role="list"]):not(:-webkit-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
-    padding-left: 2em;
+  :where(ol, ul):not([role="list"]) {
+    padding-inline-start: 2em;
   }
 
-  :where(ol, ul):not([role="list"]):not(:-moz-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
-    padding-left: 2em;
-  }
-
-  :where(ol, ul):not([role="list"]):not(:is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
-    padding-left: 2em;
-  }
-
-  :where(ol, ul):not([role="list"]):-webkit-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
-    padding-right: 2em;
-  }
-
-  :where(ol, ul):not([role="list"]):-moz-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
-    padding-right: 2em;
-  }
-
-  :where(ol, ul):not([role="list"]):is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
-    padding-right: 2em;
-  }
-
-  :where(ol, ul):not([role="list"]) :where(ol, ul):not([role="list"]):not(:-webkit-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
-    padding-left: 1em;
-  }
-
-  :where(ol, ul):not([role="list"]) :where(ol, ul):not([role="list"]):not(:-moz-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
-    padding-left: 1em;
-  }
-
-  :where(ol, ul):not([role="list"]) :where(ol, ul):not([role="list"]):not(:is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
-    padding-left: 1em;
-  }
-
-  :where(ol, ul):not([role="list"]) :where(ol, ul):not([role="list"]):-webkit-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
-    padding-right: 1em;
-  }
-
-  :where(ol, ul):not([role="list"]) :where(ol, ul):not([role="list"]):-moz-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
-    padding-right: 1em;
-  }
-
-  :where(ol, ul):not([role="list"]) :where(ol, ul):not([role="list"]):is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
-    padding-right: 1em;
+  :where(ol, ul):not([role="list"]) :where(ol, ul):not([role="list"]) {
+    padding-inline-start: 1em;
   }
 
   :where(ol):not([role="list"]) :where(ol):not([role="list"]) {
@@ -698,116 +576,28 @@
     color: var(--color-ink-primary);
   }
 
-  :where(blockquote):not(:-webkit-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
-    border-left: var(--border-width-thick) solid var(--color-accent);
+  :where(blockquote) {
+    border-inline-start: var(--border-width-thick) solid var(--color-accent);
   }
 
-  :where(blockquote):not(:-moz-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
-    border-left: var(--border-width-thick) solid var(--color-accent);
+  :where(figure:has(blockquote) blockquote) {
+    border-inline-start: unset;
+    margin-inline-start: unset;
+    padding-inline-start: unset;
   }
 
-  :where(blockquote):not(:is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
-    border-left: var(--border-width-thick) solid var(--color-accent);
-  }
-
-  :where(blockquote):-webkit-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
-    border-right: var(--border-width-thick) solid var(--color-accent);
-  }
-
-  :where(blockquote):-moz-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
-    border-right: var(--border-width-thick) solid var(--color-accent);
-  }
-
-  :where(blockquote):is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
-    border-right: var(--border-width-thick) solid var(--color-accent);
-  }
-
-  :where(figure:has(blockquote) blockquote):not(:-webkit-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
-    border-left: unset;
-    margin-left: unset;
-    padding-left: unset;
-  }
-
-  :where(figure:has(blockquote) blockquote):not(:-moz-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
-    border-left: unset;
-    margin-left: unset;
-    padding-left: unset;
-  }
-
-  :where(figure:has(blockquote) blockquote):not(:is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
-    border-left: unset;
-    margin-left: unset;
-    padding-left: unset;
-  }
-
-  :where(figure:has(blockquote) blockquote):-webkit-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
-    border-right: unset;
-    margin-right: unset;
-    padding-right: unset;
-  }
-
-  :where(figure:has(blockquote) blockquote):-moz-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
-    border-right: unset;
-    margin-right: unset;
-    padding-right: unset;
-  }
-
-  :where(figure:has(blockquote) blockquote):is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
-    border-right: unset;
-    margin-right: unset;
-    padding-right: unset;
-  }
-
-  :where(figure:has(blockquote)):not(:-webkit-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
-    border-left: var(--border-width-thick) solid var(--color-accent);
-    margin-left: 0;
-    padding-left: 1em;
-  }
-
-  :where(figure:has(blockquote)):not(:-moz-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
-    border-left: var(--border-width-thick) solid var(--color-accent);
-    margin-left: 0;
-    padding-left: 1em;
-  }
-
-  :where(figure:has(blockquote)):not(:is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
-    border-left: var(--border-width-thick) solid var(--color-accent);
-    margin-left: 0;
-    padding-left: 1em;
-  }
-
-  :where(figure:has(blockquote)):-webkit-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
-    border-right: var(--border-width-thick) solid var(--color-accent);
-    margin-right: 0;
-    padding-right: 1em;
-  }
-
-  :where(figure:has(blockquote)):-moz-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
-    border-right: var(--border-width-thick) solid var(--color-accent);
-    margin-right: 0;
-    padding-right: 1em;
-  }
-
-  :where(figure:has(blockquote)):is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
-    border-right: var(--border-width-thick) solid var(--color-accent);
-    margin-right: 0;
-    padding-right: 1em;
+  :where(figure:has(blockquote)) {
+    border-inline-start: var(--border-width-thick) solid var(--color-accent);
+    margin-inline-start: 0;
+    padding-inline-start: 1em;
   }
 
   :where(figure:has(img, blockquote) figcaption) {
     font-size: var(--font-size-00);
-    margin-top: var(--spacing-flow);
+    margin-block-start: var(--spacing-flow);
   }
 
-  :target {
-    outline-width: var(--border-width-focus);
-    outline-style: solid;
-    outline-color: var(--color-accent);
-    outline-offset: var(--border-width-focus);
-    transition: outline-offset .2s;
-  }
-
-  :focus-visible {
+  :focus-visible, :target {
     outline-width: var(--border-width-focus);
     outline-style: solid;
     outline-color: var(--color-accent);
@@ -828,103 +618,7 @@
 }
 
 @layer components {
-  button, [role="button"] {
-    --_display: inline-flex;
-    --_justify-content: center;
-    --_align-items: center;
-    --_text-align: center;
-    --_background-color: var(--color-primary-10);
-    --_border-color: var(--color-primary-10);
-    display: var(--_display);
-    align-items: var(--_align-items);
-    justify-content: var(--_justify-content);
-    padding-block: var(--spacing-button-block);
-    padding-inline: var(--spacing-button-inline);
-    border-width: var(--border-width-button);
-    border-style: solid;
-    border-color: var(--_border-color);
-    background-color: var(--_background-color);
-    border-radius: var(--radius-button);
-    color: var(--color-gray-2);
-    text-align: var(--_text-align);
-    font-family: inherit;
-    font-weight: 600;
-    transition: all .2s;
-  }
-
-  input[type="submit"] {
-    --_display: inline-flex;
-    --_justify-content: center;
-    --_align-items: center;
-    --_text-align: center;
-    --_background-color: var(--color-primary-10);
-    --_border-color: var(--color-primary-10);
-    display: var(--_display);
-    align-items: var(--_align-items);
-    justify-content: var(--_justify-content);
-    padding-block: var(--spacing-button-block);
-    padding-inline: var(--spacing-button-inline);
-    border-width: var(--border-width-button);
-    border-style: solid;
-    border-color: var(--_border-color);
-    background-color: var(--_background-color);
-    border-radius: var(--radius-button);
-    color: var(--color-gray-2);
-    text-align: var(--_text-align);
-    font-family: inherit;
-    font-weight: 600;
-    transition: all .2s;
-  }
-
-  input[type="reset"] {
-    --_display: inline-flex;
-    --_justify-content: center;
-    --_align-items: center;
-    --_text-align: center;
-    --_background-color: var(--color-primary-10);
-    --_border-color: var(--color-primary-10);
-    display: var(--_display);
-    align-items: var(--_align-items);
-    justify-content: var(--_justify-content);
-    padding-block: var(--spacing-button-block);
-    padding-inline: var(--spacing-button-inline);
-    border-width: var(--border-width-button);
-    border-style: solid;
-    border-color: var(--_border-color);
-    background-color: var(--_background-color);
-    border-radius: var(--radius-button);
-    color: var(--color-gray-2);
-    text-align: var(--_text-align);
-    font-family: inherit;
-    font-weight: 600;
-    transition: all .2s;
-  }
-
-  input[type="clear"] {
-    --_display: inline-flex;
-    --_justify-content: center;
-    --_align-items: center;
-    --_text-align: center;
-    --_background-color: var(--color-primary-10);
-    --_border-color: var(--color-primary-10);
-    display: var(--_display);
-    align-items: var(--_align-items);
-    justify-content: var(--_justify-content);
-    padding-block: var(--spacing-button-block);
-    padding-inline: var(--spacing-button-inline);
-    border-width: var(--border-width-button);
-    border-style: solid;
-    border-color: var(--_border-color);
-    background-color: var(--_background-color);
-    border-radius: var(--radius-button);
-    color: var(--color-gray-2);
-    text-align: var(--_text-align);
-    font-family: inherit;
-    font-weight: 600;
-    transition: all .2s;
-  }
-
-  input[type="button"] {
+  button, input[type="submit"], input[type="reset"], input[type="clear"], input[type="button"], [role="button"] {
     --_display: inline-flex;
     --_justify-content: center;
     --_align-items: center;
@@ -976,72 +670,7 @@
     text-decoration: none;
   }
 
-  input[type="submit"]:not([disabled]):hover {
-    --_background-color: var(--color-primary-9);
-    --_border-color: var(--color-primary-9);
-  }
-
-  input[type="submit"]:not([disabled]):focus-visible {
-    --_background-color: var(--color-primary-9);
-    --_border-color: var(--color-primary-9);
-  }
-
-  input[type="submit"]:not([disabled]):active {
-    --_background-color: var(--color-primary-11);
-    --_border-color: var(--color-primary-11);
-  }
-
-  input[type="reset"]:not([disabled]):hover {
-    --_background-color: var(--color-primary-9);
-    --_border-color: var(--color-primary-9);
-  }
-
-  input[type="reset"]:not([disabled]):focus-visible {
-    --_background-color: var(--color-primary-9);
-    --_border-color: var(--color-primary-9);
-  }
-
-  input[type="reset"]:not([disabled]):active {
-    --_background-color: var(--color-primary-11);
-    --_border-color: var(--color-primary-11);
-  }
-
-  input[type="clear"]:not([disabled]):hover {
-    --_background-color: var(--color-primary-9);
-    --_border-color: var(--color-primary-9);
-  }
-
-  input[type="clear"]:not([disabled]):focus-visible {
-    --_background-color: var(--color-primary-9);
-    --_border-color: var(--color-primary-9);
-  }
-
-  input[type="clear"]:not([disabled]):active {
-    --_background-color: var(--color-primary-11);
-    --_border-color: var(--color-primary-11);
-  }
-
-  input[type="button"]:not([disabled]):hover {
-    --_background-color: var(--color-primary-9);
-    --_border-color: var(--color-primary-9);
-  }
-
-  input[type="button"]:not([disabled]):focus-visible {
-    --_background-color: var(--color-primary-9);
-    --_border-color: var(--color-primary-9);
-  }
-
-  input[type="button"]:not([disabled]):active {
-    --_background-color: var(--color-primary-11);
-    --_border-color: var(--color-primary-11);
-  }
-
-  ::-webkit-file-upload-button:hover {
-    --_background-color: var(--color-primary-9);
-    --_border-color: var(--color-primary-9);
-  }
-
-  ::-webkit-file-upload-button:focus-visible {
+  ::-webkit-file-upload-button:hover, ::-webkit-file-upload-button:focus-visible {
     --_background-color: var(--color-primary-9);
     --_border-color: var(--color-primary-9);
   }
@@ -1051,38 +680,37 @@
     --_border-color: var(--color-primary-11);
   }
 
-  :is(button:not([disabled]), [role="button"]:not([disabled])):hover {
+  :is(button:not([disabled]), input[type="submit"]:not([disabled]), input[type="reset"]:not([disabled]), input[type="clear"]:not([disabled]), input[type="button"]:not([disabled]), [role="button"]:not([disabled])):hover, :is(button:not([disabled]), input[type="submit"]:not([disabled]), input[type="reset"]:not([disabled]), input[type="clear"]:not([disabled]), input[type="button"]:not([disabled]), [role="button"]:not([disabled])):focus-visible {
     --_background-color: var(--color-primary-9);
     --_border-color: var(--color-primary-9);
   }
 
-  :is(button:not([disabled]), [role="button"]:not([disabled])):focus-visible {
-    --_background-color: var(--color-primary-9);
-    --_border-color: var(--color-primary-9);
-  }
-
-  :is(button:not([disabled]), [role="button"]:not([disabled])):active {
+  :is(button:not([disabled]), input[type="submit"]:not([disabled]), input[type="reset"]:not([disabled]), input[type="clear"]:not([disabled]), input[type="button"]:not([disabled]), [role="button"]:not([disabled])):active {
     --_background-color: var(--color-primary-11);
     --_border-color: var(--color-primary-11);
   }
 
-  button[disabled], [role="button"][disabled] {
-    opacity: .8;
+  ::file-selector-button:hover, ::file-selector-button:focus-visible {
+    --_background-color: var(--color-primary-9);
+    --_border-color: var(--color-primary-9);
   }
 
-  input[type="submit"][disabled] {
-    opacity: .8;
+  ::file-selector-button:active {
+    --_background-color: var(--color-primary-11);
+    --_border-color: var(--color-primary-11);
   }
 
-  input[type="reset"][disabled] {
-    opacity: .8;
+  :is(button:not([disabled]), input[type="submit"]:not([disabled]), input[type="reset"]:not([disabled]), input[type="clear"]:not([disabled]), input[type="button"]:not([disabled]), [role="button"]:not([disabled])):hover, :is(button:not([disabled]), input[type="submit"]:not([disabled]), input[type="reset"]:not([disabled]), input[type="clear"]:not([disabled]), input[type="button"]:not([disabled]), [role="button"]:not([disabled])):focus-visible {
+    --_background-color: var(--color-primary-9);
+    --_border-color: var(--color-primary-9);
   }
 
-  input[type="clear"][disabled] {
-    opacity: .8;
+  :is(button:not([disabled]), input[type="submit"]:not([disabled]), input[type="reset"]:not([disabled]), input[type="clear"]:not([disabled]), input[type="button"]:not([disabled]), [role="button"]:not([disabled])):active {
+    --_background-color: var(--color-primary-11);
+    --_border-color: var(--color-primary-11);
   }
 
-  input[type="button"][disabled] input[type="file"][disabled] {
+  button[disabled], input[type="submit"][disabled], input[type="reset"][disabled], input[type="clear"][disabled], input[type="button"][disabled] input[type="file"][disabled], [role="button"][disabled] {
     opacity: .8;
   }
 
@@ -1106,45 +734,17 @@
     position: relative;
   }
 
-  details > summary:not([role="button"]):hover {
-    background-color: var(--color-surface-bright);
-    border-color: var(--color-separator-highlight);
-  }
-
-  details > summary:not([role="button"]):focus-visible {
+  details > summary:not([role="button"]):hover, details > summary:not([role="button"]):focus-visible {
     background-color: var(--color-surface-bright);
     border-color: var(--color-separator-highlight);
   }
 
   details > summary:not([role="button"]) {
     padding-inline: var(--spacing-input-inline);
+    padding-inline-end: calc(var(--spacing-input-inline) * 2 + var(--icon-size));
     padding-block: var(--spacing-input-block);
     border: var(--border-width-input) solid var(--color-separator);
     border-radius: var(--radius-input);
-  }
-
-  details > summary:not([role="button"]):not(:-webkit-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
-    padding-right: calc(var(--spacing-input-inline) * 2 + var(--icon-size));
-  }
-
-  details > summary:not([role="button"]):not(:-moz-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
-    padding-right: calc(var(--spacing-input-inline) * 2 + var(--icon-size));
-  }
-
-  details > summary:not([role="button"]):not(:is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
-    padding-right: calc(var(--spacing-input-inline) * 2 + var(--icon-size));
-  }
-
-  details > summary:not([role="button"]):-webkit-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
-    padding-left: calc(var(--spacing-input-inline) * 2 + var(--icon-size));
-  }
-
-  details > summary:not([role="button"]):-moz-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
-    padding-left: calc(var(--spacing-input-inline) * 2 + var(--icon-size));
-  }
-
-  details > summary:not([role="button"]):is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
-    padding-left: calc(var(--spacing-input-inline) * 2 + var(--icon-size));
   }
 
   details[open] > summary:not([role="button"]) {
@@ -1155,13 +755,13 @@
     content: "";
     -webkit-mask-image: var(--icon-chevron-right);
     mask-image: var(--icon-chevron-right);
-    height: var(--icon-size);
-    width: var(--icon-size);
+    block-size: var(--icon-size);
+    inline-size: var(--icon-size);
     transform: var(--_icon-rotation);
     top: 0;
     right: var(--spacing-input-inline);
     background-color: currentColor;
-    height: 100%;
+    block-size: 100%;
     transition: all .2s;
     display: inline-block;
     position: absolute;
@@ -1182,11 +782,11 @@
     background: var(--color-surface-bright);
     padding: var(--spacing-input-inline);
     border: var(--border-width-input) solid var(--color-separator);
-    margin-top: var(--spacing-sibling);
+    margin-block-start: var(--spacing-sibling);
   }
 
   details > div > * + * {
-    margin-top: var(--spacing-flow);
+    margin-block-start: var(--spacing-flow);
   }
 
   details[open] > div {
@@ -1202,8 +802,8 @@
     border-radius: var(--radius-input);
     box-shadow: var(--shadow-3);
     background-color: var(--color-surface-bright);
-    max-height: calc(100% - 4rlh);
-    width: min(48rem, 100% - 4rlh);
+    max-block-size: calc(100% - 4rlh);
+    inline-size: min(48rem, 100% - 4rlh);
     padding: 0;
     transition-duration: .4s;
     translate: 0 25vh;
@@ -1215,7 +815,7 @@
   }
 
   dialog > :where(form, article) > div > * + * {
-    margin-top: 1em;
+    margin-block-start: 1em;
   }
 
   dialog header, dialog footer {
@@ -1223,12 +823,11 @@
     padding-block: var(--spacing-xs);
     background: var(--color-surface-bright);
     z-index: 1;
-    position: -webkit-sticky;
     position: sticky;
   }
 
   dialog header {
-    border-bottom: var(--border-width-input) solid var(--color-separator);
+    border-block-end: var(--border-width-input) solid var(--color-separator);
     justify-content: space-between;
     align-items: center;
     display: flex;
@@ -1239,7 +838,7 @@
     justify-content: center;
     align-items: center;
     gap: var(--spacing-sibling);
-    border-top: var(--border-width-input) solid var(--color-separator);
+    border-block-start: var(--border-width-input) solid var(--color-separator);
     display: flex;
     bottom: 0;
   }
@@ -1252,34 +851,8 @@
     font-size: var(--font-size-2);
   }
 
-  dialog header > button:not(:-webkit-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
-    margin-left: auto;
-    margin-right: 0;
-  }
-
-  dialog header > button:not(:-moz-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
-    margin-left: auto;
-    margin-right: 0;
-  }
-
-  dialog header > button:not(:is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
-    margin-left: auto;
-    margin-right: 0;
-  }
-
-  dialog header > button:-webkit-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
-    margin-left: 0;
-    margin-right: auto;
-  }
-
-  dialog header > button:-moz-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
-    margin-left: 0;
-    margin-right: auto;
-  }
-
-  dialog header > button:is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
-    margin-left: 0;
-    margin-right: auto;
+  dialog header > button {
+    margin-inline: auto 0;
   }
 
   dialog[open] {
@@ -1295,10 +868,6 @@
     }
   }
 
-  dialog[open]::-ms-backdrop {
-    display: none;
-  }
-
   dialog[open]::backdrop {
     display: none;
   }
@@ -1308,10 +877,9 @@
     border-radius: var(--radius-pill);
     aspect-ratio: 1;
     min-height: unset;
-    align-items: center;
-    justify-items: center;
-    height: 3rem;
-    width: 3rem;
+    place-items: center;
+    block-size: 3rem;
+    inline-size: 3rem;
     display: grid;
     position: relative;
   }
@@ -1362,18 +930,18 @@
   }
 
   nav[popover] {
-    margin: 0;
     position-anchor: --menu;
     left: anchor(--menu left);
     top: anchor(--menu bottom);
-    margin-top: var(--spacing-sibling);
+    margin: 0;
+    margin-block-start: var(--spacing-sibling);
     position: absolute;
   }
 
   nav[popover] ul {
     padding-block: var(--spacing-4xs);
     flex-direction: column;
-    min-width: 20ch;
+    min-inline-size: 20ch;
     display: flex;
   }
 
@@ -1416,7 +984,6 @@
   }
 
   figure:has(table) figcaption {
-    position: -webkit-sticky;
     position: sticky;
     left: 0;
   }
@@ -1425,39 +992,18 @@
     border-collapse: collapse;
     border-spacing: 0;
     text-indent: 0;
-    border-top: 0;
-    border-bottom: 0;
+    border-block: 0;
     width: 100%;
   }
 
   thead {
     background-color: var(--color-surface-dim);
-    border-bottom: var(--border-width-thin) solid var(--color-separator);
+    border-block-end: var(--border-width-thin) solid var(--color-separator);
     font-weight: 600;
   }
 
-  thead th:not([align="center"]):not([align="right"]):not(:-webkit-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
-    text-align: left;
-  }
-
-  thead th:not([align="center"]):not([align="right"]):not(:-moz-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
-    text-align: left;
-  }
-
-  thead th:not([align="center"]):not([align="right"]):not(:is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
-    text-align: left;
-  }
-
-  thead th:not([align="center"]):not([align="right"]):-webkit-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
-    text-align: right;
-  }
-
-  thead th:not([align="center"]):not([align="right"]):-moz-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
-    text-align: right;
-  }
-
-  thead th:not([align="center"]):not([align="right"]):is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
-    text-align: right;
+  thead th:not([align="center"]):not([align="right"]) {
+    text-align: start;
   }
 
   th {
@@ -1465,7 +1011,7 @@
   }
 
   tbody tr {
-    border-top: var(--border-width-hairline) solid var(--color-separator);
+    border-block-start: var(--border-width-hairline) solid var(--color-separator);
   }
 
   th, td {
@@ -1474,9 +1020,9 @@
   }
 
   tfoot {
-    border-top: var(--border-width-thin) solid var(--color-separator);
+    border-block-start: var(--border-width-thin) solid var(--color-separator);
     background-color: var(--color-surface-dim);
-    border-bottom: 0;
+    border-block-end: 0;
     font-weight: 600;
   }
 
@@ -1487,12 +1033,6 @@
 
   tbody tr:nth-child(2n) {
     --_row-bg: var(--color-surface-bright);
-  }
-
-  ::-ms-input-placeholder {
-    color: var(--color-ink-muted);
-    opacity: 1;
-    font-style: italic;
   }
 
   ::placeholder {
@@ -1512,7 +1052,7 @@
     padding: 0;
   }
 
-  textarea, select {
+  input:not([type="submit"], [type="reset"], [type="file"], [type="range"]), textarea, select {
     padding-block: var(--spacing-input-block);
     padding-inline: var(--spacing-input-inline);
     border-radius: var(--radius-input);
@@ -1520,92 +1060,19 @@
     background-color: var(--color-surface-dim);
   }
 
-  input:not(:-webkit-any([type="submit"], [type="reset"], [type="file"], [type="range"])) {
-    padding-block: var(--spacing-input-block);
-    padding-inline: var(--spacing-input-inline);
-    border-radius: var(--radius-input);
-    border: var(--border-width-input) solid var(--color-separator);
-    background-color: var(--color-surface-dim);
-  }
-
-  input:not(:-moz-any([type="submit"], [type="reset"], [type="file"], [type="range"])) {
-    padding-block: var(--spacing-input-block);
-    padding-inline: var(--spacing-input-inline);
-    border-radius: var(--radius-input);
-    border: var(--border-width-input) solid var(--color-separator);
-    background-color: var(--color-surface-dim);
-  }
-
-  input:not(:is([type="submit"], [type="reset"], [type="file"], [type="range"])) {
-    padding-block: var(--spacing-input-block);
-    padding-inline: var(--spacing-input-inline);
-    border-radius: var(--radius-input);
-    border: var(--border-width-input) solid var(--color-separator);
-    background-color: var(--color-surface-dim);
-  }
-
-  :where(input:not(:-webkit-any([type="submit"], [type="reset"], [type="file"], [type="range"])), textarea, select):not([disabled]):focus-visible {
+  :where(input:not([type="submit"], [type="reset"], [type="file"], [type="range"]), textarea, select):not([disabled]):focus-visible {
     color: var(--color-ink-contrast);
     background-color: var(--color-surface-bright);
   }
 
-  :where(input:not(:-webkit-any([type="submit"], [type="reset"], [type="file"], [type="range"])), textarea, select):not([disabled]):hover {
+  :where(input:not([type="submit"], [type="reset"], [type="file"], [type="range"]), textarea, select):not([disabled]):hover, :where(input:not([type="submit"], [type="reset"], [type="file"], [type="range"]), textarea, select):not([disabled]):focus-visible {
     border-color: var(--color-separator-highlight);
   }
 
-  :where(input:not(:-webkit-any([type="submit"], [type="reset"], [type="file"], [type="range"])), textarea, select):not([disabled]):focus-visible {
-    border-color: var(--color-separator-highlight);
-  }
-
-  :where(input:not(:-moz-any([type="submit"], [type="reset"], [type="file"], [type="range"])), textarea, select):not([disabled]):focus-visible {
-    color: var(--color-ink-contrast);
-    background-color: var(--color-surface-bright);
-  }
-
-  :where(input:not(:-moz-any([type="submit"], [type="reset"], [type="file"], [type="range"])), textarea, select):not([disabled]):hover {
-    border-color: var(--color-separator-highlight);
-  }
-
-  :where(input:not(:-moz-any([type="submit"], [type="reset"], [type="file"], [type="range"])), textarea, select):not([disabled]):focus-visible {
-    border-color: var(--color-separator-highlight);
-  }
-
-  :where(input:not(:is([type="submit"], [type="reset"], [type="file"], [type="range"])), textarea, select):not([disabled]):focus-visible {
-    color: var(--color-ink-contrast);
-    background-color: var(--color-surface-bright);
-  }
-
-  :where(input:not(:is([type="submit"], [type="reset"], [type="file"], [type="range"])), textarea, select):not([disabled]):hover {
-    border-color: var(--color-separator-highlight);
-  }
-
-  :where(input:not(:is([type="submit"], [type="reset"], [type="file"], [type="range"])), textarea, select):not([disabled]):focus-visible {
-    border-color: var(--color-separator-highlight);
-  }
-
-  input[type="checkbox"] {
+  input[type="checkbox"], input[type="radio"] {
     aspect-ratio: 1;
     vertical-align: middle;
     line-height: inherit;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    appearance: none;
-    border: var(--border-width-input) solid var(--color-separator);
-    background-color: var(--color-surface-dim);
-    width: 1em;
-    height: 1em;
-    margin: -.3ex .15em 0 0;
-    padding: 0;
-  }
-
-  input[type="radio"] {
-    aspect-ratio: 1;
-    vertical-align: middle;
-    line-height: inherit;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
     appearance: none;
     border: var(--border-width-input) solid var(--color-separator);
     background-color: var(--color-surface-dim);
@@ -1634,39 +1101,13 @@
   }
 
   select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
     appearance: none;
     background-image: var(--icon-chevron-down);
     background-repeat: no-repeat;
     background-size: var(--icon-size);
     background-position: calc(100% - var(--spacing-input-block)) 50%;
+    padding-inline-end: calc(var(--icon-size)  + var(--spacing-input-inline));
     position: relative;
-  }
-
-  select:not(:-webkit-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
-    padding-right: calc(var(--icon-size)  + var(--spacing-input-inline));
-  }
-
-  select:not(:-moz-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
-    padding-right: calc(var(--icon-size)  + var(--spacing-input-inline));
-  }
-
-  select:not(:is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
-    padding-right: calc(var(--icon-size)  + var(--spacing-input-inline));
-  }
-
-  select:-webkit-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
-    padding-left: calc(var(--icon-size)  + var(--spacing-input-inline));
-  }
-
-  select:-moz-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
-    padding-left: calc(var(--icon-size)  + var(--spacing-input-inline));
-  }
-
-  select:is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
-    padding-left: calc(var(--icon-size)  + var(--spacing-input-inline));
   }
 
   select:invalid, option:disabled {
@@ -1677,12 +1118,9 @@
   input[type="range"] {
     --_track-height: .5rem;
     --_thumb-size: 1.5rem;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
     appearance: none;
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: #0000;
     width: 100%;
   }
 
@@ -1693,9 +1131,6 @@
   }
 
   input[type="range"]::range-thumb {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
     appearance: none;
     height: var(--_thumb-size);
     width: var(--_thumb-size);
@@ -1705,9 +1140,6 @@
   }
 
   ::-moz-range-thumb {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
     appearance: none;
     height: var(--_thumb-size);
     width: var(--_thumb-size);
@@ -1717,7 +1149,7 @@
   }
 
   ::-webkit-slider-thumb {
-    margin-top: calc((var(--_track-height) / 2)  - (var(--_thumb-size) / 2));
+    margin-block-start: calc((var(--_track-height) / 2)  - (var(--_thumb-size) / 2));
   }
 
   input[type="range"]:focus-visible {
@@ -1754,26 +1186,6 @@
     transform: scale(1.25);
   }
 
-  input:-webkit-any([type="datetime-local" i], [type="date" i], [type="month" i], [type="time" i])::-webkit-calendar-picker-indicator {
-    background: currentColor;
-    -webkit-mask-position: 50%;
-    mask-position: 50%;
-    -webkit-mask-size: 1em;
-    mask-size: 1em;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-  }
-
-  input:-moz-any([type="datetime-local" i], [type="date" i], [type="month" i], [type="time" i])::-webkit-calendar-picker-indicator {
-    background: currentColor;
-    -webkit-mask-position: 50%;
-    mask-position: 50%;
-    -webkit-mask-size: 1em;
-    mask-size: 1em;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-  }
-
   input:is([type="datetime-local" i], [type="date" i], [type="month" i], [type="time" i])::-webkit-calendar-picker-indicator {
     background: currentColor;
     -webkit-mask-position: 50%;
@@ -1782,16 +1194,6 @@
     mask-size: 1em;
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
-  }
-
-  input:-webkit-any([type="datetime-local" i], [type="date" i], [type="month" i])::-webkit-calendar-picker-indicator {
-    -webkit-mask-image: var(--icon-calendar);
-    mask-image: var(--icon-calendar);
-  }
-
-  input:-moz-any([type="datetime-local" i], [type="date" i], [type="month" i])::-webkit-calendar-picker-indicator {
-    -webkit-mask-image: var(--icon-calendar);
-    mask-image: var(--icon-calendar);
   }
 
   input:is([type="datetime-local" i], [type="date" i], [type="month" i])::-webkit-calendar-picker-indicator {
@@ -1804,44 +1206,8 @@
     mask-image: var(--icon-clock);
   }
 
-  [type="file"]:not(:-webkit-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)))::-webkit-file-upload-button {
-    margin-right: var(--spacing-sibling);
-  }
-
-  [type="file"]:not(:-moz-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)))::file-selector-button {
-    margin-right: var(--spacing-sibling);
-  }
-
-  [type="file"]:not(:is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)))::-ms-browse {
-    margin-right: var(--spacing-sibling);
-  }
-
-  [type="file"]:not(:is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)))::file-selector-button {
-    margin-right: var(--spacing-sibling);
-  }
-
-  [type="file"]:-webkit-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))::-webkit-file-upload-button {
-    margin-left: var(--spacing-sibling);
-  }
-
-  [type="file"]:-moz-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))::file-selector-button {
-    margin-left: var(--spacing-sibling);
-  }
-
-  [type="file"]:is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))::-ms-browse {
-    margin-left: var(--spacing-sibling);
-  }
-
-  [type="file"]:is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))::file-selector-button {
-    margin-left: var(--spacing-sibling);
-  }
-
-  input:-webkit-any([type="date"], [type="datetime-local"], [type="time"], [type="month"], [type="color"]) {
-    height: calc((var(--font-size-0) * 1.5)  + (var(--spacing-input-block) * 2)  + (var(--border-width-input) * 2));
-  }
-
-  input:-moz-any([type="date"], [type="datetime-local"], [type="time"], [type="month"], [type="color"]) {
-    height: calc((var(--font-size-0) * 1.5)  + (var(--spacing-input-block) * 2)  + (var(--border-width-input) * 2));
+  [type="file"]::file-selector-button {
+    margin-inline-end: var(--spacing-sibling);
   }
 
   input:is([type="date"], [type="datetime-local"], [type="time"], [type="month"], [type="color"]) {
@@ -1856,50 +1222,14 @@
     --_form-flow: var(--spacing-flow, 1em);
   }
 
-  form label:has(input:not(:-webkit-any([type="checkbox"], [type="radio"])), textarea, select) {
+  form label:has(input:not([type="checkbox"], [type="radio"]), textarea, select) {
     gap: var(--spacing-sibling);
     flex-direction: column;
     display: flex;
   }
 
-  form label:has(input:not(:-moz-any([type="checkbox"], [type="radio"])), textarea, select) {
-    gap: var(--spacing-sibling);
-    flex-direction: column;
-    display: flex;
-  }
-
-  form label:has(input:not(:is([type="checkbox"], [type="radio"])), textarea, select) {
-    gap: var(--spacing-sibling);
-    flex-direction: column;
-    display: flex;
-  }
-
-  form input:not(:-webkit-any([type="checkbox"], [type="radio"], [type="button"], [type="submit"], [type="reset"], [type="file"])) {
-    width: 100%;
-  }
-
-  form input:not(:-moz-any([type="checkbox"], [type="radio"], [type="button"], [type="submit"], [type="reset"], [type="file"])) {
-    width: 100%;
-  }
-
-  form input:not(:is([type="checkbox"], [type="radio"], [type="button"], [type="submit"], [type="reset"], [type="file"])) {
-    width: 100%;
-  }
-
-  form textarea {
-    width: 100%;
-  }
-
-  form select {
-    width: 100%;
-  }
-
-  form label:has(input:-webkit-any([type="checkbox"], [type="radio"])) {
-    display: block;
-  }
-
-  form label:has(input:-moz-any([type="checkbox"], [type="radio"])) {
-    display: block;
+  form input:not([type="checkbox"], [type="radio"], [type="button"], [type="submit"], [type="reset"], [type="file"]), form textarea, form select {
+    inline-size: 100%;
   }
 
   form label:has(input:is([type="checkbox"], [type="radio"])) {
@@ -1907,27 +1237,15 @@
   }
 
   form > * + * {
-    margin-top: var(--_form-flow);
+    margin-block-start: var(--_form-flow);
   }
 
   form > fieldset:not(:has(legend)) > * + * {
-    margin-top: var(--_form-flow);
+    margin-block-start: var(--_form-flow);
   }
 
   form fieldset > legend + * {
-    margin-top: var(--spacing-sibling);
-  }
-
-  form div:has( > label + :-webkit-any(input, textarea, select)) {
-    gap: var(--spacing-sibling);
-    flex-direction: column;
-    display: flex;
-  }
-
-  form div:has( > label + :-moz-any(input, textarea, select)) {
-    gap: var(--spacing-sibling);
-    flex-direction: column;
-    display: flex;
+    margin-block-start: var(--spacing-sibling);
   }
 
   form div:has( > label + :is(input, textarea, select)) {
@@ -1937,16 +1255,13 @@
   }
 
   progress {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
     appearance: none;
     border: var(--border-width-hairline) solid var(--color-separator);
-    width: 100%;
     border-radius: var(--radius-pill);
     background-color: var(--color-surface-bright);
     color: var(--color-ink-primary);
-    height: 1rem;
+    width: 100%;
+    block-size: 1rem;
     display: inline-block;
     overflow: hidden;
   }
@@ -1971,11 +1286,11 @@
     }
 
     progress:indeterminate[value]::-webkit-progress-value {
-      background-color: rgba(0, 0, 0, 0);
+      background-color: #0000;
     }
 
     progress:indeterminate::-moz-progress-bar {
-      background-color: rgba(0, 0, 0, 0);
+      background-color: #0000;
     }
 
     [dir="rtl"] progress:indeterminate {
