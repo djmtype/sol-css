@@ -21,6 +21,7 @@ Prevent padding and border from affecting element width.
 /* 
 1. Remove odd text zoom on touch devices  
 2. Remove iOS tap color
+3. Add intrinsic size transitions
 */
 :where(html) {
   -moz-text-size-adjust: none;
@@ -29,6 +30,8 @@ Prevent padding and border from affecting element width.
   /* 1 */
   -webkit-tap-highlight-color: transparent;
   /* 2 */
+  interpolate-size: allow-keywords;
+  /* 3 */
 }
 
 /* 
@@ -39,6 +42,7 @@ Prevent padding and border from affecting element width.
 5. Set default font family
 6. Set default line height
 7. Prevent words from overflow
+8. Prevents layout shift
 */
 :where(body) {
   margin: 0;
@@ -56,6 +60,8 @@ Prevent padding and border from affecting element width.
   /* 6 */
   overflow-wrap: break-word;
   /* 7 */
+  scrollbar-gutter: stable;
+  /* 8 */
 }
 
 /* Remove default margin */

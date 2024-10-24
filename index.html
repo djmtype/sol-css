@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <meta name = "color-scheme" content="light dark" />
+    <link rel="stylesheet" href="/build/sol.css" />
+
+    <style>
+      body {
+    min-block-size: 100%;
+    font-family: system-ui, sans-serif;
+    display: grid;
+    
+    @media (orientation: landscape) {
+      grid-auto-flow: column;
+    }
+  }
+  
+  section {
+    display: grid;
+    padding: 5vmin;
+  }
+
+  section {
+  background: var(--color-surface);
+  color: var(--color-ink);
+}
+
+    </style>
+
+</head>
+<body>
+  <section class="dark">
+    <h1>Dark</h1>
+    
+    <section class="light">
+      <h1>Light</h1>
+      
+      <section class="dark">
+        <h1>Dark</h1>
+      </section>
+    </section>
+  </section>
+  
+  <section class="light">
+    <h1>Light</h1>
+    
+    <section class="dark">
+      <h1>Dark</h1>
+      
+      <section class="light">
+        <h1>Light</h1>
+      </section>
+    </section>
+  </section>
+</body>
+</html>

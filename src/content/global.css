@@ -1,19 +1,11 @@
 :where(html) {
-  color-scheme: var(--color-scheme);
   color: var(--color-ink);
   background: var(--color-surface);
   accent-color: var(--color-accent);
 }
 
-:where(html[data-theme="light"]) {
-  color-scheme: light;
-}
-
-:where(html[data-theme="dark"]) {
-  color-scheme: dark;
-}
-
 :where(body) {
+
   font-family: var(--font-family-default);
   font-size: var(--font-size-0);
 }

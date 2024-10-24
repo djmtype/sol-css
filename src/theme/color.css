@@ -1,9 +1,10 @@
+@import "./palettes/modes.css";
 @import "./palettes/hues.css";
 @import "./palettes/palette.gray.css";
 @import "./palettes/palette.primary.css";
 @import "./palettes/palette.secondary.css";
 @import "./palettes/palette.utility.css";
 @import "./palettes/controls.css";
-@import "./palettes/colors.css";
+@import "./palettes/settings.css";
 
 

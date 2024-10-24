@@ -5,27 +5,32 @@
 :where(html) {
   -webkit-text-size-adjust: none;
   -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
   text-size-adjust: none;
   -webkit-tap-highlight-color: transparent;
+  interpolate-size: allow-keywords;
 }
 
 :where(body) {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-wrap: break-word;
-  min-block-size: 100%;
-  max-inline-size: 100%;
+  scrollbar-gutter: stable;
+  min-height: 100%;
+  max-width: 100%;
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
   line-height: 1.5;
 }
 
 :where(figure) {
-  margin-inline: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 :where(h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, ul, ol, hr, pre) {
-  margin-block: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 :where(h1, h2, h3) {
@@ -37,7 +42,8 @@
 }
 
 :where(ul[role="list"], ol[role="list"]) {
-  padding-inline: 0;
+  padding-left: 0;
+  padding-right: 0;
   list-style-type: none;
 }
 
@@ -72,8 +78,8 @@
 }
 
 :where(img, svg, video, canvas) {
-  block-size: auto;
-  max-inline-size: 100%;
+  height: auto;
+  max-width: 100%;
 }
 
 :where(img, video, canvas, audio, iframe, embed, object) {
@@ -153,12 +159,52 @@
   margin: auto;
 }
 
-:where(ol, ul):not([role="list"]) {
-  padding-inline-start: 2em;
+:where(ol, ul):not([role="list"]):not(:-webkit-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
+  padding-left: 2em;
 }
 
-:where(ol, ul):not([role="list"]) :where(ol, ul):not([role="list"]) {
-  padding-inline-start: 1em;
+:where(ol, ul):not([role="list"]):not(:-moz-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
+  padding-left: 2em;
+}
+
+:where(ol, ul):not([role="list"]):not(:is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
+  padding-left: 2em;
+}
+
+:where(ol, ul):not([role="list"]):-webkit-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
+  padding-right: 2em;
+}
+
+:where(ol, ul):not([role="list"]):-moz-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
+  padding-right: 2em;
+}
+
+:where(ol, ul):not([role="list"]):is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
+  padding-right: 2em;
+}
+
+:where(ol, ul):not([role="list"]) :where(ol, ul):not([role="list"]):not(:-webkit-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
+  padding-left: 1em;
+}
+
+:where(ol, ul):not([role="list"]) :where(ol, ul):not([role="list"]):not(:-moz-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
+  padding-left: 1em;
+}
+
+:where(ol, ul):not([role="list"]) :where(ol, ul):not([role="list"]):not(:is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
+  padding-left: 1em;
+}
+
+:where(ol, ul):not([role="list"]) :where(ol, ul):not([role="list"]):-webkit-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
+  padding-right: 1em;
+}
+
+:where(ol, ul):not([role="list"]) :where(ol, ul):not([role="list"]):-moz-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
+  padding-right: 1em;
+}
+
+:where(ol, ul):not([role="list"]) :where(ol, ul):not([role="list"]):is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
+  padding-right: 1em;
 }
 
 :where(ol):not([role="list"]) :where(ol):not([role="list"]) {
@@ -169,8 +215,38 @@
   list-style-type: disc;
 }
 
-:where(blockquote) {
-  border-inline-start: 2px solid;
-  margin-inline-start: 0;
-  padding-inline-start: 1em;
+:where(blockquote):not(:-webkit-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
+  border-left: 2px solid;
+  margin-left: 0;
+  padding-left: 1em;
+}
+
+:where(blockquote):not(:-moz-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
+  border-left: 2px solid;
+  margin-left: 0;
+  padding-left: 1em;
+}
+
+:where(blockquote):not(:is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi))) {
+  border-left: 2px solid;
+  margin-left: 0;
+  padding-left: 1em;
+}
+
+:where(blockquote):-webkit-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
+  border-right: 2px solid;
+  margin-right: 0;
+  padding-right: 1em;
+}
+
+:where(blockquote):-moz-any(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
+  border-right: 2px solid;
+  margin-right: 0;
+  padding-right: 1em;
+}
+
+:where(blockquote):is(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
+  border-right: 2px solid;
+  margin-right: 0;
+  padding-right: 1em;
 }

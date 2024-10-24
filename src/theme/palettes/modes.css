@@ -1,0 +1,12 @@
+:where(html) {
+  color-scheme: light dark;
+
+}
+
+:where([data-scheme="light"]) {
+  color-scheme: light;
+}
+
+:where([data-scheme="dark"]) {
+  color-scheme: dark;
+}

@@ -3,15 +3,15 @@
   "type": "module",
   "version": "0.0.38",
   "browserslist": [
-    "defaults"
+    "supports prefers-color-scheme, > .5%"
   ],
   "scripts": {
-    "build:reset": "lightningcss --bundle --targets 'defaults' src/base/reset.css -o build/sol.reset.css",
-    "build:core": "lightningcss --bundle --targets 'defaults' src/core.css -o build/sol.core.css",
-    "build:complete": "lightningcss --bundle --targets 'defaults' src/sol.css -o build/sol.css",
-    "build:dev": "lightningcss --bundle --targets 'defaults' src/sol.css -o build/sol.css",
+    "build:reset": "lightningcss --bundle --targets 'supports prefers-color-scheme, > .5%' src/base/reset.css -o build/sol.reset.css",
+    "build:core": "lightningcss --bundle --targets 'supports prefers-color-scheme, > .5%' src/core.css -o build/sol.core.css",
+    "build:complete": "lightningcss --bundle --targets 'supports prefers-color-scheme, > .5%' src/sol.css -o build/sol.css",
+    "build:dev": "lightningcss --bundle --targets 'supports prefers-color-scheme, > .5%' src/sol.css -o build/sol.css",
     "build:prod": "npm run build:complete && npm run build:core && npm run build:reset", 
-    "build:min": "lightningcss --bundle --targets 'defaults' build/*.css --output-dir build/minified --minify",
+    "build:min": "lightningcss --bundle --targets 'supports prefers-color-scheme, > .5%' build/*.css --output-dir build/minified --minify",
     "build": "npm run build:prod && npm run build:min"
   },
   "devDependencies": {
