@@ -47,7 +47,7 @@ Prevent padding and border from affecting element width.
 :where(body) {
   margin: 0;
   /* 1 */
-  min-block-size: 100%;
+  min-block-size: 100svh;
   /* 2 */
   max-inline-size: 100%;
   /* 3 */
