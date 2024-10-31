@@ -16,7 +16,7 @@
     -moz-osx-font-smoothing: grayscale;
     overflow-wrap: break-word;
     scrollbar-gutter: stable;
-    min-block-size: 100%;
+    min-block-size: 100svh;
     max-inline-size: 100%;
     margin: 0;
     font-family: system-ui, sans-serif;
