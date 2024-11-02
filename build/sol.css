@@ -669,6 +669,10 @@
     transition: color .2s, background-color .2s, border-color .2s;
   }
 
+  ::-webkit-file-upload-button {
+    line-height: inherit;
+  }
+
   a[role="button"] {
     text-decoration: none;
   }

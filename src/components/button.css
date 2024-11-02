@@ -29,6 +29,10 @@ input[type="button"],
   text-align: var(--_text-align);
 }
 
+::-webkit-file-upload-button {
+line-height: inherit;
+}
+
 a[role="button"] {
   text-decoration: none;
 }
