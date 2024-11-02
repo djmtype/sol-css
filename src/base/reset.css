@@ -11,6 +11,10 @@ Josh Comeau [https://www.joshwcomeau.com/css/custom-css-reset/]
 
 */
 
+:root {
+  interpolate-size: allow-keywords;
+}
+
 /* 
 Prevent padding and border from affecting element width. 
 */
@@ -30,8 +34,6 @@ Prevent padding and border from affecting element width.
   /* 1 */
   -webkit-tap-highlight-color: transparent;
   /* 2 */
-  interpolate-size: allow-keywords;
-  /* 3 */
 }
 
 /* 

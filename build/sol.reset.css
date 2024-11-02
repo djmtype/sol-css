@@ -1,3 +1,7 @@
+:root {
+  interpolate-size: allow-keywords;
+}
+
 :where(*) {
   box-sizing: border-box;
 }
@@ -7,7 +11,6 @@
   -moz-text-size-adjust: none;
   text-size-adjust: none;
   -webkit-tap-highlight-color: transparent;
-  interpolate-size: allow-keywords;
 }
 
 :where(body) {

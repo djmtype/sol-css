@@ -9,6 +9,7 @@
     "lightningcss": "^1.27.0"
   },
   "dependencies": {
+    "browserslist": "^4.24.2",
     "lightningcss-cli": "^1.27.0"
   }
 }

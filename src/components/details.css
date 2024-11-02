@@ -1,6 +1,8 @@
 details {
   padding: 0;
+  overflow: hidden;
 }
+
 
 details > summary::-webkit-details-marker {
   display: none;
@@ -79,7 +81,17 @@ details > div > * + * {
 
 
 
-details[open] > div {
+/* details[open] > div {
   animation-name: fadeInDown;
   animation-duration: 400ms;
+} */
+
+details::details-content {
+  block-size: 0;
+  transition: block-size 400ms, content-visibility 400ms;
+  transition-behavior: allow-discrete;
+}
+
+details[open]::details-content {
+  block-size: auto;
 }

@@ -1,4 +1,8 @@
 @layer base {
+  :root {
+    interpolate-size: allow-keywords;
+  }
+
   :where(*) {
     box-sizing: border-box;
   }
@@ -8,7 +12,6 @@
     -moz-text-size-adjust: none;
     text-size-adjust: none;
     -webkit-tap-highlight-color: transparent;
-    interpolate-size: allow-keywords;
   }
 
   :where(body) {
@@ -639,7 +642,7 @@
     text-align: var(--_text-align);
     font-family: inherit;
     font-weight: 600;
-    transition: all .2s;
+    transition: color .2s, background-color .2s, border-color .2s;
   }
 
   ::-webkit-file-upload-button {
@@ -663,7 +666,7 @@
     text-align: var(--_text-align);
     font-family: inherit;
     font-weight: 600;
-    transition: all .2s;
+    transition: color .2s, background-color .2s, border-color .2s;
   }
 
   a[role="button"] {
@@ -716,6 +719,7 @@
 
   details {
     padding: 0;
+    overflow: hidden;
   }
 
   details > summary::-webkit-details-marker {
@@ -789,9 +793,14 @@
     margin-block-start: var(--spacing-flow);
   }
 
-  details[open] > div {
-    animation-name: fadeInDown;
-    animation-duration: .4s;
+  details::details-content {
+    transition-behavior: allow-discrete;
+    block-size: 0;
+    transition: block-size .4s, content-visibility .4s;
+  }
+
+  details[open]::details-content {
+    block-size: auto;
   }
 
   dialog {
