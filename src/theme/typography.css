@@ -19,4 +19,9 @@
   --font-size-6: calc(var(--font-size-5) * var(--font-scale));
 
   --font-size-smaller: 75%;
+
+  --letter-spacing-tight: -.02em;
+  --letter-spacing-loose: .04em;
+  
+
 }
