@@ -1,6 +1,15 @@
 :where(html) {
+  --light-scheme: initial;
+  --dark-scheme: ;
   color-scheme: light dark;
 
+}
+
+@media (prefers-color-scheme: dark) {
+  :where(html) {
+      --light-scheme: ;
+      --dark-scheme: initial;
+  }
 }
 
 :where([data-scheme="light"]) {
@@ -10,3 +19,6 @@
 :where([data-scheme="dark"]) {
   color-scheme: dark;
 }
+
+
+

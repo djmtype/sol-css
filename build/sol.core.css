@@ -212,6 +212,8 @@
 
 @layer theme {
   :where(html) {
+    --light-scheme: initial;
+    --dark-scheme: ;
     --lightningcss-light: initial;
     --lightningcss-dark: ;
     color-scheme: light dark;
@@ -221,6 +223,8 @@
     :where(html) {
       --lightningcss-light: ;
       --lightningcss-dark: initial;
+      --light-scheme: ;
+      --dark-scheme: initial;
     }
   }
 
