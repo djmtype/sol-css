@@ -186,6 +186,7 @@ input[type="time" i]::-webkit-calendar-picker-indicator {
   mask-image: var(--icon-clock);
 }
 
+
 [type="file"]::file-selector-button {
   margin-inline-end: var(--spacing-sibling);
 }
@@ -253,7 +254,9 @@ form {
   }
 }
 
-
+input[type="password"], input[type="number"] {
+  font-family: var(--font-family-mono);
+}
 
 form label:has(input:is([type="checkbox"], [type="radio"])) {
   display: block;
