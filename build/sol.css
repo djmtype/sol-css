@@ -385,6 +385,8 @@
     --font-size-5: calc(var(--font-size-4) * var(--font-scale));
     --font-size-6: calc(var(--font-size-5) * var(--font-scale));
     --font-size-smaller: 75%;
+    --letter-spacing-tight: -.02em;
+    --letter-spacing-loose: .04em;
     --spacing-size: var(--spacing-size-default, 1rem);
     --spacing-scale: var(--spacing-scale-default, 1.25);
     --spacing-4xs: calc(var(--spacing-3xs) / var(--spacing-scale));
@@ -798,13 +800,20 @@
   }
 
   details::details-content {
-    transition-behavior: allow-discrete;
     block-size: 0;
     transition: block-size .4s, content-visibility .4s;
   }
 
+  details::details-content {
+    transition-behavior: allow-discrete;
+  }
+
   details[open]::details-content {
     block-size: auto;
+  }
+
+  details[name] + details[name] {
+    margin-block-start: var(--spacing-sibling);
   }
 
   dialog {

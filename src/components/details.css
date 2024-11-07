@@ -89,9 +89,19 @@ details > div > * + * {
 details::details-content {
   block-size: 0;
   transition: block-size 400ms, content-visibility 400ms;
+}
+
+details::details-content {
   transition-behavior: allow-discrete;
 }
 
 details[open]::details-content {
   block-size: auto;
 }
+
+/* Details Group */
+
+details[name] + details[name] {
+  margin-block-start: var(--spacing-sibling);
+}
+
