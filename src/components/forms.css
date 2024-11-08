@@ -254,6 +254,24 @@ form {
   }
 }
 
+label:has(input:not([type="submit"],[type="reset"],[type="button"]):disabled),
+label:has(+ input:not([type="submit"],[type="reset"],[type="button"]):disabled)
+ {
+  color: var(--color-ink-muted);
+}
+
+
+
+input[type="search"] {
+  appearance: none;
+  background-image: var(--icon-search);
+  background-repeat: no-repeat;
+  background-size: var(--icon-size);
+  background-position: calc(100% - var(--spacing-input-block) * 1.5) 50%;
+  padding-inline-end: calc(var(--icon-size) + (var(--spacing-input-inline) * 2));
+  position: relative;
+}
+
 input[type="password"], input[type="number"] {
   font-family: var(--font-family-mono);
 }
