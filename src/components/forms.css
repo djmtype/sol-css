@@ -1,3 +1,8 @@
+:root {
+  --_icon-padding: calc(var(--icon-size) + (var(--spacing-input-inline) * 2));
+  --_icon-position: calc(100% - var(--spacing-input-inline)) 50%;
+}
+
 ::placeholder {
   color: var(--color-ink-muted);
   opacity: 1;
@@ -82,8 +87,8 @@ select {
   background-image: var(--icon-chevron-down);
   background-repeat: no-repeat;
   background-size: var(--icon-size);
-  background-position: calc(100% - var(--spacing-input-block)) 50%;
-  padding-inline-end: calc(var(--icon-size) + var(--spacing-input-inline));
+  background-position: var(--_icon-position);
+  padding-inline-end: var(--_icon-padding);
   position: relative;
 }
 
@@ -267,8 +272,8 @@ input[type="search"] {
   background-image: var(--icon-search);
   background-repeat: no-repeat;
   background-size: var(--icon-size);
-  background-position: calc(100% - var(--spacing-input-block) * 1.5) 50%;
-  padding-inline-end: calc(var(--icon-size) + (var(--spacing-input-inline) * 2));
+  background-position: var(--_icon-position);
+  padding-inline-end: var(--_icon-padding);
   position: relative;
 }
 
