@@ -24,7 +24,7 @@ nav[popover] {
 nav[popover] ul {
   display: flex;
   flex-direction: column;
-  padding-block: var(--spacing-4xs);
+  padding-block: var(--spacing-sibling);
   min-inline-size: 20ch;
 
 }
@@ -33,7 +33,6 @@ nav[popover] ul {
 
 nav[popover] li {
   display: flex;
-  flex-direction: column;
 }
 
 nav[popover] li a {
@@ -50,7 +49,7 @@ nav[popover] li a {
   /* display: none; */
   opacity: 0;
   transform: translateY(calc(-1 * var(--spacing-sibling)));
-  transform-origin: center top;
+  transform-origin: center bottom;
   transition-duration: 400ms;
   transition-behavior: allow-discrete;
   
