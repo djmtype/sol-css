@@ -800,6 +800,7 @@
     background: var(--color-surface-bright);
     padding: var(--spacing-input-inline);
     border: var(--border-width-input) solid var(--color-separator);
+    border-block-start: 0;
   }
 
   details > div > * + * {
