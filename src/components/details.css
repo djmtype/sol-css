@@ -33,12 +33,14 @@ details > summary:not([role="button"]) {
 details > summary:not([role="button"]) {
   &:hover, &:focus-visible {
     background-color: var(--color-surface-bright);
-    border-color: var(--color-separator-highlight);
+    /* border-color: var(--color-surface-bright); */
   }
 }
 
 details[open] > summary:not([role="button"]) {
   background: var(--color-surface-bright);
+  border-end-start-radius: 0;
+border-end-end-radius: 0;
 }
 
 details > summary::after {
@@ -69,9 +71,9 @@ details[open] > summary {
 
 
 details > div {
-  border-radius: var(--radius-input);
+  border-radius: 0 0 var(--radius-input) var(--radius-input);
   background: var(--color-surface-bright);
-  margin-block-start: var(--spacing-sibling);
+  /* margin-block-start: var(--spacing-sibling); */
   padding: var(--spacing-input-inline);
   border: var(--border-width-input) solid var(--color-separator);
 }
