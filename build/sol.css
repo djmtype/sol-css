@@ -798,7 +798,7 @@
   details > div {
     border-radius: 0 0 var(--radius-input) var(--radius-input);
     background: var(--color-surface-bright);
-    padding: var(--spacing-input-inline);
+    padding: var(--spacing-input-block) var(--spacing-input-inline);
     border: var(--border-width-input) solid var(--color-separator);
     border-block-start: 0;
   }
@@ -969,7 +969,7 @@
   }
 
   nav[popover] ul {
-    padding-block: var(--spacing-sibling);
+    padding: var(--spacing-input-block) var(--spacing-input-inline);
     flex-direction: column;
     min-inline-size: 20ch;
     display: flex;
@@ -977,11 +977,6 @@
 
   nav[popover] li {
     display: flex;
-  }
-
-  nav[popover] li a {
-    padding-block: var(--spacing-input-block);
-    padding-inline: var(--spacing-input-inline);
   }
 
   [popover] {

@@ -74,7 +74,7 @@ details > div {
   border-radius: 0 0 var(--radius-input) var(--radius-input);
   background: var(--color-surface-bright);
   /* margin-block-start: var(--spacing-sibling); */
-  padding: var(--spacing-input-inline);
+  padding: var(--spacing-input-block) var(--spacing-input-inline);
   border: var(--border-width-input) solid var(--color-separator);
   border-block-start: 0;
 }
