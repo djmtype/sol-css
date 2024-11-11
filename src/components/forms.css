@@ -230,9 +230,9 @@ input:not(
   );
 } */
 
-form {
+/* form {
   --_form-flow: var(--spacing-flow, 1em);
-}
+} */
 form label:has(input:not([type="checkbox"], [type="radio"]), textarea, select) {
   display: flex;
   flex-direction: column;
@@ -280,10 +280,10 @@ form label:has(input:is([type="checkbox"], [type="radio"])) {
   display: block;
 }
 
-form > * + *,
+/* form > * + *,
 form > fieldset:not(:has(legend)) > * + * {
   margin-block-start: var(--_form-flow);
-}
+} */
 
 form fieldset > legend + * {
   margin-block-start: var(--spacing-sibling);
