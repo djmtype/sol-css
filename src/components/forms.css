@@ -1,3 +1,18 @@
+form {
+  --_form-flow: var(--spacing-flow, 1em);
+}
+
+form > * + *,
+form > fieldset:not(:has(legend)) > * + * {
+  margin-block-start: var(--_form-flow);
+} 
+
+dialog:has(> form) > form > * + *,
+dialog:has(> form) > form > fieldset:not(:has(legend)) > * + * {
+margin-block-start: unset;
+}
+ 
+
 ::placeholder {
   color: var(--color-ink-muted);
   opacity: 1;
@@ -230,9 +245,7 @@ input:not(
   );
 } */
 
-/* form {
-  --_form-flow: var(--spacing-flow, 1em);
-} */
+
 form label:has(input:not([type="checkbox"], [type="radio"]), textarea, select) {
   display: flex;
   flex-direction: column;
@@ -280,10 +293,7 @@ form label:has(input:is([type="checkbox"], [type="radio"])) {
   display: block;
 }
 
-/* form > * + *,
-form > fieldset:not(:has(legend)) > * + * {
-  margin-block-start: var(--_form-flow);
-} */
+
 
 form fieldset > legend + * {
   margin-block-start: var(--spacing-sibling);

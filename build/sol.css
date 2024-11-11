@@ -1059,6 +1059,26 @@
     --_row-bg: var(--color-surface-bright);
   }
 
+  form {
+    --_form-flow: var(--spacing-flow, 1em);
+  }
+
+  form > * + * {
+    margin-block-start: var(--_form-flow);
+  }
+
+  form > fieldset:not(:has(legend)) > * + * {
+    margin-block-start: var(--_form-flow);
+  }
+
+  dialog:has( > form) > form > * + * {
+    margin-block-start: unset;
+  }
+
+  dialog:has( > form) > form > fieldset:not(:has(legend)) > * + * {
+    margin-block-start: unset;
+  }
+
   ::placeholder {
     color: var(--color-ink-muted);
     opacity: 1;
