@@ -7,31 +7,26 @@
   <meta name = "color-scheme" content="light dark" />
     <link rel="stylesheet" href="/build/sol.css" />
 <style>
-  .box {
-    max-inline-size: 80%;
-    height: 3rem;
-    margin-block-start: 1em;
-    
+  .container {
+    max-inline-size: 60ch;
+    margin-inline: auto;
+    margin-block: 2em;
+    overflow: visible;
   }
 </style>
 </head>
 <body>
 
-
-
-  <div class="box" style="background: var(--color-accent); color: var(--color-ink-light)">Lorem ipsum whatever</div>
-
-
-<h1>A <span style="background: var(--color-surface-primary-highlight); color: var(--color-ink-dark);">plain old</span> sentence</h1>
-
-<h2>Leave a <mark>mark</mark> here</h2>
+<p>A plain old sentence</p>
   
-        <details>
-          <summary>Can I animate details/summary elements?</summary>
-          <div>
-          <p>This used to be something that was impossible, but now thanks to modern CSS, it's actually pretty easy to do!</p>
+        <div class="container">
+          <details>
+            <summary>Can I animate details/summary elements?</summary>
+            <div>
+            <p>This used to be something that was impossible, but now thanks to modern CSS, it's actually pretty easy to do!</p>
+          </div>
+          </details>
         </div>
-        </details>
   
        
 

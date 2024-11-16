@@ -4,11 +4,13 @@
   --font-family-mono: ui-monospace, monospace;
   --font-family-serif: ui-serif, serif;
 
-  /* Type Scale */
+  /* Font Weight */
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
 
+  /* Type Scale */
   --font-size: var(--font-size-default, 1rem);
   --font-scale: var(--font-scale-default, 1.25);
-
   --font-size-00: calc(var(--font-size) / var(--font-scale));
   --font-size-0: var(--font-size);
   --font-size-1: calc(var(--font-size-0) * var(--font-scale));
@@ -17,11 +19,13 @@
   --font-size-4: calc(var(--font-size-3) * var(--font-scale));
   --font-size-5: calc(var(--font-size-4) * var(--font-scale));
   --font-size-6: calc(var(--font-size-5) * var(--font-scale));
-
   --font-size-smaller: 75%;
 
-  --letter-spacing-tight: -.02em;
-  --letter-spacing-loose: .04em;
-  
+  /* Tracking */
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-loose: 0.04em;
 
+  /* Leading */
+  --line-height-normal: 1.5;
+  --line-height-tight: calc(1em + .5rem);
 }

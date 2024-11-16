@@ -366,6 +366,8 @@
     --font-family-sans: system-ui, sans-serif;
     --font-family-mono: ui-monospace, monospace;
     --font-family-serif: ui-serif, serif;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
     --font-size: var(--font-size-default, 1rem);
     --font-scale: var(--font-scale-default, 1.25);
     --font-size-00: calc(var(--font-size) / var(--font-scale));
@@ -379,6 +381,8 @@
     --font-size-smaller: 75%;
     --letter-spacing-tight: -.02em;
     --letter-spacing-loose: .04em;
+    --line-height-normal: 1.5;
+    --line-height-tight: calc(1em + .5rem);
     --spacing-size: var(--spacing-size-default, 1rem);
     --spacing-scale: var(--spacing-scale-default, 1.25);
     --spacing-4xs: calc(var(--spacing-3xs) / var(--spacing-scale));

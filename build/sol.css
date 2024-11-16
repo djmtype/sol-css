@@ -379,6 +379,8 @@
     --font-family-sans: system-ui, sans-serif;
     --font-family-mono: ui-monospace, monospace;
     --font-family-serif: ui-serif, serif;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
     --font-size: var(--font-size-default, 1rem);
     --font-scale: var(--font-scale-default, 1.25);
     --font-size-00: calc(var(--font-size) / var(--font-scale));
@@ -392,6 +394,8 @@
     --font-size-smaller: 75%;
     --letter-spacing-tight: -.02em;
     --letter-spacing-loose: .04em;
+    --line-height-normal: 1.5;
+    --line-height-tight: calc(1em + .5rem);
     --spacing-size: var(--spacing-size-default, 1rem);
     --spacing-scale: var(--spacing-scale-default, 1.25);
     --spacing-4xs: calc(var(--spacing-3xs) / var(--spacing-scale));
@@ -734,7 +738,6 @@
 
   details {
     padding: 0;
-    overflow: hidden;
   }
 
   details > summary::-webkit-details-marker {
@@ -747,7 +750,7 @@
 
   details > summary {
     --_icon-rotation: rotate(0deg);
-    font-weight: 600;
+    font-weight: var(--font-weight-bold, 700);
     transition: all .2s;
     display: list-item;
     position: relative;
@@ -810,8 +813,10 @@
   }
 
   details::details-content {
+    opacity: 0;
     block-size: 0;
-    transition: block-size .4s, content-visibility .4s;
+    transition: content-visibility .4s, opacity .4s, block-size .4s;
+    overflow-y: clip;
   }
 
   details::details-content {
@@ -819,6 +824,7 @@
   }
 
   details[open]::details-content {
+    opacity: 1;
     block-size: auto;
   }
 
