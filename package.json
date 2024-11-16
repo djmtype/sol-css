@@ -1,7 +1,7 @@
 {
   "name": "sol-css",
   "type": "module",
-  "version": "0.5.4",
+  "version": "0.5.5",
   "scripts": {
     "build": "node build.js all"
   },

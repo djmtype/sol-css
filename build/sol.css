@@ -350,7 +350,9 @@
     --utility-chroma: 1;
     --color-ink: var(--lightningcss-light, var(--color-gray-14)) var(--lightningcss-dark, var(--color-gray-2));
     --color-ink-contrast: var(--lightningcss-light, var(--color-gray-16)) var(--lightningcss-dark, var(--color-gray-1));
-    --color-ink-muted: var(--lightningcss-light, var(--color-gray-10)) var(--lightningcss-dark, var(--color-gray-5));
+    --color-ink-mute: var(--lightningcss-light, var(--color-gray-10)) var(--lightningcss-dark, var(--color-gray-5));
+    --color-ink-dark: var(--color-gray-14);
+    --color-ink-light: var(--lightningcss-light, var(--color-primary-2)) var(--lightningcss-dark, var(--color-primary-2));
     --color-ink-primary: var(--lightningcss-light, var(--color-primary-10)) var(--lightningcss-dark, var(--color-primary-5));
     --color-ink-secondary: var(--lightningcss-light, var(--color-secondary-10)) var(--lightningcss-dark, var(--color-secondary-5));
     --color-surface: var(--lightningcss-light, var(--color-gray-2)) var(--lightningcss-dark, var(--color-gray-14));
@@ -363,7 +365,6 @@
     --color-shadow: var(--lightningcss-light, var(--color-gray-4)) var(--lightningcss-dark, var(--color-gray-16));
     --color-focus-outline: var(--lightningcss-light, var(--color-primary-10)) var(--lightningcss-dark, var(--color-primary-6));
     --color-accent: var(--lightningcss-light, var(--color-primary-10)) var(--lightningcss-dark, var(--color-primary-10));
-    --color-checked: var(--lightningcss-light, var(--color-primary-2)) var(--lightningcss-dark, var(--color-primary-2));
     --color-anchor: var(--lightningcss-light, var(--color-primary-10)) var(--lightningcss-dark, var(--color-primary-5));
     --color-anchor-hover: var(--lightningcss-light, var(--color-primary-8)) var(--lightningcss-dark, var(--color-primary-3));
     --color-anchor-active: var(--lightningcss-light, var(--color-primary-12)) var(--lightningcss-dark, var(--color-primary-7));
@@ -508,6 +509,7 @@
 
   :where(mark) {
     --utility-hue: var(--hue-yellow);
+    color: var(--color-ink-dark);
     background: var(--color-surface-utility-highlight);
     padding-block: var(--spacing-badge-block);
     padding-inline: var(--spacing-badge-inline);
@@ -1080,7 +1082,7 @@
   }
 
   ::placeholder {
-    color: var(--color-ink-muted);
+    color: var(--color-ink-mute);
     opacity: 1;
     font-style: italic;
   }
@@ -1131,7 +1133,7 @@
   }
 
   input[type="radio"]:checked {
-    background-color: var(--color-checked);
+    background-color: var(--color-ink-light);
     border-color: var(--color-accent);
     box-shadow: inset 0 0 0 .5ex var(--color-accent);
   }
@@ -1155,7 +1157,7 @@
   }
 
   select:invalid, option:disabled {
-    color: var(--color-ink-muted);
+    color: var(--color-ink-mute);
     font-style: italic;
   }
 
@@ -1273,7 +1275,7 @@
   }
 
   :is(label:has(input:not([type="submit"], [type="reset"], [type="button"]):disabled), label:has( + input:not([type="submit"], [type="reset"], [type="button"]):disabled)) {
-    color: var(--color-ink-muted);
+    color: var(--color-ink-mute);
   }
 
   input[type="search"] {

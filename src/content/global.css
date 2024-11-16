@@ -32,6 +32,7 @@
 
 :where(mark) {
   --utility-hue: var(--hue-yellow);
+  color: var(--color-ink-dark);
   background: var(--color-surface-utility-highlight);
   padding-block: var(--spacing-badge-block);
   padding-inline: var(--spacing-badge-inline);
