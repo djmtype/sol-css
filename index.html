@@ -28,7 +28,32 @@
           </details>
         </div>
   
-       
+        <dialog id="dialogBasic">
+          <article>
+            <header>
+              <h2>Basic Dialog Title</h2>
+              <button id="closeButton" aria-label="Close" autofocus></button>
+            </header>
+            <div>
+              <p>Amet amet laboris tempor labore nostrud cupidatat ex aliqua non duis. Id deserunt elit reprehenderit. Ea consequat nisi in Lorem.</p>
+              <p>Amet amet laboris tempor labore nostrud cupidatat ex aliqua non duis. Id deserunt elit reprehenderit. Ea consequat nisi in Lorem.</p>
+            </div>
+          </article>
+        </dialog>
+        <button id="showButton">Open the Basic Dialog</button>
+        
+        <script>
+          const dialog = document.getElementById("dialogBasic")
+          const showButton = document.getElementById("showButton")
+          const closeButton = document.getElementById("closeButton")
+          showButton.addEventListener("click", () => {
+            dialog.showModal()
+          })
+          closeButton.addEventListener("click", () => {
+            dialog.close()
+          })
+        </script>
+        
 
 </body>
 </html>

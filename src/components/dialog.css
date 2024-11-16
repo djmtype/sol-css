@@ -1,16 +1,45 @@
 dialog {
-  opacity: 0;
   padding: 0;
-  translate: 0 25vh;
-  transition-duration: 400ms;
-  transition-behavior: allow-discrete;
   overscroll-behavior: contain;
   border: var(--border-width-input) solid var(--color-separator);
   border-radius: var(--radius-input);
-  box-shadow: var(--shadow-3);
+  box-shadow: var(--shadow-far);
   background-color: var(--color-surface-bright);
   inline-size: min(48rem, 100% - 4rlh);
   max-block-size: calc(100% - 4rlh);
+  translate: 0 25vh;
+}
+
+  dialog, dialog::backdrop {
+    transition: display 400ms allow-discrete, overlay 400ms allow-discrete, opacity 400ms, translate 400ms;
+    opacity: 0;
+  }
+
+
+
+  dialog[open] {
+    opacity: 1;
+    translate: 0 0;
+    &::backdrop {
+      opacity: 0.8;
+    }
+  }
+
+dialog {
+  @starting-style {
+    &[open],
+    &[open]::backdrop {
+      opacity: 0;
+    }
+    &[open] {
+      translate: 0 25vh;
+    }
+  }
+
+}
+
+::backdrop {
+  background: var(--color-surface);
 }
 
 dialog > :where(form, article) {
@@ -61,7 +90,7 @@ dialog header > button {
   margin-inline-start: auto;
 }
 
-dialog[open] {
+/* dialog[open] {
   display: block;
   opacity: 1;
   translate: 0 0;
@@ -73,7 +102,7 @@ dialog[open] {
 
 dialog[open]::backdrop {
   display: none;
-}
+} */
 
 
 
@@ -102,17 +131,17 @@ dialog header > button[aria-label]::after {
 }
 
 
-body:has(dialog) {
+/* body:has(dialog) {
   transition-property: filter;
   transition-duration: 400ms;
   transition-behavior: allow-discrete;
-}
+} */
 
-body:has(dialog[open]) {
+/* body:has(dialog[open]) {
   overflow: clip;
   overscroll-behavior: contain;
   filter: blur(5px) grayscale(1);
   @starting-style {
     filter: blur(0px) grayscale(0);
   }
-}
+} */
