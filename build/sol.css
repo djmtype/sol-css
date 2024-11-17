@@ -839,6 +839,10 @@
     translate: 0 25vh;
   }
 
+  dialog::backdrop {
+    background: var(--color-surface);
+  }
+
   dialog, dialog::backdrop {
     transition: display .4s allow-discrete, overlay .4s allow-discrete, opacity .4s, translate .4s;
     opacity: 0;
@@ -861,10 +865,6 @@
     dialog[open] {
       translate: 0 25vh;
     }
-  }
-
-  ::backdrop {
-    background: var(--color-surface);
   }
 
   dialog > :where(form, article) {

@@ -10,6 +10,10 @@ dialog {
   translate: 0 25vh;
 }
 
+dialog::backdrop {
+  background: var(--color-surface);
+}
+
   dialog, dialog::backdrop {
     transition: display 400ms allow-discrete, overlay 400ms allow-discrete, opacity 400ms, translate 400ms;
     opacity: 0;
@@ -38,9 +42,7 @@ dialog {
 
 }
 
-::backdrop {
-  background: var(--color-surface);
-}
+
 
 dialog > :where(form, article) {
   display: flex;
