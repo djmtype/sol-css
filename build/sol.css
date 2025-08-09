@@ -1,17 +1,16 @@
 @layer base {
-  :root {
-    interpolate-size: allow-keywords;
-  }
-
-  :where(*) {
-    box-sizing: border-box;
-  }
-
   :where(html) {
+    box-sizing: border-box;
     -webkit-text-size-adjust: none;
     -moz-text-size-adjust: none;
     text-size-adjust: none;
     -webkit-tap-highlight-color: transparent;
+    interpolate-size: allow-keywords;
+    font-size: max(1em, 20px);
+  }
+
+  :where(*) {
+    box-sizing: inherit;
   }
 
   :where(body) {
@@ -20,7 +19,6 @@
     overflow-wrap: break-word;
     scrollbar-gutter: stable;
     min-block-size: 100svh;
-    max-inline-size: 100%;
     margin: 0;
     font-family: system-ui, sans-serif;
     line-height: 1.5;
@@ -34,7 +32,7 @@
     margin-block: 0;
   }
 
-  :where(h1, h2, h3) {
+  :where(h1, h2, h3, h4) {
     line-height: calc(1em + .5rem);
   }
 
@@ -99,11 +97,13 @@
     border-color: currentColor;
   }
 
+  :where(button) {
+    border: 1px solid #0000;
+  }
+
   :where(input, button, textarea, select) {
-    font-family: inherit;
-    font-size: inherit;
+    font: inherit;
     color: inherit;
-    line-height: inherit;
   }
 
   :where(hr) {
@@ -122,7 +122,7 @@
   }
 
   :where([type="search"]) {
-    -webkit-appearance: textfield;
+    appearance: textfield;
   }
 
   :where() {

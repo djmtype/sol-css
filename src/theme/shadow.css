@@ -1,41 +1,42 @@
 * {
-  --shadow-strength: light-dark(1%, 25%);
-  --shadow-chroma: light-dark(3%, 10%);
-  --shadow-hue: var(--shadow-tint, var(--primary-hue));
-  --shadow-color: 15% var(--shadow-chroma) var(--shadow-hue);
-  --inner-shadow-light: inset 0 -0.5px 0 0 #fff, inset 0 0.5px 0 0 #0001;
-  --inner-shadow-dark: inset 0 -0.5px 0 0 #fff1, inset 0 0.5px 0 0 #0007;
-  --inner-shadow-highlight: light-dark(
-    var(--inner-shadow-light),
-    var(--inner-shadow-dark)
-  );
-
-  --shadow-near: 0 -1px 3px 0 oklch(var(--shadow-color) /
-          calc(var(--shadow-strength) + 2%)),
-    0 1px 2px -5px oklch(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
-    0 2px 5px -5px oklch(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
-    0 4px 12px -5px oklch(var(--shadow-color) /
-          calc(var(--shadow-strength) + 5%)),
-    0 12px 15px -5px oklch(var(--shadow-color) /
-          calc(var(--shadow-strength) + 7%));
-
-  --shadow-far: 0 -1px 2px 0 oklch(var(--shadow-color) /
-          calc(var(--shadow-strength) + 2%)),
-    0 3px 2px -2px oklch(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
-    0 7px 5px -2px oklch(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
-    0 12px 10px -2px oklch(var(--shadow-color) /
-          calc(var(--shadow-strength) + 4%)),
-    0 22px 18px -2px oklch(var(--shadow-color) /
-          calc(var(--shadow-strength) + 5%)),
-    0 41px 33px -2px oklch(var(--shadow-color) /
-          calc(var(--shadow-strength) + 6%)),
-    0 100px 80px -2px oklch(var(--shadow-color) /
-          calc(var(--shadow-strength) + 7%));
-
-  --shadow-inner-shallow: inset 0 1px 4px 0
-      oklch(var(--shadow-color) / calc(var(--shadow-strength) + 9%)),
-    var(--inner-shadow-highlight);
-  --shadow-inner-deep: inset 0 2px 14px 0
-      oklch(var(--shadow-color) / calc(var(--shadow-strength) + 9%)),
-    var(--inner-shadow-highlight);
-}
+      --shadow-strength: light-dark(1%, 25%);
+      --shadow-chroma: light-dark(3%, 10%);
+      --shadow-hue: var(--shadow-tint, var(--primary-hue));
+      --shadow-color: 15% var(--shadow-chroma) var(--shadow-hue);
+      --inner-shadow-light: inset 0 -0.5px 0 0 #fff, inset 0 0.5px 0 0 #0001;
+      --inner-shadow-dark: inset 0 -0.5px 0 0 #fff1, inset 0 0.5px 0 0 #0007;
+      --inner-shadow-highlight: light-dark(
+        var(--inner-shadow-light),
+        var(--inner-shadow-dark)
+      );
+    
+      --shadow-near: 0 -1px 3px 0 oklch(var(--shadow-color) /
+              calc(var(--shadow-strength) + 2%)),
+        0 1px 2px -5px oklch(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+        0 2px 5px -5px oklch(var(--shadow-color) / calc(var(--shadow-strength) + 4%)),
+        0 4px 12px -5px oklch(var(--shadow-color) /
+              calc(var(--shadow-strength) + 5%)),
+        0 12px 15px -5px oklch(var(--shadow-color) /
+              calc(var(--shadow-strength) + 7%));
+    
+      --shadow-far: 0 -1px 2px 0 oklch(var(--shadow-color) /
+              calc(var(--shadow-strength) + 2%)),
+        0 3px 2px -2px oklch(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+        0 7px 5px -2px oklch(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+        0 12px 10px -2px oklch(var(--shadow-color) /
+              calc(var(--shadow-strength) + 4%)),
+        0 22px 18px -2px oklch(var(--shadow-color) /
+              calc(var(--shadow-strength) + 5%)),
+        0 41px 33px -2px oklch(var(--shadow-color) /
+              calc(var(--shadow-strength) + 6%)),
+        0 100px 80px -2px oklch(var(--shadow-color) /
+              calc(var(--shadow-strength) + 7%));
+    
+      --shadow-inner-shallow: inset 0 1px 4px 0
+          oklch(var(--shadow-color) / calc(var(--shadow-strength) + 9%)),
+        var(--inner-shadow-highlight);
+      --shadow-inner-deep: inset 0 2px 14px 0
+          oklch(var(--shadow-color) / calc(var(--shadow-strength) + 9%)),
+        var(--inner-shadow-highlight);
+    }
+    
