@@ -12,36 +12,39 @@ Josh Comeau [https://www.joshwcomeau.com/css/custom-css-reset/]
 */
 
 /* 
-1. Prevent padding and border from affecting element width. 
-2. Remove odd text zoom on touch devices  
-3. Remove iOS tap color
-4. Add intrinsic size transitions 
-5. Respect user font size settings
-6. Normalize tab size for code snippets
+1. Remove odd text zoom on touch devices  
+2. Remove iOS tap color
+3. Add intrinsic size transitions 
+4. Respect user font size settings
+5. Normalize tab size for code snippets
 */
 :where(html) {
   /* 1 */
-  box-sizing: border-box;
-  /* 2 */
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
-  /* 3 */
+  /* 2 */
   -webkit-tap-highlight-color: transparent;
-  /* 4 */
+  /* 3 */
   interpolate-size: allow-keywords;
-  /* 5 */
+  /* 4 */
   /* font-size: max(1em, 20px); */
-  /* 6 */
+  /* 5 */
   tab-size: 2;
+}
+
+/* Prevent padding and border from affecting element width.  
+https://www.oddbird.net/2025/09/04/box-model/ */
+* {
+  box-sizing: border-box;
 }
 
 /* 
 Inherit the box sizing rule from the html element. 
 */
-:where(*, *::before, *::after) {
+/* :where(*, *::before, *::after) {
   box-sizing: inherit;
-}
+} */
 
 /* 
 1. Remove margin
