@@ -262,11 +262,12 @@ form {
       [type="reset"],
       [type="file"]
     ),
-  textarea,
   select {
-    inline-size: 100%;
+    inline-size: min(100%, 45ch);
   }
 }
+
+
 
 label:has(input:not([type="submit"],[type="reset"],[type="button"]):disabled),
 label:has(+ input:not([type="submit"],[type="reset"],[type="button"]):disabled)

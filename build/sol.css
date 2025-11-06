@@ -1,6 +1,5 @@
 @layer base {
   :where(html) {
-    box-sizing: border-box;
     -webkit-text-size-adjust: none;
     -moz-text-size-adjust: none;
     text-size-adjust: none;
@@ -9,8 +8,8 @@
     tab-size: 2;
   }
 
-  :where(*) {
-    box-sizing: inherit;
+  * {
+    box-sizing: border-box;
   }
 
   :where(body) {
@@ -133,8 +132,6 @@
   :where(textarea) {
     field-sizing: content;
     min-block-size: 5rlh;
-    min-inline-size: 45ch;
-    max-inline-size: 100%;
   }
 
   :where([type="number"]) {
@@ -1288,8 +1285,8 @@
     display: flex;
   }
 
-  form input:not([type="checkbox"], [type="radio"], [type="button"], [type="submit"], [type="reset"], [type="file"]), form textarea, form select {
-    inline-size: 100%;
+  form input:not([type="checkbox"], [type="radio"], [type="button"], [type="submit"], [type="reset"], [type="file"]), form select {
+    inline-size: min(100%, 45ch);
   }
 
   :is(label:has(input:not([type="submit"], [type="reset"], [type="button"]):disabled), label:has( + input:not([type="submit"], [type="reset"], [type="button"]):disabled)) {

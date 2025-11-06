@@ -1,5 +1,4 @@
 :where(html) {
-  box-sizing: border-box;
   -webkit-text-size-adjust: none;
   -moz-text-size-adjust: none;
   text-size-adjust: none;
@@ -8,8 +7,8 @@
   tab-size: 2;
 }
 
-:where(*) {
-  box-sizing: inherit;
+* {
+  box-sizing: border-box;
 }
 
 :where(body) {
@@ -132,8 +131,6 @@
 :where(textarea) {
   field-sizing: content;
   min-block-size: 5rlh;
-  min-inline-size: 45ch;
-  max-inline-size: 100%;
 }
 
 :where([type="number"]) {

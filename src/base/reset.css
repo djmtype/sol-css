@@ -241,9 +241,7 @@ Prevent `sub` and `sup` elements from affecting the line height in all browsers.
 /* Normalize and auto grow textarea */
 :where(textarea) {
   field-sizing: content;
-  min-block-size: 5rlh;
-  min-inline-size: 45ch;
-  max-inline-size: 100%;
+   min-block-size: 5rlh;
 }
 
 :where([type="number"]) {
