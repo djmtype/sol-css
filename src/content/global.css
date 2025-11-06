@@ -151,3 +151,17 @@
 ::selection {
   background: color-mix(in oklch, var(--color-primary-8), transparent 70%);
 }
+
+:where(pre) {
+  padding: 1em;
+  overflow-x: auto;
+}
+
+:where(code, kbd, samp, pre) {
+
+color: var(--color-ink-contrast);
+  background-color: var(--color-surface-bright);
+}
+
+
+

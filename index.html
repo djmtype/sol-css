@@ -4,18 +4,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <meta name = "color-scheme" content="light dark" />
+  <!-- <meta name="color-scheme" content="light dark" /> -->
     <link rel="stylesheet" href="/build/sol.css" />
 <style>
-  .container {
-    max-inline-size: 60ch;
+  body {
+    max-inline-size: 72ch;
     margin-inline: auto;
     margin-block: 2em;
     overflow: visible;
   }
 </style>
 </head>
-<body>
+<body class="flow">
+
+  <h1>Howdy Ho</h1>
+
+<pre>
+/* Reset and provide intrinsic alignment */
+:where(blockquote) {
+  margin-inline-start: 0;
+  padding-inline-start: 1em;
+  border-inline-start: 2px solid currentColor;
+}
+</pre>
+
+<blockquote>
+	The right place to go is somewhere
+</blockquote>
+
+<figure>
+	<blockquote>
+		<p>The right place to go is somewhere</p>
+	</blockquote>
+	<figcaption><cite>Mr Giggles</cite></figcaption>
+</figure>
+
+<ul>
+	<li>Item One Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum non ipsum saepe veniam nam explicabo amet molestias neque! Debitis, corrupti eos aliquid perspiciatis dolorum deleniti voluptatem facilis ad tenetur saepe.</li>
+</ul>
+
+<ol>
+	<li>Item One Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum non ipsum saepe veniam nam explicabo amet molestias neque! Debitis, corrupti eos aliquid perspiciatis dolorum deleniti voluptatem facilis ad tenetur saepe.</li>
+</ol>
 
 <p>A plain old sentence</p>
   

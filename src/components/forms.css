@@ -2,6 +2,7 @@ form {
   --_form-flow: var(--spacing-flow, 1em);
 }
 
+
 form > * + *,
 form > fieldset:not(:has(legend)) > * + * {
   margin-block-start: var(--_form-flow);
@@ -304,4 +305,14 @@ form div:has(> label + :is(input, textarea, select)) {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-sibling);
+}
+
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+	height: auto;
 }

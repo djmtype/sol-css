@@ -11,13 +11,13 @@ Josh Comeau [https://www.joshwcomeau.com/css/custom-css-reset/]
 
 */
 
-
 /* 
 1. Prevent padding and border from affecting element width. 
 2. Remove odd text zoom on touch devices  
 3. Remove iOS tap color
 4. Add intrinsic size transitions 
 5. Respect user font size settings
+6. Normalize tab size for code snippets
 */
 :where(html) {
   /* 1 */
@@ -31,7 +31,9 @@ Josh Comeau [https://www.joshwcomeau.com/css/custom-css-reset/]
   /* 4 */
   interpolate-size: allow-keywords;
   /* 5 */
-  font-size: max(1em, 20px);
+  /* font-size: max(1em, 20px); */
+  /* 6 */
+  tab-size: 2;
 }
 
 /* 
@@ -40,7 +42,6 @@ Inherit the box sizing rule from the html element.
 :where(*, *::before, *::after) {
   box-sizing: inherit;
 }
-
 
 /* 
 1. Remove margin
@@ -70,7 +71,6 @@ Inherit the box sizing rule from the html element.
   overflow-wrap: break-word;
   /* 8 */
   scrollbar-gutter: stable;
-  
 }
 
 /* Remove default margin */
@@ -84,7 +84,7 @@ Inherit the box sizing rule from the html element.
 
 /* Better leading on large headlines */
 :where(h1, h2, h3, h4) {
-  line-height: calc(1em + 0.5rem);
+  line-height: calc(0.25rem + 1em + 0.25rem);
 }
 
 /* 
@@ -103,7 +103,6 @@ Balance headlines
   padding-inline: 0;
   /* 2 */
   list-style-type: none;
-  
 }
 
 /* 
@@ -139,11 +138,12 @@ Prevent `sub` and `sup` elements from affecting the line height in all browsers.
   top: -0.5em;
 }
 
-/* Set uniform font size on code */
-:where(code) {
-  font-family: ui-monospace, monospace;
+/* Set uniform font family and size on code */
+:where(code, kbd, samp, pre) {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: 1em;
 }
+
 
 /* Preserve intrinsic aspect ratio. */
 :where(img, svg, video, canvas) {
@@ -235,6 +235,14 @@ Prevent `sub` and `sup` elements from affecting the line height in all browsers.
   font: inherit;
 }
 
+/* Normalize and auto grow textarea */
+:where(textarea) {
+  field-sizing: content;
+  min-block-size: 5rlh;
+  min-inline-size: 45ch;
+  max-inline-size: 100%;
+}
+
 :where([type="number"]) {
   height: auto;
 }
@@ -257,7 +265,7 @@ Add the correct vertical alignment
   cursor: not-allowed;
 }
 
-/* Adds smooth scrolling only to targets */
+/* Add smooth scrolling only to targets */
 @media (prefers-reduced-motion: no-preference) {
   :where(html:focus-within) {
     scroll-behavior: smooth;
@@ -290,6 +298,16 @@ Add the correct vertical alignment
 /* Reset and provide intrinsic alignment */
 :where(blockquote) {
   margin-inline-start: 0;
+  padding-inline-start: 1em;
+  border-inline-start: 2px solid currentColor;
+}
+
+/* Blockquote styled within a `figure` element */
+:where(figure > blockquote) {
+  padding-inline-start: unset;
+  border-inline-start: unset;
+}
+:where(figure:has(blockquote)) {
   padding-inline-start: 1em;
   border-inline-start: 2px solid currentColor;
 }

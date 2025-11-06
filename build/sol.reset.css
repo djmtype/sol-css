@@ -5,7 +5,7 @@
   text-size-adjust: none;
   -webkit-tap-highlight-color: transparent;
   interpolate-size: allow-keywords;
-  font-size: max(1em, 20px);
+  tab-size: 2;
 }
 
 :where(*) {
@@ -32,7 +32,7 @@
 }
 
 :where(h1, h2, h3, h4) {
-  line-height: calc(1em + .5rem);
+  line-height: calc(.5rem + 1em);
 }
 
 :where(h1, h2, h3, h4, h5) {
@@ -69,8 +69,8 @@
   top: -.5em;
 }
 
-:where(code) {
-  font-family: ui-monospace, monospace;
+:where(code, kbd, samp, pre) {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: 1em;
 }
 
@@ -129,6 +129,13 @@
   font: inherit;
 }
 
+:where(textarea) {
+  field-sizing: content;
+  min-block-size: 5rlh;
+  min-inline-size: 45ch;
+  max-inline-size: 100%;
+}
+
 :where([type="number"]) {
   height: auto;
 }
@@ -174,5 +181,15 @@
 :where(blockquote) {
   border-inline-start: 2px solid;
   margin-inline-start: 0;
+  padding-inline-start: 1em;
+}
+
+:where(figure > blockquote) {
+  border-inline-start: unset;
+  padding-inline-start: unset;
+}
+
+:where(figure:has(blockquote)) {
+  border-inline-start: 2px solid;
   padding-inline-start: 1em;
 }
