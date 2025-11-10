@@ -4,7 +4,7 @@ import browserslist from 'browserslist';
 import { bundle, transform, browserslistToTargets } from 'lightningcss';
 
 // Get targets from the browserslist configuration in package.json or `.browserslistrc`
-const targets = browserslistToTargets(browserslist('defaults'));
+const targets = browserslistToTargets(browserslist('baseline widely available'));
 
 // Helper function to create a directory if it doesn't exist
 const ensureDirExists = async (dirPath) => {

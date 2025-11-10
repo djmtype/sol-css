@@ -35,7 +35,7 @@ Josh Comeau [https://www.joshwcomeau.com/css/custom-css-reset/]
 
 /* Prevent padding and border from affecting element width.  
 https://www.oddbird.net/2025/09/04/box-model/ */
-* {
+:where(*) {
   box-sizing: border-box;
 }
 

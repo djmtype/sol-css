@@ -7,7 +7,7 @@
   tab-size: 2;
 }
 
-* {
+:where(*) {
   box-sizing: border-box;
 }
 

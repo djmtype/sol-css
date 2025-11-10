@@ -4,6 +4,7 @@
 
   /* --font-scale-default: 1.25; */
   --font-size-default: clamp(1rem, 0.93rem + 0.35vw, 1.25rem);
+  /* --font-size-default: clamp(1em, 20px, 1.25em); */
   --font-family-default: var(--font-family-sans);
   --font-size-code: .9em;
 

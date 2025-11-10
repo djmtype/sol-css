@@ -8,7 +8,7 @@
     tab-size: 2;
   }
 
-  * {
+  :where(*) {
     box-sizing: border-box;
   }
 
@@ -458,7 +458,7 @@
 
   :where(body) {
     font-family: var(--font-family-default);
-    font-size: var(--font-size-0);
+    font-size: var(--font-size);
   }
 
   :where(h1) {
