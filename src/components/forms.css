@@ -119,7 +119,9 @@ input[type="range"] {
   width: 100%;
 }
 
-input[type="range"]::range-track {
+input[type="range"]::range-track, 
+input[type="range"]::-webkit-slider-runnable-track,
+input[type="range"]::-moz-range-track {
   background-color: light-dark(var(--color-gray-4), var(--color-gray-13));
   height: var(--_track-height);
   border-radius: 1e5px;
@@ -127,7 +129,9 @@ input[type="range"]::range-track {
 
 
 
-input[type="range"]::range-thumb {
+input[type="range"]::range-thumb, 
+input[type="range"]::-webkit-slider-thumb,
+input[type="range"]::-moz-range-thumb {
   appearance: none;
   height: var(--_thumb-size);
   width: var(--_thumb-size);
@@ -137,16 +141,8 @@ input[type="range"]::range-thumb {
 }
 
 
-::-moz-range-thumb {
-  appearance: none;
-  height: var(--_thumb-size);
-  width: var(--_thumb-size);
-  background-color: var(--color-accent);
-  border: 0;
-  border-radius: 1e5px;
-}
 
-::-webkit-slider-thumb {
+input[type="range"]::-webkit-slider-thumb {
   margin-block-start: calc(
     (var(--_track-height) / 2) - (var(--_thumb-size) / 2)
   );
@@ -156,7 +152,9 @@ input[type="range"]:focus-visible {
   outline: unset;
 }
 
-input[type="range"]:focus-visible::range-thumb {
+input[type="range"]:focus-visible::range-thumb,
+input[type="range"]:focus-visible::-webkit-slider-thumb,
+input[type="range"]:focus-visible::-moz-range-thumb {
   border: 0;
   outline-width: var(--border-width-focus);
   outline-style: solid;
@@ -165,14 +163,22 @@ input[type="range"]:focus-visible::range-thumb {
 }
 
 input[type="range"]:focus-within::range-track,
-input[type="range"]:active::range-track {
+input[type="range"]:active::range-track,
+input[type="range"]:focus-within::-webkit-slider-runnable-track,
+input[type="range"]:active::-webkit-slider-runnable-track,
+input[type="range"]:focus-within::-moz-range-track,
+input[type="range"]:active::-moz-range-track {
     transition: all 200ms;
     background-color: light-dark(var(--color-gray-5), var(--color-gray-12));
 }
 
 
 input[type="range"]:focus-within::range-thumb,
-input[type="range"]:active::range-thumb {
+input[type="range"]:active::range-thumb,
+input[type="range"]:focus-within::-webkit-slider-thumb,
+input[type="range"]:active::-webkit-slider-thumb,
+input[type="range"]:focus-within::-moz-range-thumb,
+input[type="range"]:active::-moz-range-thumb {
     transition: all 200ms;
     background-color: var(--color-primary-9);
     transform: scale(1.25);
@@ -260,10 +266,11 @@ form {
       [type="button"],
       [type="submit"],
       [type="reset"],
-      [type="file"]
+      [type="file"],
+      [type="number"]
     ),
   select {
-    inline-size: min(100%, 45ch);
+    inline-size: 100%;
   }
 }
 

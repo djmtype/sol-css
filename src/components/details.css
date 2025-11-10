@@ -6,15 +6,14 @@ details > summary::-webkit-details-marker {
   display: none;
 }
 
-details > summary::marker {
-  content: "";
-}
+
 
 details > summary {
   --_icon-rotation: rotate(0deg);
   position: relative;
   transition: all 200ms;
   display: list-item;
+  list-style: none;
   font-weight: var(--font-weight-bold, 700);
 }
 
@@ -99,3 +98,6 @@ details[open]::details-content {
 details[name] + details[name] {
   margin-block-start: var(--spacing-sibling);
 }
+
+
+

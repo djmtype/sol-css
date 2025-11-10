@@ -13,11 +13,24 @@
     margin-block: 2em;
     overflow: visible;
   }
+
+  .flow > * + * {
+    margin-block-start: 1lh;
+  }
 </style>
 </head>
 <body class="flow">
 
   <h1>Howdy Ho</h1>
+
+  <form>
+  <fieldset>
+    <label>Volume Control
+      <input type="range" name="range" min="0" max="100" value="80" step="10">
+    </label>
+  </fieldset>
+</form>
+
 
 <pre>
 /* Reset and provide intrinsic alignment */
