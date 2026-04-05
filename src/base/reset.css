@@ -17,6 +17,7 @@ Josh Comeau [https://www.joshwcomeau.com/css/custom-css-reset/]
 3. Add intrinsic size transitions 
 4. Respect user font size settings
 5. Normalize tab size for code snippets
+6. Reserve space for scrollbar 
 */
 :where(html) {
   /* 1 */
@@ -31,6 +32,8 @@ Josh Comeau [https://www.joshwcomeau.com/css/custom-css-reset/]
   /* font-size: max(1em, 20px); */
   /* 5 */
   tab-size: 2;
+  /* 6 */
+  scrollbar-gutter: stable;
 }
 
 /* Prevent padding and border from affecting element width.  

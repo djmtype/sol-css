@@ -6,6 +6,7 @@
     -webkit-tap-highlight-color: transparent;
     interpolate-size: allow-keywords;
     tab-size: 2;
+    scrollbar-gutter: stable;
   }
 
   :where(*) {
@@ -1011,8 +1012,15 @@
     }
   }
 
-  figure:has(table) {
+  :where(table) {
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-indent: 0;
+    border-block: 0;
     width: 100%;
+  }
+
+  figure:has(table) {
     max-width: 100%;
     position: relative;
     overflow-x: auto;
@@ -1021,14 +1029,6 @@
   figure:has(table) figcaption {
     position: sticky;
     left: 0;
-  }
-
-  :where(table) {
-    border-collapse: collapse;
-    border-spacing: 0;
-    text-indent: 0;
-    border-block: 0;
-    width: 100%;
   }
 
   thead {

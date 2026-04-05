@@ -5,6 +5,7 @@
   -webkit-tap-highlight-color: transparent;
   interpolate-size: allow-keywords;
   tab-size: 2;
+  scrollbar-gutter: stable;
 }
 
 :where(*) {

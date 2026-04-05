@@ -1,15 +1,3 @@
-figure:has(table) {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: auto;
-  position: relative;
-}
-
-figure:has(table) figcaption {
-position: sticky;
-left: 0;
-}
-
 :where(table) {
   width: 100%;
   border-collapse: collapse;
@@ -20,7 +8,16 @@ left: 0;
   
 }
 
+figure:has(table) {
+  max-width: 100%;
+  overflow-x: auto;
+  position: relative;
+}
 
+figure:has(table) figcaption {
+position: sticky;
+left: 0;
+}
 
 thead {
   background-color: var(--color-surface-dim);
