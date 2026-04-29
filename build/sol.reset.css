@@ -6,6 +6,8 @@
   interpolate-size: allow-keywords;
   tab-size: 2;
   scrollbar-gutter: stable;
+  overflow-wrap: break-word;
+  block-size: 100%;
 }
 
 :where(*) {
@@ -24,11 +26,16 @@
 }
 
 :where(figure) {
-  margin-inline: 0;
+  margin-inline: unset;
 }
 
 :where(h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, ul, ol, hr, pre) {
-  margin-block: 0;
+  margin-block: unset;
+}
+
+:where(pre) {
+  white-space: pre-wrap;
+  white-space: preserve wrap;
 }
 
 :where(h1, h2, h3, h4) {
