@@ -22,7 +22,6 @@
   min-block-size: 100svh;
   margin: 0;
   font-family: system-ui, sans-serif;
-  line-height: 1.5;
 }
 
 :where(figure) {
@@ -38,12 +37,16 @@
   white-space: preserve wrap;
 }
 
-:where(h1, h2, h3, h4) {
+:where(h1, h2, h3, h4, h5, p, li, dt, dd) {
   line-height: calc(.5rem + 1em);
 }
 
 :where(h1, h2, h3, h4, h5) {
   text-wrap: balance;
+}
+
+:where(p) {
+  text-wrap: pretty;
 }
 
 :where(ul[role="list"], ol[role="list"]) {

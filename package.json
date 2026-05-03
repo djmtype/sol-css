@@ -1,7 +1,7 @@
 {
   "name": "sol-css",
   "type": "module",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "scripts": {
     "build": "node build.js all"
   },
@@ -9,8 +9,9 @@
     "lightningcss": "^1.30.2"
   },
   "dependencies": {
+    "baseline-browser-mapping": "^2.10.25",
     "browserslist": "^4.27.0",
-    "caniuse-lite": "^1.0.30001754",
+    "caniuse-lite": "^1.0.30001791",
     "lightningcss-cli": "^1.30.2"
   }
 }
