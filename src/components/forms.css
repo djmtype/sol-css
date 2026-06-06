@@ -2,17 +2,15 @@ form {
   --_form-flow: var(--spacing-flow, 1em);
 }
 
-
 form > * + *,
 form > fieldset:not(:has(legend)) > * + * {
   margin-block-start: var(--_form-flow);
-} 
+}
 
 dialog:has(> form) > form > * + *,
 dialog:has(> form) > form > fieldset:not(:has(legend)) > * + * {
-margin-block-start: unset;
+  margin-block-start: unset;
 }
- 
 
 ::placeholder {
   color: var(--color-ink-mute);
@@ -43,11 +41,23 @@ select {
   background-color: var(--color-surface-dim);
 }
 
+::-webkit-datetime-edit,
+::-webkit-datetime-edit-fields-wrapper,
+::-webkit-datetime-edit-text,
+::-webkit-datetime-edit-minute-field,
+::-webkit-datetime-edit-hour-field,
+::-webkit-datetime-edit-meridiem-field,
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-year-field {
+  padding: 0;
+}
+
 :where(
-    input:not([type="submit"], [type="reset"], [type="file"], [type="range"]),
-    textarea,
-    select
-  ):not([disabled]) {
+  input:not([type="submit"], [type="reset"], [type="file"], [type="range"]),
+  textarea,
+  select
+):not([disabled]) {
   &:focus-visible {
     color: var(--color-ink-contrast);
     background-color: var(--color-surface-bright);
@@ -119,7 +129,7 @@ input[type="range"] {
   width: 100%;
 }
 
-input[type="range"]::range-track, 
+input[type="range"]::range-track,
 input[type="range"]::-webkit-slider-runnable-track,
 input[type="range"]::-moz-range-track {
   background-color: light-dark(var(--color-gray-4), var(--color-gray-13));
@@ -127,9 +137,7 @@ input[type="range"]::-moz-range-track {
   border-radius: 1e5px;
 }
 
-
-
-input[type="range"]::range-thumb, 
+input[type="range"]::range-thumb,
 input[type="range"]::-webkit-slider-thumb,
 input[type="range"]::-moz-range-thumb {
   appearance: none;
@@ -139,8 +147,6 @@ input[type="range"]::-moz-range-thumb {
   border: 0;
   border-radius: 1e5px;
 }
-
-
 
 input[type="range"]::-webkit-slider-thumb {
   margin-block-start: calc(
@@ -168,10 +174,9 @@ input[type="range"]:focus-within::-webkit-slider-runnable-track,
 input[type="range"]:active::-webkit-slider-runnable-track,
 input[type="range"]:focus-within::-moz-range-track,
 input[type="range"]:active::-moz-range-track {
-    transition: all 200ms;
-    background-color: light-dark(var(--color-gray-5), var(--color-gray-12));
+  transition: all 200ms;
+  background-color: light-dark(var(--color-gray-5), var(--color-gray-12));
 }
-
 
 input[type="range"]:focus-within::range-thumb,
 input[type="range"]:active::range-thumb,
@@ -179,9 +184,9 @@ input[type="range"]:focus-within::-webkit-slider-thumb,
 input[type="range"]:active::-webkit-slider-thumb,
 input[type="range"]:focus-within::-moz-range-thumb,
 input[type="range"]:active::-moz-range-thumb {
-    transition: all 200ms;
-    background-color: var(--color-primary-9);
-    transform: scale(1.25);
+  transition: all 200ms;
+  background-color: var(--color-primary-9);
+  transform: scale(1.25);
 }
 
 input:is(
@@ -208,23 +213,21 @@ input[type="time" i]::-webkit-calendar-picker-indicator {
   mask-image: var(--icon-clock);
 }
 
-
 [type="file"]::file-selector-button {
   margin-inline-end: var(--spacing-sibling);
 }
 
-
-/* 
+/*
 * Equalize heights (Safari bug) *
 */
 
 input:is(
-    [type="date"],
-    [type="datetime-local"],
-    [type="time"],
-    [type="month"],
-    [type="color"]
-  ) {
+  [type="date"],
+  [type="datetime-local"],
+  [type="time"],
+  [type="month"],
+  [type="color"]
+) {
   height: calc(
     (var(--font-size-0) * 1.5) + (var(--spacing-input-block) * 2) +
       (var(--border-width-input) * 2)
@@ -252,7 +255,6 @@ input:not(
   );
 } */
 
-
 form label:has(input:not([type="checkbox"], [type="radio"]), textarea, select) {
   display: flex;
   flex-direction: column;
@@ -261,28 +263,25 @@ form label:has(input:not([type="checkbox"], [type="radio"]), textarea, select) {
 
 form {
   input:not(
-      [type="checkbox"],
-      [type="radio"],
-      [type="button"],
-      [type="submit"],
-      [type="reset"],
-      [type="file"],
-      [type="number"]
-    ),
+    [type="checkbox"],
+    [type="radio"],
+    [type="button"],
+    [type="submit"],
+    [type="reset"],
+    [type="file"],
+    [type="number"]
+  ),
   select {
     inline-size: 100%;
   }
 }
 
-
-
-label:has(input:not([type="submit"],[type="reset"],[type="button"]):disabled),
-label:has(+ input:not([type="submit"],[type="reset"],[type="button"]):disabled)
- {
+label:has(input:not([type="submit"], [type="reset"], [type="button"]):disabled),
+label:has(
+  + input:not([type="submit"], [type="reset"], [type="button"]):disabled
+) {
   color: var(--color-ink-mute);
 }
-
-
 
 input[type="search"] {
   appearance: none;
@@ -294,15 +293,14 @@ input[type="search"] {
   position: relative;
 }
 
-input[type="password"], input[type="number"] {
+input[type="password"],
+input[type="number"] {
   font-family: var(--font-family-mono);
 }
 
 form label:has(input:is([type="checkbox"], [type="radio"])) {
   display: block;
 }
-
-
 
 form fieldset > legend + * {
   margin-block-start: var(--spacing-sibling);
@@ -315,12 +313,11 @@ form div:has(> label + :is(input, textarea, select)) {
   gap: var(--spacing-sibling);
 }
 
-
 /**
 Correct the cursor style of increment and decrement buttons in Safari.
 */
 
 ::-webkit-inner-spin-button,
 ::-webkit-outer-spin-button {
-	height: auto;
+  height: auto;
 }
