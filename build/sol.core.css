@@ -128,7 +128,7 @@
   }
 
   :where(button, [type="button"], [type="reset"], [type="submit"]) {
-    -webkit-appearance: button;
+    appearance: button;
   }
 
   :where([type="search"]) {
@@ -136,7 +136,7 @@
   }
 
   :where() {
-    -webkit-appearance: none;
+    appearance: none;
     font: inherit;
   }
 

@@ -1,8 +1,8 @@
-/* 
+/*
 SOL Reset
 Somewhere between reset and normalize
 
-Sources: 
+Sources:
 SET Studio [https://piccalil.li/blog/a-more-modern-css-reset/]
 Open Props Normalize [https://github.com/argyleink/open-props/blob/main/src/extra/normalize.src.css]
 Normalize CSS [https://github.com/necolas/normalize.css/blob/master/normalize.css]
@@ -11,13 +11,13 @@ Josh Comeau [https://www.joshwcomeau.com/css/custom-css-reset/]
 
 */
 
-/* 
-1. Remove odd text zoom on touch devices  
+/*
+1. Remove odd text zoom on touch devices
 2. Remove iOS tap color
-3. Add intrinsic size transitions 
+3. Add intrinsic size transitions
 4. Respect user font size settings
 5. Normalize tab size for code snippets
-6. Reserve space for scrollbar 
+6. Reserve space for scrollbar
 7. Define height in order to set min-height on body
 8. Prevent inline overflow with long text lines
 */
@@ -42,20 +42,20 @@ Josh Comeau [https://www.joshwcomeau.com/css/custom-css-reset/]
   overflow-wrap: break-word;
 }
 
-/* Prevent padding and border from affecting element width.  
+/* Prevent padding and border from affecting element width.
 https://www.oddbird.net/2025/09/04/box-model/ */
 :where(*) {
   box-sizing: border-box;
 }
 
-/* 
-Inherit the box sizing rule from the html element. 
+/*
+Inherit the box sizing rule from the html element.
 */
 /* :where(*, *::before, *::after) {
   box-sizing: inherit;
 } */
 
-/* 
+/*
 1. Remove margin
 2. Set to smallest vertical height if content block size is less than HTML height
 3. Set max width
@@ -94,9 +94,9 @@ Inherit the box sizing rule from the html element.
 }
 
 /* Preserve white space and line breaks */
-:where(pre) { 
-    white-space: pre-wrap; 
-    white-space: preserve wrap; 
+:where(pre) {
+    white-space: pre-wrap;
+    white-space: preserve wrap;
   }
 
 /* Better leading on large headlines */
@@ -104,8 +104,8 @@ Inherit the box sizing rule from the html element.
   line-height: calc(0.5rem + 1em);
 }
 
-/* 
-Balance headlines 
+/*
+Balance headlines
 */
 :where(h1, h2, h3, h4, h5) {
   text-wrap: balance;
@@ -116,8 +116,8 @@ Balance headlines
   text-wrap: pretty;
 }
 
-/* 
-1. Remove indentation on styled lists 
+/*
+1. Remove indentation on styled lists
 2. Remove list type appearance for non-technical list items
 */
 :where(ul[role="list"], ol[role="list"]) {
@@ -127,7 +127,7 @@ Balance headlines
   list-style-type: none;
 }
 
-/* 
+/*
 Make anchor and abbreviated elements more legible
 */
 :where(a:not([class]), u, ins, abbr) {
@@ -135,8 +135,8 @@ Make anchor and abbreviated elements more legible
   text-underline-offset: 0.2ex;
 }
 
-/* 
-Unify text size across browsers  
+/*
+Unify text size across browsers
 */
 :where(small) {
   font-size: 75%;
@@ -187,8 +187,8 @@ Prevent `sub` and `sup` elements from affecting the line height in all browsers.
   display: none;
 }
 
-/* 
-1. Remove gaps 
+/*
+1. Remove gaps
 2. Correct color consistency
 */
 :where(table) {
@@ -239,17 +239,16 @@ Prevent `sub` and `sup` elements from affecting the line height in all browsers.
     [type="submit"],
     ::-webkit-file-upload-button
   ) {
-  -webkit-appearance: button;
+  appearance: button;
 }
 
 /* Webkit: Fix search field appearance */
 :where([type="search"]) {
-  -webkit-appearance: textfield;
   appearance: textfield;
 }
 
 :where([type="search"]::-webkit-search-decoration) {
-  -webkit-appearance: none;
+  appearance: none;
 }
 
 /* Webkit: Fix font size */
