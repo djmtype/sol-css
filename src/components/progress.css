@@ -8,7 +8,7 @@ progress {
   block-size: 1rem;
   /* inline-size: min(100%, 15rem); */
   border-radius: var(--radius-pill);
-  background-color: var(--color-surface-bright);
+  background-color: var(--color-surface-glare);
   color: var(--color-ink-primary);
   overflow: hidden;
 }
@@ -28,11 +28,11 @@ progress::-moz-progress-bar {
 
 @media (prefers-reduced-motion: no-preference) {
   progress:indeterminate {
-    background: var(--color-surface-bright)
+    background: var(--color-surface-glare)
       linear-gradient(
         to right,
         var(--color-accent) 25%,
-        var(--color-surface-bright) 25%
+        var(--color-surface-glare) 25%
       )
       top left/150% 150% no-repeat;
     animation: progress-indeterminate 1s linear infinite;

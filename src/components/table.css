@@ -63,7 +63,7 @@ tbody tr {
 }
 
 tbody tr:nth-child(even) {
-  --_row-bg: var(--color-surface-bright);
+  --_row-bg: var(--color-surface-glare);
 }
 
 

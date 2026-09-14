@@ -16,7 +16,7 @@
 
   /* Background */
   --color-surface: light-dark(var(--color-gray-2), var(--color-gray-14));
-  --color-surface-bright: light-dark(var(--color-gray-1), var(--color-gray-13));
+  --color-surface-glare: light-dark(var(--color-gray-1), var(--color-gray-13));
   --color-surface-dim: light-dark(var(--color-gray-3), var(--color-gray-15));
   --color-surface-primary-highlight: light-dark(
     var(--color-primary-3),

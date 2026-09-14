@@ -4,7 +4,7 @@ dialog {
   border: var(--border-width-input) solid var(--color-separator);
   border-radius: var(--radius-input);
   box-shadow: var(--shadow-far);
-  background-color: var(--color-surface-bright);
+  background-color: var(--color-surface-glare);
   inline-size: min(48rem, 100% - 4rlh);
   max-block-size: calc(100% - 4rlh);
   translate: 0 25vh;
@@ -58,7 +58,7 @@ dialog footer {
   padding: var(--spacing-panel);
   padding-block: var(--spacing-xs);
   position: sticky;
-  background: var(--color-surface-bright);
+  background: var(--color-surface-glare);
   z-index: 1;
 }
 

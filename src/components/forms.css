@@ -60,7 +60,7 @@ select {
 ):not([disabled]) {
   &:focus-visible {
     color: var(--color-ink-contrast);
-    background-color: var(--color-surface-bright);
+    background-color: var(--color-surface-glare);
   }
   &:hover,
   &:focus-visible {

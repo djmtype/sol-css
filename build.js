@@ -1,112 +1,90 @@
-import { promises as fs } from 'fs';
-import path from 'path';
+import { mkdir, writeFile, readdir } from 'node:fs/promises';
+import path from 'node:path';
 import browserslist from 'browserslist';
-import { bundle, transform, browserslistToTargets } from 'lightningcss';
+import { bundle, browserslistToTargets, Features } from 'lightningcss';
 
-// Get targets from the browserslist configuration in package.json or `.browserslistrc`
+// Resolve target browsers from browserslist query
 const targets = browserslistToTargets(browserslist('baseline widely available'));
 
-// Helper function to create a directory if it doesn't exist
-const ensureDirExists = async (dirPath) => {
+/**
+ * Single-pass bundle and transpile function
+ */
+const buildCSS = async (inputFile, outputFile, options = {}) => {
   try {
-    await fs.mkdir(dirPath, { recursive: true });
-  } catch (error) {
-    console.error(`Error creating directory ${dirPath}:`, error);
-    process.exit(1);
-  }
-};
-
-// Helper function to bundle and transform CSS using LightningCSS with the browserslist targets
-const bundleAndTransformCSS = async (inputFile, outputFile, options = {}) => {
-  try {
-    // Bundle the CSS
-    const bundleResult = bundle({
+    const result = bundle({
       filename: inputFile,
-      drafts: {
-        nesting: true,
-        customMedia: true
-      }
-    });
-
-    // Transform the bundled CSS to apply browser targets
-    const transformResult = transform({
-      filename: inputFile,
-      code: bundleResult.code,
       targets,
-      minify: options.minify || false,
-      sourceMap: options.sourceMap || false,
+      minify: options.minify ?? false,
+      sourceMap: options.sourceMap ?? false,
+      drafts: {
+        customMedia: true,
+      },
+      // Exclude specific CSS features from being polyfilled/transformed
+      exclude: Features.LightDark,
     });
 
-    // Write the final transformed CSS to the output file
-    await ensureDirExists(path.dirname(outputFile));
-    await fs.writeFile(outputFile, transformResult.code);
-    
-    // Optionally, write the source map
-    if (transformResult.map) {
+    await mkdir(path.dirname(outputFile), { recursive: true });
+    await writeFile(outputFile, result.code);
+
+    if (result.map) {
       const mapFile = `${outputFile}.map`;
-      await fs.writeFile(mapFile, transformResult.map);
-      console.log(`Built: ${outputFile} and source map: ${mapFile}`);
+      await writeFile(mapFile, result.map);
+      console.log(`Built: ${outputFile} (+ source map)`);
     } else {
       console.log(`Built: ${outputFile}`);
     }
   } catch (error) {
-    console.error(`Error building ${outputFile}:`, error);
+    console.error(`Failed to build ${inputFile} -> ${outputFile}:`, error);
     process.exit(1);
   }
 };
 
-// Build functions
-const buildReset = () => bundleAndTransformCSS('src/base/reset.css', 'build/sol.reset.css');
-const buildCore = () => bundleAndTransformCSS('src/core.css', 'build/sol.core.css');
-const buildComplete = () => bundleAndTransformCSS('src/sol.css', 'build/sol.css');
+// Target build tasks
+const buildReset = () => buildCSS('src/base/reset.css', 'build/sol.reset.css');
+const buildCore = () => buildCSS('src/core.css', 'build/sol.core.css');
+const buildComplete = () => buildCSS('src/sol.css', 'build/sol.css');
+
 const buildMinify = async () => {
   try {
-    // Ensure the minified directory exists
-    await ensureDirExists('build/minified');
+    await mkdir('build/minified', { recursive: true });
+    const files = await readdir('build');
 
-    const cssFiles = await fs.readdir('build');
-    await Promise.all(
-      cssFiles.filter(file => file.endsWith('.css')).map(file =>
-        bundleAndTransformCSS(`build/${file}`, `build/minified/${file}`, { minify: true })
-      )
-    );
+    const minificationTasks = files
+      .filter((file) => file.endsWith('.css'))
+      .map((file) =>
+        buildCSS(`build/${file}`, `build/minified/${file}`, { minify: true })
+      );
+
+    await Promise.all(minificationTasks);
   } catch (error) {
-    console.error('Error during minification:', error);
+    console.error('Error during minification batch:', error);
     process.exit(1);
   }
 };
 
-// Main build logic
+// Main parallel build
 const buildAll = async () => {
-  await buildComplete();
-  await buildCore();
-  await buildReset();
+  // Run core build passes concurrently
+  await Promise.all([buildComplete(), buildCore(), buildReset()]);
+  // Minify once unminified builds complete
   await buildMinify();
 };
 
-// CLI handling
-const mode = process.argv[2];
+// CLI entry router
+const mode = process.argv[2] ?? 'all';
 
-switch (mode) {
-  case 'dev':
-    buildComplete();
-    break;
-  case 'reset':
-    buildReset();
-    break;
-  case 'core':
-    buildCore();
-    break;
-  case 'prod':
-    buildAll();
-    break;
-  case 'min':
-    buildMinify();
-    break;
-  case 'all':
-    buildAll();
-    break;
-  default:
-    console.error("Unknown build mode. Use 'dev', 'reset', 'core', 'prod', 'min', or 'all'.");
-    process.exit(1);
+const tasks = {
+  dev: buildComplete,
+  reset: buildReset,
+  core: buildCore,
+  prod: buildAll,
+  min: buildMinify,
+  all: buildAll,
+};
+
+if (tasks[mode]) {
+  await tasks[mode]();
+} else {
+  console.error(`Unknown build mode: "${mode}". Valid options: ${Object.keys(tasks).join(', ')}`);
+  process.exit(1);
 }

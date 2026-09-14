@@ -1,7 +1,7 @@
 {
   "name": "sol-css",
   "type": "module",
-  "version": "0.6.6",
+  "version": "0.7.0",
   "scripts": {
     "build": "node build.js all"
   },
@@ -13,12 +13,5 @@
     "browserslist": "^4.28.8",
     "caniuse-lite": "^1.0.30001797",
     "lightningcss-cli": "^1.32.0"
-  },
-  "devEngines": {
-    "packageManager": {
-      "name": "nub",
-      "version": "^0.6.0",
-      "onFail": "warn"
-    }
   }
 }

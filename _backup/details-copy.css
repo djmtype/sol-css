@@ -15,13 +15,13 @@ details {
   position: relative;
   &:hover,
   &:focus-visible, &:focus-within {
-    --_background: var(--color-surface-bright);
+    --_background: var(--color-surface-glare);
     --_border-color: var(--color-separator-highlight);
   }
 }
 
 details[open] {
-  --_background: var(--color-surface-bright);
+  --_background: var(--color-surface-glare);
   --_border-color: var(--color-separator-highlight);
   padding-block: var(--_padding-block);
   padding-inline: var(--_padding-inline);

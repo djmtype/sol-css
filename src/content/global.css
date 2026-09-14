@@ -52,7 +52,7 @@
 }
 
 :where(code) {
-  background-color: var(--color-surface-bright);
+  background-color: var(--color-surface-glare);
   border-radius: var(--radius-badge);
 }
 
@@ -161,7 +161,7 @@
 :where(code, kbd, samp, pre) {
 
 color: var(--color-ink-contrast);
-  background-color: var(--color-surface-bright);
+  background-color: var(--color-surface-glare);
 }
 
 
