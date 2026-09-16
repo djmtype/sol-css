@@ -108,7 +108,7 @@
 }
 
 :where(ol, ul):not([role="list"]) li::marker {
-  color: var(--color-ink-primary);
+  color: var(--color-ink-bullet, var(--color-ink-primary));
 }
 
 :where(blockquote) {
@@ -163,6 +163,3 @@
 color: var(--color-ink-contrast);
   background-color: var(--color-surface-glare);
 }
-
-
-

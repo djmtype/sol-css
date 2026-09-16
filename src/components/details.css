@@ -1,70 +1,54 @@
-details {
-  padding: 0;
-}
-
-details > summary::-webkit-details-marker {
-  display: none;
+:root {
+  interpolate-size: allow-keywords;
 }
 
 details > summary {
   --_icon-rotation: rotate(0deg);
   position: relative;
-  transition: all 200ms;
-  display: list-item;
-  list-style: none;
+  transition: all var(--duration-short);
+  list-style-type: none;
   font-weight: var(--font-weight-bold, 700);
-}
 
-details > summary:not([role="button"]) {
   padding-inline: var(--spacing-input-inline);
   padding-inline-end: var(--_icon-padding);
   padding-block: var(--spacing-input-block);
   border: var(--border-width-input) solid var(--color-separator);
   border-radius: var(--radius-input);
-}
 
-details > summary:not([role="button"]) {
   &:hover,
   &:focus-visible {
     background-color: var(--color-surface-glare);
   }
 }
 
-details[open] > summary:not([role="button"]) {
+details[open] > summary {
   background: var(--color-surface-glare);
   border-end-start-radius: 0;
   border-end-end-radius: 0;
+  --_icon-rotation: rotate(90deg);
 }
 
 details > summary::after {
   background-color: currentColor;
   content: "";
-  transition: all 200ms;
+  transition: transform var(--duration-short);
   mask-image: var(--icon-chevron-right);
   mask-size: contain;
   mask-position: 50% 50%;
   mask-repeat: no-repeat;
-  block-size: var(--icon-size);
+
   inline-size: var(--icon-size);
   block-size: 100%;
   display: inline-block;
   position: absolute;
   transform: var(--_icon-rotation);
   top: 0;
-}
-
-details > summary::after {
   right: var(--spacing-input-inline);
-}
-
-details[open] > summary {
-  --_icon-rotation: rotate(90deg);
 }
 
 details > div {
   border-radius: 0 0 var(--radius-input) var(--radius-input);
   background: var(--color-surface-glare);
-  /* margin-block-start: var(--spacing-sibling); */
   padding: var(--spacing-input-block) var(--spacing-input-inline);
   border: var(--border-width-input) solid var(--color-separator);
   border-block-start: 0;
@@ -76,25 +60,24 @@ details > div > * + * {
 
 details::details-content {
   opacity: 0;
-  block-size: 0;
+  height: 0;
   overflow-y: clip;
-  transition:
-    content-visibility 400ms,
-    opacity 400ms,
-    block-size 400ms;
-}
-
-/* Separated to avoid LightningCSS bug */
-details::details-content {
-  transition-behavior: allow-discrete;
+  transition-property: content-visibility, opacity, height;
+    transition-duration: var(--duration-short);
+    transition-behavior: allow-discrete;
 }
 
 details[open]::details-content {
   opacity: 1;
-  block-size: auto;
+  height: auto;
 }
 
-/* Details Group */
+@starting-style {
+  details[open]::details-content {
+    opacity: 0;
+    height: 0;
+  }
+}
 
 details[name] + details[name] {
   margin-block-start: var(--spacing-sibling);

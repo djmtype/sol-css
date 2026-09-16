@@ -232,6 +232,7 @@
     --radius-panel: var(--radius-default);
     --spacing-table: var(--spacing-sm);
     --icon-size: 1em;
+    --duration-short: .3s;
   }
 }
 
@@ -636,7 +637,7 @@
   }
 
   :where(ol, ul):not([role="list"]) li::marker {
-    color: var(--color-ink-primary);
+    color: var(--color-ink-bullet, var(--color-ink-primary));
   }
 
   :where(blockquote) {

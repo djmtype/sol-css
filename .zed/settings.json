@@ -1,0 +1,3 @@
+{
+ "file_scan_exclusions": ["_backup/**/*", ".DS_Store", "build/**/*", "dist/**/*"],
+}

@@ -15,7 +15,7 @@ dialog::backdrop {
 }
 
   dialog, dialog::backdrop {
-    transition: display 400ms allow-discrete, overlay 400ms allow-discrete, opacity 400ms, translate 400ms;
+    transition: display var(--duration-short) allow-discrete, overlay var(--duration-short) allow-discrete, opacity var(--duration-short), translate var(--duration-short);
     opacity: 0;
   }
 
@@ -135,7 +135,7 @@ dialog header > button[aria-label]::after {
 
 /* body:has(dialog) {
   transition-property: filter;
-  transition-duration: 400ms;
+  transition-duration: var(--duration-short);
   transition-behavior: allow-discrete;
 } */
 
