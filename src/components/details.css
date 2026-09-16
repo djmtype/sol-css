@@ -6,8 +6,6 @@ details > summary::-webkit-details-marker {
   display: none;
 }
 
-
-
 details > summary {
   --_icon-rotation: rotate(0deg);
   position: relative;
@@ -80,7 +78,10 @@ details::details-content {
   opacity: 0;
   block-size: 0;
   overflow-y: clip;
-  transition: content-visibility 400ms, opacity 400ms, block-size 400ms;
+  transition:
+    content-visibility 400ms,
+    opacity 400ms,
+    block-size 400ms;
 }
 
 /* Separated to avoid LightningCSS bug */
@@ -98,6 +99,3 @@ details[open]::details-content {
 details[name] + details[name] {
   margin-block-start: var(--spacing-sibling);
 }
-
-
-

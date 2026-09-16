@@ -240,17 +240,11 @@
     color-scheme: light dark;
   }
 
-  @media (prefers-color-scheme: dark) {
-    :where(html) {
-      color-scheme: dark;
-    }
-  }
-
-  :where([data-theme="light"]) {
+  :where([data-scheme="light"]) {
     color-scheme: light;
   }
 
-  :where([data-theme="dark"]) {
+  :where([data-scheme="dark"]) {
     color-scheme: dark;
   }
 
