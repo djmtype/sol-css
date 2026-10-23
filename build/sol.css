@@ -947,7 +947,10 @@
   }
 
   dialog, dialog::backdrop {
-    transition: display var(--duration-short) allow-discrete, overlay var(--duration-short) allow-discrete, opacity var(--duration-short), translate var(--duration-short);
+    transition: display var(--duration-short) allow-discrete,
+    overlay var(--duration-short) allow-discrete,
+    opacity var(--duration-short),
+    translate var(--duration-short);
     opacity: 0;
   }
 
@@ -1095,11 +1098,8 @@
   }
 
   :where(table) {
-    border-collapse: collapse;
-    border-spacing: 0;
     text-indent: 0;
     border-block: 0;
-    width: 100%;
   }
 
   figure:has(table) {
@@ -1133,7 +1133,8 @@
 
   th, td {
     font-feature-settings: "tnum" 1;
-    padding: calc(var(--spacing-table, var(--spacing-xs)) / 2) var(--spacing-table, var(--spacing-xs));
+    padding: calc(var(--spacing-table, var(--spacing-xs)) / 2)
+    var(--spacing-table, var(--spacing-xs));
   }
 
   tfoot {

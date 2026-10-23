@@ -14,7 +14,7 @@ dialog:has(> form) > form > fieldset:not(:has(legend)) > * + * {
 
 ::placeholder {
   color: inherit;
-  opacity: .8;
+  opacity: 0.8;
   font-style: italic;
 }
 
@@ -31,7 +31,14 @@ fieldset {
 
 /* Text fields */
 
-input:not([type="submit"], [type="reset"], [type="file"], [type="range"], [type="image"], [type="hidden"]),
+input:not(
+  [type="submit"],
+  [type="reset"],
+  [type="file"],
+  [type="range"],
+  [type="image"],
+  [type="hidden"]
+),
 textarea,
 select {
   padding-block: var(--spacing-input-block);
@@ -40,8 +47,6 @@ select {
   border: var(--border-width-input) solid var(--color-separator);
   background-color: var(--color-surface-dim);
 }
-
-
 
 textarea {
   overflow: auto;
@@ -333,5 +338,3 @@ Correct the cursor style of increment and decrement buttons in Safari.
 ::-webkit-outer-spin-button {
   height: auto;
 }
-
-

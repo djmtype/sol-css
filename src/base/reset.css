@@ -221,8 +221,6 @@ Prevent `sub` and `sup` elements from affecting the line height in all browsers.
   color: inherit;
 }
 
-
-
 /* Normalize separator appearance */
 :where(hr) {
   border-style: solid;

@@ -63,8 +63,8 @@ details::details-content {
   height: 0;
   overflow-y: clip;
   transition-property: content-visibility, opacity, height;
-    transition-duration: var(--duration-short);
-    transition-behavior: allow-discrete;
+  transition-duration: var(--duration-short);
+  transition-behavior: allow-discrete;
 }
 
 details[open]::details-content {

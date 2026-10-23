@@ -1,11 +1,7 @@
 :where(table) {
-  width: 100%;
-  border-collapse: collapse;
-  border-spacing: 0;
   text-indent: 0;
   border-block-start: 0;
   border-block-end: 0;
-  
 }
 
 figure:has(table) {
@@ -15,8 +11,8 @@ figure:has(table) {
 }
 
 figure:has(table) figcaption {
-position: sticky;
-left: 0;
+  position: sticky;
+  left: 0;
 }
 
 thead {
@@ -24,8 +20,6 @@ thead {
   border-block-end: var(--border-width-thin) solid var(--color-separator);
   font-weight: 600;
 }
-
-
 
 thead th:not([align="center"]):not([align="right"]) {
   text-align: start;
@@ -39,13 +33,11 @@ tbody tr {
   border-block-start: var(--border-width-hairline) solid var(--color-separator);
 }
 
-
-th, td {
-
-  font-feature-settings:"tnum" 1;
-  padding: calc(var(--spacing-table, var(--spacing-xs)) / 2) var(--spacing-table, var(--spacing-xs));
-
-  
+th,
+td {
+  font-feature-settings: "tnum" 1;
+  padding: calc(var(--spacing-table, var(--spacing-xs)) / 2)
+    var(--spacing-table, var(--spacing-xs));
 }
 
 tfoot {
@@ -55,8 +47,6 @@ tfoot {
   font-weight: 600;
 }
 
-
-
 tbody tr {
   --_row-bg: initial;
   background: var(--_row-bg);
@@ -65,5 +55,3 @@ tbody tr {
 tbody tr:nth-child(even) {
   --_row-bg: var(--color-surface-glare);
 }
-
-

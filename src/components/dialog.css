@@ -14,20 +14,23 @@ dialog::backdrop {
   background: var(--color-surface);
 }
 
-  dialog, dialog::backdrop {
-    transition: display var(--duration-short) allow-discrete, overlay var(--duration-short) allow-discrete, opacity var(--duration-short), translate var(--duration-short);
-    opacity: 0;
+dialog,
+dialog::backdrop {
+  transition:
+    display var(--duration-short) allow-discrete,
+    overlay var(--duration-short) allow-discrete,
+    opacity var(--duration-short),
+    translate var(--duration-short);
+  opacity: 0;
+}
+
+dialog[open] {
+  opacity: 1;
+  translate: 0 0;
+  &::backdrop {
+    opacity: 0.8;
   }
-
-
-
-  dialog[open] {
-    opacity: 1;
-    translate: 0 0;
-    &::backdrop {
-      opacity: 0.8;
-    }
-  }
+}
 
 dialog {
   @starting-style {
@@ -39,10 +42,7 @@ dialog {
       translate: 0 25vh;
     }
   }
-
 }
-
-
 
 dialog > :where(form, article) {
   display: flex;
@@ -106,11 +106,9 @@ dialog[open]::backdrop {
   display: none;
 } */
 
-
-
 dialog header > button[aria-label] {
- padding: unset;
- border-radius: var(--radius-pill);
+  padding: unset;
+  border-radius: var(--radius-pill);
   aspect-ratio: 1;
   min-height: unset;
   position: relative;
@@ -131,7 +129,6 @@ dialog header > button[aria-label]::after {
   mask-repeat: no-repeat;
   background-color: currentColor;
 }
-
 
 /* body:has(dialog) {
   transition-property: filter;

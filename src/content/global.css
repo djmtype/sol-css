@@ -5,11 +5,9 @@
 }
 
 :where(body) {
-
   font-family: var(--font-family-default);
   font-size: var(--font-size);
 }
-
 
 :where(h1) {
   font-size: var(--font-size-4);
@@ -127,14 +125,13 @@
   border-inline-start: var(--border-width-thick) solid var(--color-accent);
 }
 
-
 :where(figure:has(img, blockquote) figcaption) {
   font-size: var(--font-size-00);
   margin-block-start: var(--spacing-flow);
 }
 
-
-:focus-visible, :target {
+:focus-visible,
+:target {
   outline-width: var(--border-width-focus);
   outline-style: solid;
   outline-color: var(--color-accent);
@@ -159,7 +156,6 @@
 }
 
 :where(code, kbd, samp, pre) {
-
-color: var(--color-ink-contrast);
+  color: var(--color-ink-contrast);
   background-color: var(--color-surface-glare);
 }

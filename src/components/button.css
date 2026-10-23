@@ -16,7 +16,10 @@ input[type="button"],
   align-items: var(--_align-items);
   justify-content: var(--_justify-content);
   font-family: inherit;
-  transition: color 200ms, background-color 200ms, border-color 200ms;
+  transition:
+    color 200ms,
+    background-color 200ms,
+    border-color 200ms;
   padding-block: var(--spacing-button-block);
   padding-inline: var(--spacing-button-inline);
   border-width: var(--border-width-button);
@@ -30,7 +33,7 @@ input[type="button"],
 }
 
 ::-webkit-file-upload-button {
-line-height: inherit;
+  line-height: inherit;
 }
 
 a[role="button"] {
@@ -60,8 +63,7 @@ button[disabled],
 input[type="submit"][disabled],
 input[type="reset"][disabled],
 input[type="clear"][disabled],
-input[type="button"][disabled]
-input[type="file"][disabled],
+input[type="button"][disabled] input[type="file"][disabled],
 [role="button"][disabled] {
   opacity: 0.8;
 }
