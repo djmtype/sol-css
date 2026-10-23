@@ -13,8 +13,8 @@ dialog:has(> form) > form > fieldset:not(:has(legend)) > * + * {
 }
 
 ::placeholder {
-  color: var(--color-ink-mute);
-  opacity: 1;
+  color: inherit;
+  opacity: .8;
   font-style: italic;
 }
 
@@ -31,7 +31,7 @@ fieldset {
 
 /* Text fields */
 
-input:not([type="submit"], [type="reset"], [type="file"], [type="range"]),
+input:not([type="submit"], [type="reset"], [type="file"], [type="range"], [type="image"], [type="hidden"]),
 textarea,
 select {
   padding-block: var(--spacing-input-block);
@@ -39,6 +39,14 @@ select {
   border-radius: var(--radius-input);
   border: var(--border-width-input) solid var(--color-separator);
   background-color: var(--color-surface-dim);
+}
+
+
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+  /* vertical-align: top; */
 }
 
 ::-webkit-datetime-edit,
@@ -129,12 +137,12 @@ input[type="range"] {
   width: 100%;
 }
 
-input[type="range"]::-webkit-slider-runnable-track, input[type="range"]::-moz-range-track {
+input[type="range"]::-webkit-slider-runnable-track,
+input[type="range"]::-moz-range-track {
   background-color: light-dark(var(--color-gray-4), var(--color-gray-13));
   height: var(--_track-height);
   border-radius: 1e5px;
 }
-
 
 /*input[type="range"]::range-track {
   background-color: light-dark(var(--color-gray-4), var(--color-gray-13));
@@ -142,7 +150,8 @@ input[type="range"]::-webkit-slider-runnable-track, input[type="range"]::-moz-ra
   border-radius: 1e5px;
 }*/
 
-input[type="range"]::-webkit-slider-thumb, input[type="range"]::-moz-range-thumb {
+input[type="range"]::-webkit-slider-thumb,
+input[type="range"]::-moz-range-thumb {
   appearance: none;
   height: var(--_thumb-size);
   width: var(--_thumb-size);
@@ -150,7 +159,6 @@ input[type="range"]::-webkit-slider-thumb, input[type="range"]::-moz-range-thumb
   border: 0;
   border-radius: 1e5px;
 }
-
 
 input[type="range"]::-webkit-slider-thumb {
   margin-block-start: calc(
@@ -325,3 +333,5 @@ Correct the cursor style of increment and decrement buttons in Safari.
 ::-webkit-outer-spin-button {
   height: auto;
 }
+
+

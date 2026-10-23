@@ -21,3 +21,12 @@
 @import "components/table.css" layer(components);
 @import "components/forms.css" layer(components); 
 @import "components/progress.css" layer(components); 
+
+/* The hidden attribute has to win against a class that sets display. The selector is written without :where(), so its specificity is (0, 2, 0). hidden="until-found" is left alone so find-in-page can reveal it. This rule is also outside @layer reset. Full build only. */
+
+[hidden]:not([hidden="until-found" i]) {
+  display: none;
+}
+
+
+

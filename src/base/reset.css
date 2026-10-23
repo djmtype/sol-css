@@ -7,8 +7,8 @@ SET Studio [https://piccalil.li/blog/a-more-modern-css-reset/]
 Open Props Normalize [https://github.com/argyleink/open-props/blob/main/src/extra/normalize.src.css]
 Normalize CSS [https://github.com/necolas/normalize.css/blob/master/normalize.css]
 CSS Remedy [https://github.com/jensimmons/cssremedy]
-Josh Comeau [https://www.joshwcomeau.com/css/custom-css-reset/]
-
+Josh Comeau [https://www.joshwcomeau.com/css/custom-css-reset/] 
+Reseter.css [https://ikrishg.github.io/reseter.css/reference]
 */
 
 /*
@@ -42,8 +42,9 @@ Josh Comeau [https://www.joshwcomeau.com/css/custom-css-reset/]
   overflow-wrap: break-word;
 }
 
-/* Prevent padding and border from affecting element width.
-https://www.oddbird.net/2025/09/04/box-model/ */
+/* Prevent padding and border from affecting element width. Do NOT apply to its psuedo selectors.
+https://www.oddbird.net/2025/09/04/box-model/ 
+*/
 :where(*) {
   box-sizing: border-box;
 }
@@ -95,9 +96,9 @@ Inherit the box sizing rule from the html element.
 
 /* Preserve white space and line breaks */
 :where(pre) {
-    white-space: pre-wrap;
-    white-space: preserve wrap;
-  }
+  white-space: pre-wrap;
+  white-space: preserve wrap;
+}
 
 /* Better leading on large headlines */
 :where(h1, h2, h3, h4, h5, p, li, dt, dd) {
@@ -135,6 +136,11 @@ Make anchor and abbreviated elements more legible
   text-underline-offset: 0.2ex;
 }
 
+/* Consistent cue across all browsers */
+:where(abbr[title]) {
+  text-decoration: underline dotted;
+}
+
 /*
 Unify text size across browsers
 */
@@ -166,7 +172,6 @@ Prevent `sub` and `sup` elements from affecting the line height in all browsers.
   font-size: 1em;
 }
 
-
 /* Preserve intrinsic aspect ratio. */
 :where(img, svg, video, canvas) {
   max-inline-size: 100%;
@@ -176,6 +181,11 @@ Prevent `sub` and `sup` elements from affecting the line height in all browsers.
 /* Remove awkward space */
 :where(img, video, canvas, audio, iframe, embed, object) {
   display: block;
+}
+
+/* Browsers draw a border around iframe. Mini removes it. Mini only. */
+:where(iframe) {
+  border: 0;
 }
 
 /* Make the image element easier to target */
@@ -188,19 +198,21 @@ Prevent `sub` and `sup` elements from affecting the line height in all browsers.
 }
 
 /*
-1. Remove gaps
+1. Remove gaps and spacing
 2. Correct color consistency
 */
 :where(table) {
   border-collapse: collapse;
+  border-spacing: 0;
   /* 1 */
   border-color: currentcolor;
   /* 2 */
 }
 
-/* Normalize border on buttons for accessibility */
-:where(button) {
-  border: 1px solid transparent;
+/* Normalize border and padding on buttons for accessibility */
+:where(button, [type="button"], [type="reset"], [type="submit"]) {
+  padding: 1px 4px;
+  border: 1px solid;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -208,6 +220,8 @@ Prevent `sub` and `sup` elements from affecting the line height in all browsers.
   font: inherit;
   color: inherit;
 }
+
+
 
 /* Normalize separator appearance */
 :where(hr) {
@@ -218,27 +232,25 @@ Prevent `sub` and `sup` elements from affecting the line height in all browsers.
 }
 
 /* Provide cursor indicators for interactive elements */
-:where(
-    button,
-    summary,
-    [type="submit"],
-    [type="reset"],
-    [type="button"],
-    [role="button"],
-    ::-webkit-file-upload-button,
-    ::file-selector-button
-  ) {
+
+:where(button):not(:disabled),
+:where([type="button"]):not(:disabled),
+:where([type="reset"]):not(:disabled),
+:where([type="submit"]):not(:disabled),
+:where([role="button"]):not(:disabled),
+:where(::-webkit-file-upload-button):not(:disabled),
+:where(::file-selector-button):not(:disabled) {
   cursor: pointer;
 }
 
 /* Webkit: Apply default button appearance */
 :where(
-    button,
-    [type="button"],
-    [type="reset"],
-    [type="submit"],
-    ::-webkit-file-upload-button
-  ) {
+  button,
+  [type="button"],
+  [type="reset"],
+  [type="submit"],
+  ::-webkit-file-upload-button
+) {
   appearance: button;
 }
 
@@ -259,7 +271,7 @@ Prevent `sub` and `sup` elements from affecting the line height in all browsers.
 /* Normalize and auto grow textarea */
 :where(textarea) {
   field-sizing: content;
-   min-block-size: 5rlh;
+  min-block-size: 5rlh;
 }
 
 :where([type="number"]) {
@@ -276,7 +288,7 @@ Add the correct vertical alignment
 
 /* Allow page top breathing room */
 :where(:target) {
-  scroll-margin-top: 2rlh;
+  scroll-margin-block: 2rlh;
 }
 
 /* Provide visual feedback for disabled elements */
